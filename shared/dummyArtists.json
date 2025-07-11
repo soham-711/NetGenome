@@ -1,0 +1,270 @@
+[
+  {
+    "artistID": "a001",
+    "displayName": "Falu",
+    "priceUSD": 5000,
+    "identity": {
+      "realName": "Falguni Shah",
+      "aliases": ["Falu"],
+      "origin": "Mumbai, India",
+      "location": "New York, USA",
+      "languages": ["Hindi", "English"]
+    },
+    "artistic_background": {
+      "roles": ["Vocalist", "Composer"],
+      "genres": ["Indian Classical", "Fusion"],
+      "influences": ["A.R. Rahman", "Lata Mangeshkar"],
+      "skills": ["Vocals", "Harmonium"]
+    },
+    "career": {
+      "education": "Trained in Indian classical from age 3",
+      "collaborations": ["A.R. Rahman", "Yo-Yo Ma"],
+      "performances": ["TIME 100 Gala", "White House State Dinner"],
+      "awards": ["Grammy Nominee"]
+    },
+    "discography": [
+      {
+        "title": "Falu’s Bazaar",
+        "type": "Album",
+        "year": 2019,
+        "label": "Independent",
+        "details": "Fusion of Indian classical with western lullabies"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Blends classical melodies with modern themes",
+      "production_process": "Collaborates with western musicians in studio"
+    },
+    "availability": {
+      "current_projects": ["New Fusion Album 2025"],
+      "looking_for": ["Producers", "Booking Agents"]
+    },
+    "online_presence": {
+      "website": "https://www.falusmusic.com",
+      "social_media": [
+        { "platform": "Instagram", "url": "https://instagram.com/falu" },
+        { "platform": "Facebook", "url": "https://facebook.com/falu" }
+      ],
+      "streaming_platforms": [
+        { "platform": "Spotify", "url": "https://open.spotify.com/artist/falu" }
+      ]
+    },
+    "quotes": ["Follow your dreams, and don’t stop until you’ve achieved them."]
+  },
+  {
+    "artistID": "a002",
+    "displayName": "Mar Fayos",
+    "priceUSD": 4000,
+    "identity": {
+      "realName": "Mar Fayos",
+      "aliases": [],
+      "origin": "Barcelona, Spain",
+      "location": "Boston, USA",
+      "languages": ["Spanish", "English"]
+    },
+    "artistic_background": {
+      "roles": ["Jazz Vocalist"],
+      "genres": ["Jazz", "Latin Jazz"],
+      "influences": ["Esperanza Spalding", "Ella Fitzgerald"],
+      "skills": ["Vocals"]
+    },
+    "career": {
+      "education": "Berklee College of Music",
+      "collaborations": ["Berklee Jazz Collective"],
+      "performances": ["Barcelona Jazz Festival"],
+      "awards": ["Berklee Performance Award"]
+    },
+    "discography": [
+      {
+        "title": "Mi Propia Religión",
+        "type": "Album",
+        "year": 2020,
+        "label": "Independent",
+        "details": "Recorded in Barcelona"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Writes lyrics inspired by cultural identity",
+      "production_process": "Uses live instrumentation and jazz arrangements"
+    },
+    "availability": {
+      "current_projects": ["Latin Jazz EP"],
+      "looking_for": ["Booking Agents", "Jazz Festivals"]
+    },
+    "online_presence": {
+      "website": "https://marfayos.com",
+      "social_media": [
+        { "platform": "Instagram", "url": "https://instagram.com/marfayos" }
+      ],
+      "streaming_platforms": [
+        {
+          "platform": "Spotify",
+          "url": "https://open.spotify.com/artist/marfayos"
+        }
+      ]
+    },
+    "quotes": ["Jazz is a conversation with your soul."]
+  },
+  {
+    "artistID": "a003",
+    "displayName": "Chris Andres",
+    "priceUSD": 3000,
+    "identity": {
+      "realName": "Chris Andres",
+      "aliases": [],
+      "origin": "Calgary, Canada",
+      "location": "Calgary, Canada",
+      "languages": ["English"]
+    },
+    "artistic_background": {
+      "roles": ["Singer-songwriter"],
+      "genres": ["Country Rock", "Blues"],
+      "influences": ["Johnny Cash", "Guy Clark"],
+      "skills": ["Vocals", "Guitar"]
+    },
+    "career": {
+      "education": "Self-taught",
+      "collaborations": ["The Calgarian Blues Band"],
+      "performances": ["Canada Indie Fest 2021"],
+      "awards": ["Canadian Roots Rising Star 2022"]
+    },
+    "discography": [
+      {
+        "title": "Unknown Stomp",
+        "type": "Single",
+        "year": 2021,
+        "label": "Independent",
+        "details": "Upcoming album preview track"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Starts with guitar riffs and develops lyrics organically",
+      "production_process": "Home studio with mixing engineer"
+    },
+    "availability": {
+      "current_projects": ["New Album: Scars"],
+      "looking_for": ["Tour Manager", "Festival Bookings"]
+    },
+    "online_presence": {
+      "website": "https://chrisandresmusic.com",
+      "social_media": [
+        { "platform": "Facebook", "url": "https://facebook.com/chrisandres" }
+      ],
+      "streaming_platforms": [
+        {
+          "platform": "Spotify",
+          "url": "https://open.spotify.com/artist/chrisandres"
+        }
+      ]
+    },
+    "quotes": ["Find your own voice... it was a gamechanger for me."]
+  },
+  {
+    "artistID": "a004",
+    "displayName": "Soul Chatter",
+    "priceUSD": 4500,
+    "identity": {
+      "realName": "Soul Chatter Band",
+      "aliases": ["Soul Chatter"],
+      "origin": "Nashville, USA",
+      "location": "Nashville, USA",
+      "languages": ["English"]
+    },
+    "artistic_background": {
+      "roles": ["Band"],
+      "genres": ["Indie Rock", "Folk Soul"],
+      "influences": ["Fleetwood Mac", "The Lumineers"],
+      "skills": ["Vocals", "Guitar", "Drums"]
+    },
+    "career": {
+      "education": "Various members trained at Belmont University",
+      "collaborations": ["Brian Stepien"],
+      "performances": ["Nashville Indie Nights"],
+      "awards": []
+    },
+    "discography": [
+      {
+        "title": "Midnight Reverie",
+        "type": "EP",
+        "year": 2022,
+        "label": "Independent",
+        "details": "Indie folk soul fusion"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Collaborative, lyrics written post jam sessions",
+      "production_process": "Each member records and shares tracks remotely"
+    },
+    "availability": {
+      "current_projects": ["Nashville Tour 2025"],
+      "looking_for": ["Promoters", "Live Venues"]
+    },
+    "online_presence": {
+      "website": "https://soulchatterband.com",
+      "social_media": [
+        { "platform": "Instagram", "url": "https://instagram.com/soulchatter" }
+      ],
+      "streaming_platforms": [
+        {
+          "platform": "Apple Music",
+          "url": "https://music.apple.com/soulchatter"
+        }
+      ]
+    },
+    "quotes": ["We believe in music that speaks from the soul."]
+  },
+  {
+    "artistID": "a005",
+    "displayName": "Prakash Slim",
+    "priceUSD": 3500,
+    "identity": {
+      "realName": "Prakash Slim",
+      "aliases": [],
+      "origin": "Lalitpur, Nepal",
+      "location": "Lalitpur, Nepal",
+      "languages": ["Nepali", "English"]
+    },
+    "artistic_background": {
+      "roles": ["Blues Guitarist", "Vocalist"],
+      "genres": ["Delta Blues", "Acoustic Blues"],
+      "influences": ["Robert Johnson", "BB King"],
+      "skills": ["Slide Guitar", "Vocals"]
+    },
+    "career": {
+      "education": "Self-taught blues artist",
+      "collaborations": ["Nepal Blues Collective"],
+      "performances": ["Pokhara Blues Festival"],
+      "awards": ["Best Blues Artist – Nepal 2023"]
+    },
+    "discography": [
+      {
+        "title": "Kathmandu Delta",
+        "type": "Album",
+        "year": 2023,
+        "label": "BluesAsia",
+        "details": "Recorded with analog gear in Kathmandu"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Writes lyrics about local life and global struggle",
+      "production_process": "DIY home recordings with vintage mics"
+    },
+    "availability": {
+      "current_projects": ["US Blues Tour Application"],
+      "looking_for": ["International Gigs", "Collaborations"]
+    },
+    "online_presence": {
+      "website": "https://prakashslim.com",
+      "social_media": [
+        { "platform": "YouTube", "url": "https://youtube.com/prakashslim" }
+      ],
+      "streaming_platforms": [
+        {
+          "platform": "Spotify",
+          "url": "https://open.spotify.com/artist/prakashslim"
+        }
+      ]
+    },
+    "quotes": ["The blues is the truth, and the truth comes from pain."]
+  }
+]
