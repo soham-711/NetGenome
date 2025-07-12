@@ -13,6 +13,7 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as cart from "../cart.js";
 import type * as matched from "../matched.js";
 import type * as seedArtists from "../seedArtists.js";
 
@@ -25,6 +26,7 @@ import type * as seedArtists from "../seedArtists.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  cart: typeof cart;
   matched: typeof matched;
   seedArtists: typeof seedArtists;
 }>;

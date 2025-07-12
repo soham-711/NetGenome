@@ -9,7 +9,7 @@ import gif from '../assets/gif5.gif';
 const navItems = [
   { name: 'Home', path: '/home' },
   { name: 'Explore', path: '/explore' },
-  { name: 'Ai chat', path: '/ai-chat-land' },
+  { name: 'Ai chat', path: '/ai_chat_land' },
   { name: 'Collaborations', path: '/collaborations' },
   { name: 'Join Community', path: '/join-community' },
   { name: 'Connect', path: '/connect' },

@@ -1,111 +1,195 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { ShoppingCart, Plus, Users, CheckCircle } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
-const MatchesPage = () => {
-  const { state } = useLocation();
-  const foundMatches = state?.foundMatches || {};
-  const perfectMatches = foundMatches.perfectMatches || [];
-  const suggestedMatches = foundMatches.suggestedMatches || [];
+import bgImage from "../assets/i11.png";
+import logo from "../assets/logo.png";
+import fallbackImg from "../assets/artist1.jpg";
 
-  const allMatches = [...perfectMatches, ...suggestedMatches];
-  console.log(allMatches);
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "Explore", path: "/explore" },
+  { label: "Ai Chat", path: "/ai_chat_land" },
+  { label: "Collaborations", path: "/collab" },
+  { label: "Join Community", path: "/community" },
+  { label: "Connect", path: "/connect" },
+];
+
+const handleAddToCart = ()=>{
+  console.log("Added to cart");
   
+}
+
+export default function Matches() {
+  const location = useLocation();
+  const { foundMatches } = location.state || {
+    foundMatches: { perfectMatches: [], suggestedMatches: [] },
+  };
+
+  const renderArtistCard = (artist, index, handleAddToCart) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="rounded-[32px] shadow-lg bg-black/80 backdrop-blur-md border border-white/10 flex flex-col overflow-hidden"
+    >
+      {/* Image */}
+      <div className="aspect-[4/3] w-full overflow-hidden rounded-t-[32px]">
+        <img
+          src={artist.imageUrl || fallbackImg}
+          alt={artist.displayName}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      {/* Info */}
+      <div className="p-5 text-white space-y-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold">{artist.displayName}</h2>
+          <span className="text-white/70 text-sm">
+            {artist.identity?.gender || "N/A"}
+          </span>
+        </div>
+
+        {/* Bio */}
+        {artist.quotes?.[0] && (
+          <p className="text-sm text-white/70 italic">"{artist.quotes[0]}"</p>
+        )}
+
+        {/* Tags */}
+        <div className="space-y-2 text-sm text-white/80">
+          {artist.artistic_background?.roles?.length > 0 && (
+            <div>
+              <span className="text-white font-semibold">Roles:</span>{" "}
+              {artist.artistic_background.roles.join(", ")}
+            </div>
+          )}
+          {artist.identity?.languages?.length > 0 && (
+            <div>
+              <span className="text-white font-semibold">Languages:</span>{" "}
+              {artist.identity.languages.join(", ")}
+            </div>
+          )}
+          {artist.identity?.location && (
+            <div>
+              <span className="text-white font-semibold">Location:</span>{" "}
+              {artist.identity.location}
+            </div>
+          )}
+          <div>
+            <span className="text-white font-semibold">Price:</span> $
+            {artist.priceUSD || "Not listed"}
+          </div>
+        </div>
+      </div>
+      {/* Footer Actions */}
+      <div className="flex items-center justify-between px-6 pb-5">
+        <div className="flex gap-5 text-white/90 text-[15px] font-medium">
+          <div className="flex items-center gap-2">
+            <Users className="w-4 h-4 text-gray-300" />
+            312
+          </div>
+          <div className="flex items-center gap-2">
+            <ShoppingCart className="w-4 h-4 text-gray-300" />
+            48
+          </div>
+        </div>
+
+        {/* Add to Cart Button */}
+        <button
+          onClick={() => handleAddToCart(artist)}
+          className="h-[42px] px-[18px] py-[8px] bg-[#2c2c2c] text-white rounded-full flex items-center gap-2 shadow-inner shadow-white/10 hover:bg-[#3a3a3a] transition"
+        >
+          <span className="text-[14px] font-medium">Cart</span>
+          <Plus className="w-4 h-4 text-white" />
+        </button>
+      </div>
+    </motion.div>
+  );
 
   return (
-    <div className="p-6 text-white min-h-screen bg-gradient-to-b from-gray-900 to-black">
-      <h1 className="text-4xl font-bold mb-6 text-center">
-        🎶 Your Music Collaborator Matches
-      </h1>
+    <div
+      className="relative w-full min-h-screen bg-cover bg-center overflow-y-scroll"
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <style>{`
+        div::-webkit-scrollbar {
+          width: 10px;
+        }
+        div::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 9999px;
+          border: 2px solid transparent;
+          background-clip: content-box;
+        }
+        div::-webkit-scrollbar-thumb:hover {
+          background: rgba(255, 255, 255, 0.4);
+        }
+      `}</style>
 
-      {/* ✅ All Matches */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-white mb-4">
-          🎯 All Matches ({allMatches.length})
-        </h2>
-        {allMatches.length === 0 ? (
-          <p className="text-gray-300">
-            No matches found. Please adjust your preferences.
-          </p>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
+
+      <motion.div
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="fixed top-0 left-0 w-full h-[80px] bg-white/5 backdrop-blur-md flex justify-between items-center px-8 md:px-24 z-50 border-b border-white/10"
+      >
+        <img src={logo} alt="Logo" className="h-10 w-auto" />
+        <div className="hidden md:flex items-center gap-8 text-white text-base font-medium">
+          {navItems.map(({ label }, idx) => (
+            <span
+              key={idx}
+              className="text-white/80 hover:text-white transition cursor-default"
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="relative z-20 pt-[120px] px-6 md:px-16 pb-12 space-y-20">
+        {foundMatches.perfectMatches.length > 0 ? (
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              🎯 Perfect Matches
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+              {foundMatches.perfectMatches.map((artist, idx) =>
+                renderArtistCard(artist, idx, handleAddToCart)
+              )}
+            </div>
+          </div>
         ) : (
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {allMatches.map((profile, index) => (
-              <div
-                key={index}
-                className="bg-white/10 p-4 rounded-xl shadow-lg border border-white/20"
-              >
-                <h3 className="text-xl font-bold mb-1">
-                  {profile.name || profile.username || "Unknown Artist"}
-                </h3>
-                <p>🎵 Genres: {(profile.genres || []).join(", ")}</p>
-                <p>🎭 Roles: {(profile.roles || []).join(", ")}</p>
-                <p>📍 Location: {profile.location || "N/A"}</p>
-                <p>✨ Vibe: {(profile.vibeTags || []).join(", ")}</p>
-                <p>🗣️ Languages: {(profile.languages || []).join(", ")}</p>
-                <p>🚻 Gender: {profile.gender || "N/A"}</p>
-                <p>⭐ Match Score: {profile.matchScore || "N/A"}%</p>
+          <>
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                🎯 Perfect Matches
+              </h2>
+              <p className="text-white/70">No perfect matches found.</p>
+            </div>
+
+            {foundMatches.suggestedMatches.length > 0 && (
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  ✨ Suggested Matches
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                  {foundMatches.suggestedMatches.map((artist, idx) =>
+                    renderArtistCard(artist, idx, handleAddToCart)
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
-      </section>
-
-      {/* ✅ Perfect Matches */}
-      {perfectMatches.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-green-400 mb-4">
-            ✅ Perfect Matches ({perfectMatches.length})
-          </h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {perfectMatches.map((profile, index) => (
-              <div
-                key={`perfect-${index}`}
-                className="bg-green-900/20 p-4 rounded-xl border border-green-500/30"
-              >
-                <h3 className="text-xl font-bold mb-1">
-                  {profile.name || profile.username || "Unknown Artist"}
-                </h3>
-                <p>🎵 Genres: {(profile.genres || []).join(", ")}</p>
-                <p>🎭 Roles: {(profile.roles || []).join(", ")}</p>
-                <p>📍 Location: {profile.location || "N/A"}</p>
-                <p>✨ Vibe: {(profile.vibeTags || []).join(", ")}</p>
-                <p>🗣️ Languages: {(profile.languages || []).join(", ")}</p>
-                <p>🚻 Gender: {profile.gender || "N/A"}</p>
-                <p>⭐ Match Score: {profile.matchScore || "N/A"}%</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* ✅ Suggested Matches */}
-      {suggestedMatches.length > 0 && (
-        <section>
-          <h2 className="text-2xl font-semibold text-yellow-400 mb-4">
-            🤝 Suggested Matches ({suggestedMatches.length})
-          </h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {suggestedMatches.map((profile, index) => (
-              <div
-                key={`suggested-${index}`}
-                className="bg-yellow-900/20 p-4 rounded-xl border border-yellow-400/30"
-              >
-                <h3 className="text-xl font-bold mb-1">
-                  {profile.name || profile.username || "Unknown Artist"}
-                </h3>
-                <p>🎵 Genres: {(profile.genres || []).join(", ")}</p>
-                <p>🎭 Roles: {(profile.roles || []).join(", ")}</p>
-                <p>📍 Location: {profile.location || "N/A"}</p>
-                <p>✨ Vibe: {(profile.vibeTags || []).join(", ")}</p>
-                <p>🗣️ Languages: {(profile.languages || []).join(", ")}</p>
-                <p>🚻 Gender: {profile.gender || "N/A"}</p>
-                <p>⭐ Match Score: {profile.matchScore || "N/A"}%</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      </div>
     </div>
   );
-};
+}
 
-export default MatchesPage;
+
+

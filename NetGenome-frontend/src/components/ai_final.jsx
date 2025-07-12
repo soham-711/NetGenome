@@ -848,9 +848,13 @@ export default function AiFinal() {
   ];
 
   // Initialize the conversation
-  useEffect(() => {
-    initializeChat();
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     initializeChat();
+  //   }, 2000); // delay 1 second (adjust if needed)
+
+  //   return () => clearTimeout(timer); // cleanup
+  // }, []);
 
   const initializeChat = async () => {
     try {
@@ -865,7 +869,8 @@ export default function AiFinal() {
         setCurrentStepIndex(data.stepIndex);
 
         // Add welcome message and first question
-        setChat([
+        setChat((prev) => [
+          ...prev,
           {
             role: "bot",
             text: "Hi! I'm here to help you find perfect music collaborators. Let me ask you a few questions to understand your preferences better.",
@@ -894,16 +899,43 @@ export default function AiFinal() {
   };
 
   const handleSubmit = async (manualInput) => {
-    if (isCompleted && !isModifying) {
-      // Handle post-completion interactions
-      await handlePostCompletionChat(manualInput);
+    let input = manualInput || inputText.trim();
+    if (!input) return;
+
+    const loweredInput = input.toLowerCase();
+
+    // Step 1: Trigger onboarding when user types "hi" as first message
+    if (chat.length === 0 && ["hi", "hello", "hey"].includes(loweredInput)) {
+      setChat((prev) => [...prev, { role: "user", text: input }]);
+      initializeChat(); // show welcome and first question
+      setInputText("");
+      setAwaitingResponse(true);
       return;
     }
 
-    const input = manualInput || inputText.trim();
-    if (!input || !awaitingResponse) return;
+    // Step 2: If user types something else first
+    if (chat.length === 0) {
+      setChat([
+        {
+          role: "bot",
+          text: "👋 Please type 'Hi' to begin your onboarding.",
+        },
+      ]);
+      setInputText("");
+      setAwaitingResponse(true);
+      return;
+    }
 
-    // Add user message to chat
+    // Step 3: Handle post-completion questions
+    if (isCompleted && !isModifying) {
+      await handlePostCompletionChat(input);
+      return;
+    }
+
+    // Step 4: Ignore if response isn't expected
+    if (!awaitingResponse) return;
+
+    // Step 5: Add user message to chat
     setChat((prev) => [...prev, { role: "user", text: input }]);
     setInputText("");
     setIsLoading(true);
@@ -912,7 +944,7 @@ export default function AiFinal() {
     try {
       let processedAnswer = input;
 
-      // If it's a natural language response for a structured question, process it first
+      // Step 6: NLP processing (if input doesn't match options)
       if (
         currentStep &&
         currentStep.type !== "text" &&
@@ -929,7 +961,8 @@ export default function AiFinal() {
 
           if (nlpResponse.data.processedAnswer) {
             processedAnswer = nlpResponse.data.processedAnswer;
-            // Add bot explanation of interpretation
+
+            // Add bot clarification message
             setChat((prev) => [
               ...prev,
               {
@@ -947,7 +980,7 @@ export default function AiFinal() {
         }
       }
 
-      // Process the step with the answer
+      // Step 7: Send answer to backend and get next step
       const response = await axios.post(
         "http://localhost:5000/api/onboarding/step",
         {
@@ -959,13 +992,13 @@ export default function AiFinal() {
 
       const data = response.data;
 
-      // Update user responses
+      // Step 8: Update user responses
       if (data.userResponses) {
         setUserResponses(data.userResponses);
       }
 
+      // Step 9: Handle completion
       if (data.completed) {
-        // Onboarding completed
         setUserProfile(data.profile);
         setChat((prev) => [
           ...prev,
@@ -987,12 +1020,12 @@ export default function AiFinal() {
         setIsCompleted(true);
         setIsModifying(false);
         setAwaitingResponse(true);
-      } else if (data.step) {
-        // Move to next step
+      }
+
+      // Step 10: Move to next onboarding step
+      else if (data.step) {
         setCurrentStep(data.step);
         setCurrentStepIndex(data.stepIndex);
-
-        // Add next question
         setChat((prev) => [
           ...prev,
           {
@@ -1019,6 +1052,133 @@ export default function AiFinal() {
       setIsLoading(false);
     }
   };
+
+  // const handleSubmit = async (manualInput) => {
+  //   if (isCompleted && !isModifying) {
+  //     // Handle post-completion interactions
+  //     await handlePostCompletionChat(manualInput);
+  //     return;
+  //   }
+
+  //   const input = manualInput || inputText.trim();
+  //   if (!input || !awaitingResponse) return;
+
+  //   // Add user message to chat
+  //   setChat((prev) => [...prev, { role: "user", text: input }]);
+  //   setInputText("");
+  //   setIsLoading(true);
+  //   setAwaitingResponse(false);
+
+  //   try {
+  //     let processedAnswer = input;
+
+  //     // If it's a natural language response for a structured question, process it first
+  //     if (
+  //       currentStep &&
+  //       currentStep.type !== "text" &&
+  //       !currentStep.options?.includes(input)
+  //     ) {
+  //       try {
+  //         const nlpResponse = await axios.post(
+  //           "http://localhost:5000/api/onboarding/process-message",
+  //           {
+  //             message: input,
+  //             stepIndex: currentStepIndex,
+  //           }
+  //         );
+
+  //         if (nlpResponse.data.processedAnswer) {
+  //           processedAnswer = nlpResponse.data.processedAnswer;
+  //           // Add bot explanation of interpretation
+  //           setChat((prev) => [
+  //             ...prev,
+  //             {
+  //               role: "bot",
+  //               text: `I understand you meant: ${
+  //                 Array.isArray(processedAnswer)
+  //                   ? processedAnswer.join(", ")
+  //                   : processedAnswer
+  //               }`,
+  //             },
+  //           ]);
+  //         }
+  //       } catch (nlpError) {
+  //         console.log("NLP processing failed, using original input");
+  //       }
+  //     }
+
+  //     // Process the step with the answer
+  //     const response = await axios.post(
+  //       "http://localhost:5000/api/onboarding/step",
+  //       {
+  //         stepIndex: currentStepIndex,
+  //         answer: processedAnswer,
+  //         userResponses: userResponses,
+  //       }
+  //     );
+
+  //     const data = response.data;
+
+  //     // Update user responses
+  //     if (data.userResponses) {
+  //       setUserResponses(data.userResponses);
+  //     }
+
+  //     if (data.completed) {
+  //       // Onboarding completed
+  //       setUserProfile(data.profile);
+  //       setChat((prev) => [
+  //         ...prev,
+  //         {
+  //           role: "bot",
+  //           text: "Perfect! I've created your profile. Here's what I learned about you:",
+  //         },
+  //         {
+  //           role: "bot",
+  //           text: `🎵 **Musical Style**: ${data.profile.musicalStyle}\n\n🤝 **Looking for**: ${data.profile.collaborationPreferences}\n\n💪 **Your Strengths**: ${data.profile.strengths}\n\n🎯 **Ideal Matches**: ${data.profile.idealMatches}`,
+  //           isProfile: true,
+  //         },
+  //         {
+  //           role: "bot",
+  //           text: "Would you like me to start finding collaborators for you, or would you like to modify any of these preferences?",
+  //           showActionButtons: true,
+  //         },
+  //       ]);
+  //       setIsCompleted(true);
+  //       setIsModifying(false);
+  //       setAwaitingResponse(true);
+  //     } else if (data.step) {
+  //       // Move to next step
+  //       setCurrentStep(data.step);
+  //       setCurrentStepIndex(data.stepIndex);
+
+  //       // Add next question
+  //       setChat((prev) => [
+  //         ...prev,
+  //         {
+  //           role: "bot",
+  //           text: data.step.question,
+  //           hint: data.step.hint,
+  //           options: data.step.options || null,
+  //           type: data.step.type,
+  //         },
+  //       ]);
+  //       setAwaitingResponse(true);
+  //     }
+  //   } catch (error) {
+  //     console.error("Step processing error:", error);
+  //     setChat((prev) => [
+  //       ...prev,
+  //       {
+  //         role: "bot",
+  //         text: "I'm having trouble processing that. Could you try again?",
+  //       },
+  //     ]);
+  //     setAwaitingResponse(true);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   const handlePostCompletionChat = async (input) => {
     const message = input || inputText.trim();
@@ -1204,7 +1364,9 @@ export default function AiFinal() {
           },
           {
             role: "bot",
-            text: `📍 **Your Search Criteria**:\n🎵 **Genres**: ${matchingPayload.searchCriteria.genres.join(
+            text: `**Your Search Criteria**:\n 📍 **Location**: ${
+              matchingPayload.searchCriteria.location
+            }\n🎵 **Genres**: ${matchingPayload.searchCriteria.genres.join(
               ", "
             )}\n🎭 **Looking for**: ${matchingPayload.searchCriteria.roles.join(
               ", "
@@ -1276,28 +1438,6 @@ export default function AiFinal() {
     const perfectMatches = foundMatches.perfectMatches || [];
     const suggestedMatches = foundMatches.suggestedMatches || [];
     const allMatches = [...perfectMatches, ...suggestedMatches];
-
-    console.log("=== ALL MATCHING PROFILES ===");
-    console.log("Total matches found:", allMatches.length);
-    console.log("Matching criteria used:", matchingData);
-
-    allMatches.forEach((profile, index) => {
-      console.log(`\n--- Profile ${index + 1} ---`);
-      console.log("Profile ID:", profile.id || profile._id);
-      console.log("Name:", profile.name || profile.username);
-      console.log("Genres:", profile.genres);
-      console.log("Roles:", profile.roles);
-      console.log("Location:", profile.location);
-      console.log("Vibe Tags:", profile.vibeTags);
-      console.log("Languages:", profile.languages);
-      console.log("Gender:", profile.gender);
-      console.log("Match Score:", profile.matchScore || "N/A");
-      console.log("Profile Score:", profile.profileScore || "N/A");
-      console.log("Full Profile:", profile);
-    });
-
-    console.log("\n=== END OF PROFILES ===");
-
     // Show summary in chat
     setChat((prev) => [
       ...prev,
@@ -1326,6 +1466,7 @@ export default function AiFinal() {
         isProfileList: true,
       },
     ]);
+    
     navigate("/matches", {
       state: {
         foundMatches: foundMatches, // contains { perfectMatches, suggestedMatches }
@@ -1554,6 +1695,8 @@ export default function AiFinal() {
         backgroundPosition: "center",
       }}
     >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-0" />
+
       {/* Navbar */}
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
@@ -1637,8 +1780,9 @@ export default function AiFinal() {
       )}
 
       {/* Chat Messages */}
-      <div className="absolute bottom-40 left-[53.5%]  transform -translate-x-1/2 w-[95%] max-w-2xl z-50 space-y-3 overflow-y-auto max-h-95 pr-2 pb-5 scrollbar-hide"
-       ref={chatRef}
+      <div
+        className="absolute bottom-40 left-[53.5%]  transform -translate-x-1/2 w-[95%] max-w-2xl z-50 space-y-3 overflow-y-auto max-h-95 pr-2 pb-5 scrollbar-hide"
+        ref={chatRef}
       >
         {chat.map((msg, i) => renderMessage(msg, i))}
         {isLoading && (

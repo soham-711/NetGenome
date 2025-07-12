@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import gifImage from "../assets/gif1.gif";
+import google from "../assets/google-color.png";
+import facebook from "../assets/Facebook_icon.png";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import {
@@ -26,7 +28,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/home");
+      navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
     }
@@ -35,7 +37,7 @@ export default function SignUp() {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, providerGoogle);
-      navigate("/home");
+      navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
     }
@@ -44,7 +46,7 @@ export default function SignUp() {
   const handleFacebookSignIn = async () => {
     try {
       await signInWithPopup(auth, providerFacebook);
-      navigate("/home");
+      navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
     }
@@ -185,11 +187,7 @@ export default function SignUp() {
             onClick={handleGoogleSignIn}
             className="flex items-center justify-center gap-3 px-4 py-2 rounded-md bg-transparent border border-white/20 text-white cursor-pointer hover:bg-white/5 transition shadow-[0_0_30px_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_10px_rgba(255,255,255,0.2)]"
           >
-            <img
-              src="https://www.svgrepo.com/show/475656/google-color.svg"
-              alt="Google"
-              className="w-6 h-6"
-            />
+            <img src={google} alt="Google" className="w-6 h-6" />
             <span>Sign in with Google</span>
           </motion.div>
 
@@ -198,11 +196,7 @@ export default function SignUp() {
             onClick={handleFacebookSignIn}
             className="flex items-center justify-center gap-3 px-4 py-2 rounded-md bg-transparent border border-white/20 text-white cursor-pointer hover:bg-white/5 transition shadow-[0_0_30px_0_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_10px_rgba(255,255,255,0.2)]"
           >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-              alt="Facebook"
-              className="w-6 h-6"
-            />
+            <img src={facebook} alt="Facebook" className="w-6 h-6" />
             <span>Sign in with Facebook</span>
           </motion.div>
 

@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   try {
     const filters = req.body.collected;
     console.log(filters);
-    
+
     if (!filters) {
       return res
         .status(400)
@@ -60,23 +60,26 @@ router.post("/", async (req, res) => {
         languageMatch &&
         locationMatch;
 
+      // const isSuggested =
+      //   !isPerfect &&
+      //   genderMatch &&
+      //   (filters.roles?.some((role) =>
+      //     artist.artistic_background?.roles?.includes(role)
+      //   ) ||
+      //     filters.genres?.some((genre) =>
+      //       artist.artistic_background?.genres?.includes(genre)
+      //     ) ||
+      //     filters.vibeTags?.some((tag) => artist.vibeTags?.includes(tag)) ||
+      //     filters.language?.some((lang) =>
+      //       artist.identity?.languages?.includes(lang)
+      //     ) ||
+      //     (filters.location &&
+      //       artist.identity?.location
+      //         ?.toLowerCase()
+      //         .includes(filters.location.toLowerCase())));
+
       const isSuggested =
-        !isPerfect &&
-        genderMatch &&
-        (filters.roles?.some((role) =>
-          artist.artistic_background?.roles?.includes(role)
-        ) ||
-          filters.genres?.some((genre) =>
-            artist.artistic_background?.genres?.includes(genre)
-          ) ||
-          filters.vibeTags?.some((tag) => artist.vibeTags?.includes(tag)) ||
-          filters.language?.some((lang) =>
-            artist.identity?.languages?.includes(lang)
-          ) ||
-          (filters.location &&
-            artist.identity?.location
-              ?.toLowerCase()
-              .includes(filters.location.toLowerCase())));
+        !isPerfect && rolesMatch && genresMatch && vibeMatch && languageMatch;
 
       if (isPerfect) {
         perfectMatches.push(artist);

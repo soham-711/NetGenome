@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
-import gifImage from '../assets/gif2.gif';
-import logo from '../assets/logo.png';
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ShoppingCart } from "lucide-react";
+import gifImage from "../assets/gif2.gif";
+import logo from "../assets/logo.png";
 
 export default function Home() {
   const location = useLocation();
@@ -22,7 +22,7 @@ export default function Home() {
       const deltaY = dragStartY.current - endY;
 
       if (deltaY > 100) {
-        navigate('/explore'); // Navigate if upward drag > 100px
+        navigate("/explore"); // Navigate if upward drag > 100px
       }
 
       setDragging(false);
@@ -31,12 +31,12 @@ export default function Home() {
   };
 
   const navItems = [
-    { label: 'Home', path: '/home' },
-    { label: 'Explore', path: '/explore' },
-    { label: 'AI Chat', path: '/ai_chat_land' },
-    { label: 'Collaborations', path: '/collaborations' },
-    { label: 'Join Community', path: '/join-community' },
-    { label: 'Connect', path: '/connect' },
+    { label: "Home", path: "/home" },
+    { label: "Explore", path: "/explore" },
+    { label: "AI Chat", path: "/ai_chat_land" },
+    { label: "Collaborations", path: "/collaborations" },
+    { label: "Join Community", path: "/join-community" },
+    { label: "Connect", path: "/connect" },
   ];
 
   return (
@@ -65,13 +65,16 @@ export default function Home() {
                 {label}
                 <span
                   className={`absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-300 ${
-                    isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </Link>
             );
           })}
-          <Link to="/cart" className="hover:text-white text-white/80 transition duration-300">
+          <Link
+            to="/cart"
+            className="hover:text-white text-white/80 transition duration-300"
+          >
             <ShoppingCart className="w-5 h-5" />
           </Link>
         </div>
@@ -118,14 +121,21 @@ export default function Home() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-white text-sm md:text-lg font-light mt-6 md:mt-4 leading-relaxed max-w-2xl md:max-w-3xl"
         >
-          Unlock your potential as an artist with our platform. Discover, collaborate, and <br className="hidden md:inline" />
+          Unlock your potential as an artist with our platform. Discover,
+          collaborate, and <br className="hidden md:inline" />
           engage with fellow musicians and fans like never before.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.8, repeat: Infinity, repeatType: 'loop', repeatDelay: 2 }}
+          transition={{
+            delay: 1.2,
+            duration: 0.8,
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 2,
+          }}
           className="mt-10 text-white text-base md:text-lg font-light animate-bounce"
         >
           swipe up

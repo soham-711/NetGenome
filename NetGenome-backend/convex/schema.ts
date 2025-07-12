@@ -63,4 +63,9 @@ export default defineSchema({
     }),
     quotes: v.array(v.string()),
   }),
+  cartItems: defineTable({
+    userId: v.string(), // Clerk or Firebase user ID
+    artistId: v.id("artists"), // Convex ID of the artist
+    addedAt: v.number(), // Timestamp
+  }).index("by_user", ["userId"]),
 });
