@@ -31,6 +31,7 @@ import End from "../src/components/end";
 import ProtectedRoute from "./components/ProtectedRoute";
 import MatchesPage from "./components/MatchesPage";
 import CartPage from "./components/CartPage";
+import WalletConnectPage from "./components/WalletConnectPage";
 
 export default function App() {
   const location = useLocation();
@@ -217,6 +218,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <CartPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/wallet-connect"
+            element={
+              <ProtectedRoute>
+                <WalletConnectPage/>
               </ProtectedRoute>
             }
           />

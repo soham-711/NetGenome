@@ -6,14 +6,17 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-
+import "@solana/wallet-adapter-react-ui/styles.css";
+import SolanaProvider from "./context/SolanaProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <StrictMode>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      <SolanaProvider>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </SolanaProvider>
     </StrictMode>
   </BrowserRouter>
 );
