@@ -77,34 +77,30 @@ export default function Cart() {
   };
 
   const handlePayment = async () => {
-  if (total === 0) return alert("Cart is empty.");
+    if (total === 0 || paying) return;
 
-  try {
-    setPaying(true);
-    const recipient = "8gysvf5dCqK95rXpEQjLMYZyisNfEc16pFD8PRWRwhAM";
+    try {
+      setPaying(true);
+      const recipient = "8gysvf5dCqK95rXpEQjLMYZyisNfEc16pFD8PRWRwhAM";
+      const txSig = await sendSol(connection, wallet, recipient, total);
+      console.log("✅ Transaction successful:", txSig);
 
-    // Log for debugging
-    console.log("Sending", total, "SOL to", recipient);
-    console.log("Wallet:", wallet.publicKey?.toBase58());
-
-    await sendSol(connection, wallet, recipient, total);
-
-    localStorage.setItem(
-      "purchased",
-      JSON.stringify([...purchasedProfiles, ...cartItems])
-    );
-    setPurchasedProfiles([...purchasedProfiles, ...cartItems]);
-    setCartItems([]);
-    setSuccess(true);
-    setShowSuccessPopup(true);
-  } catch (err) {
-    console.error("Payment Error:", err); // <-- this is line 95
-    alert("Payment failed. Check console for more info.");
-  } finally {
-    setPaying(false);
-  }
-};
-
+      // Post-payment logic
+      localStorage.setItem(
+        "purchased",
+        JSON.stringify([...purchasedProfiles, ...cartItems])
+      );
+      setPurchasedProfiles([...purchasedProfiles, ...cartItems]);
+      setCartItems([]);
+      setSuccess(true);
+      setShowSuccessPopup(true);
+    } catch (err) {
+      console.error("Payment Error:", err);
+      alert("Payment failed. Try again.");
+    } finally {
+      setPaying(false);
+    }
+  };
 
   // Prevent rendering until hooks are settled
   if (loading) {
