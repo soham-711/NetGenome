@@ -13,8 +13,11 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as cart from "../cart.js";
+import type * as addToCart from "../addToCart.js";
+import type * as clearCart from "../clearCart.js";
+import type * as getCartItems from "../getCartItems.js";
 import type * as matched from "../matched.js";
+import type * as removeFromCart from "../removeFromCart.js";
 import type * as seedArtists from "../seedArtists.js";
 
 /**
@@ -26,8 +29,11 @@ import type * as seedArtists from "../seedArtists.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  cart: typeof cart;
+  addToCart: typeof addToCart;
+  clearCart: typeof clearCart;
+  getCartItems: typeof getCartItems;
   matched: typeof matched;
+  removeFromCart: typeof removeFromCart;
   seedArtists: typeof seedArtists;
 }>;
 export declare const api: FilterApi<

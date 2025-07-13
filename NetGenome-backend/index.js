@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import onboardingRouter from "./api/onboarding.js";
 import matchRoute from "./api/match.js";
+import cartRoutes from "./api/cartRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 // Routes
 app.use("/api/onboarding", onboardingRouter);
 app.use("/api/match", matchRoute);
+app.use("/api/cart", cartRoutes);
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({

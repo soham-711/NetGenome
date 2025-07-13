@@ -87,6 +87,8 @@ const ONBOARDING_STEPS = [
       "Indie",
       "Alternative",
       "Fusion",
+      "Folk Soul",
+      "Indie Rock",
       "Other",
     ],
   },

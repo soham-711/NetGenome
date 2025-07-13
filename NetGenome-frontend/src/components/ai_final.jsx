@@ -798,6 +798,9 @@
 //   );
 // }
 
+
+
+
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
@@ -811,7 +814,7 @@ import {
   Heart,
 } from "lucide-react";
 import axios from "axios";
-import bgImage from "../assets/i8.png";
+import bgImage from "../assets/gif6.gif";
 import logo from "../assets/logo.png";
 
 export default function AiFinal() {
@@ -1466,7 +1469,7 @@ export default function AiFinal() {
         isProfileList: true,
       },
     ]);
-    
+
     navigate("/matches", {
       state: {
         foundMatches: foundMatches, // contains { perfectMatches, suggestedMatches }
@@ -1687,10 +1690,9 @@ export default function AiFinal() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="relative w-full h-screen font-sans overflow-hidden"
+      className="relative w-full h-screen font-sans overflow-hidden bg-black"
       style={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
@@ -1873,3 +1875,7 @@ export default function AiFinal() {
     </motion.div>
   );
 }
+
+
+
+
