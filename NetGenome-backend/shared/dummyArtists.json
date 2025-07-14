@@ -2,6 +2,7 @@
   {
     "artistID": "a001",
     "displayName": "Falu",
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/1aba5fa1-9c49-4209-bc96-850371395cec",
     "priceUSD": 0.01,
     "vibeTags": ["Dreamy", "World Fusion"],
     "identity": {
@@ -57,6 +58,7 @@
     "artistID": "a002",
     "displayName": "Mar Fayos",
     "priceUSD": 0.02,
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/69f39845-98e1-42fc-82ff-4298262dbc5b",
     "vibeTags": ["Chill", "Lo-Fi", "Late Night"],
     "identity": {
       "realName": "Mar Fayos",
@@ -112,6 +114,7 @@
   {
     "artistID": "a003",
     "displayName": "Chris Andres",
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/9f97ac76-0676-4ee5-8951-895953194333 ",
     "priceUSD": 0.01,
     "vibeTags": ["Futuristic", "Experimental"],
     "identity": {
@@ -169,6 +172,7 @@
     "artistID": "a004",
     "displayName": "Soul Chatter",
     "priceUSD": 0.02,
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/0ef6856b-3446-438e-99de-fa166f3d59f5 ",
     "vibeTags": ["Spiritual", "Melancholic"],
     "identity": {
       "realName": "Soul Chatter Band",
@@ -225,6 +229,7 @@
     "artistID": "a005",
     "displayName": "Prakash Slim",
     "priceUSD": 0.01,
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/a61294a6-bac0-4dfe-8f37-0b1911a65103 ",
     "vibeTags": ["Groovy", "Urban"],
     "identity": {
       "realName": "Prakash Slim",
@@ -281,7 +286,7 @@
     "artistID": "a006",
     "displayName": "Arijit",
     "priceUSD": 0.01,
-    "imageUrl":"https://glad-sockeye-129.convex.cloud/api/storage/c73ce753-1ce7-4e13-88c2-52fcb2e10ccc",
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/c73ce753-1ce7-4e13-88c2-52fcb2e10ccc",
     "vibeTags": ["Dreamy", "World Fusion"],
     "identity": {
       "realName": "Arijit Singh",
@@ -332,10 +337,10 @@
     },
     "quotes": ["Follow your dreams, and don’t stop until you’ve achieved them."]
   },
-   {
+  {
     "artistID": "a007",
     "displayName": "Shreya",
-    "imageUrl":"",
+    "imageUrl": "https://glad-sockeye-129.convex.cloud/api/storage/9b3f4032-834d-4576-bff2-a5bee2e2a1bd ",
     "priceUSD": 0.02,
     "vibeTags": ["Dreamy", "World Fusion"],
     "identity": {

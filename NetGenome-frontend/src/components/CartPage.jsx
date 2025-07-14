@@ -135,7 +135,7 @@ export default function Cart() {
     try {
       setPaying(true);
 
-      const recipient = "J7cPxxB6tgktmtZC3GCBFCeMLL3fgcUbvh2rabAvnSgJ";
+      const recipient = "8gysvf5dCqK95rXpEQjLMYZyisNfEc16pFD8PRWRwhAM";
 
       // ✅ Step 1: Send SOL
       const txSig = await sendSol(connection, wallet, recipient, total);
