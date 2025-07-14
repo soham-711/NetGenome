@@ -15,7 +15,7 @@ export default function Cart() {
   const [paying, setPaying] = useState(false);
   const [success, setSuccess] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const [loading, setLoading] = useState(true); // NEW
+  const [loading, setLoading] = useState(true);
 
   const { connection } = useConnection();
   const wallet = useWallet();
@@ -45,15 +45,14 @@ export default function Cart() {
       }
     };
 
-    const fetchPurchased = () => {
-      const saved = localStorage.getItem("purchased");
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          if (Array.isArray(parsed)) setPurchasedProfiles(parsed);
-        } catch (e) {
-          console.error("Error parsing purchased data:", e);
-        }
+    const fetchPurchased = async () => {
+      try {
+        const res = await axios.post("http://localhost:5000/api/purchased", {
+          userId: user.uid,
+        });
+        setPurchasedProfiles(res.data.data); // ✅ From Convex
+      } catch (e) {
+        console.error("❌ Error fetching purchased profiles:", e);
       }
     };
 
@@ -81,28 +80,41 @@ export default function Cart() {
 
     try {
       setPaying(true);
+
       const recipient = "8gysvf5dCqK95rXpEQjLMYZyisNfEc16pFD8PRWRwhAM";
       const txSig = await sendSol(connection, wallet, recipient, total);
+
       console.log("✅ Transaction successful:", txSig);
 
-      // Post-payment logic
-      localStorage.setItem(
-        "purchased",
-        JSON.stringify([...purchasedProfiles, ...cartItems])
-      );
-      setPurchasedProfiles([...purchasedProfiles, ...cartItems]);
-      setCartItems([]);
-      setSuccess(true);
-      setShowSuccessPopup(true);
+      const purchases = cartItems.map((item) => ({
+        artistId: item._id,
+      }));
+
+      const res = await axios.post("http://localhost:5000/api/unlock", {
+        transactionSignature: txSig,
+        userId: user.uid,
+        purchases,
+        recipient,
+      });
+
+      if (res.data.success) {
+        setPurchasedProfiles([...purchasedProfiles, ...cartItems]);
+        setCartItems([]);
+        setSuccess(true);
+        setShowSuccessPopup(true);
+        console.log("✅ Purchase processed and saved in Convex");
+      } else {
+        console.warn("⚠️ Backend responded without success:", res.data);
+        alert("Something went wrong with unlocking. Please contact support.");
+      }
     } catch (err) {
-      console.error("Payment Error:", err);
-      alert("Payment failed. Try again.");
+      console.error("❌ Payment or Unlock Failed:", err);
+      alert("Payment failed or could not verify transaction. Try again.");
     } finally {
       setPaying(false);
     }
   };
 
-  // Prevent rendering until hooks are settled
   if (loading) {
     return <div className="text-white text-center mt-20">Loading...</div>;
   }
@@ -200,7 +212,6 @@ export default function Cart() {
                 ))}
               </motion.div>
 
-              {/* Payment */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

@@ -1,4 +1,3 @@
-// PurchasedList.jsx
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -32,26 +31,32 @@ export default function PurchasedList({
           >
             <h2 className="text-2xl font-bold mb-4">Purchased Profiles</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              {purchasedProfiles.map((item) => (
-                <div
-                  key={item._id}
-                  className="bg-gray-800 p-4 rounded-lg border border-gray-700 relative"
-                >
-                  <h3 className="font-semibold text-lg">{item.displayName}</h3>
-                  <p className="text-sm text-gray-400">${item.priceUSD}</p>
-                  <Link to={`/catalog/${item._id}`}>
-                    <p className="text-blue-400 underline hover:text-blue-200 mt-2">
-                      View Profile
-                    </p>
-                  </Link>
-                  <button
-                    onClick={() => handleDelete(item._id)}
-                    className="mt-3 px-4 py-1 text-sm font-bold bg-red-600 hover:bg-red-700 rounded"
+              {purchasedProfiles.length === 0 ? (
+                <p className="text-gray-400">No purchased profiles yet.</p>
+              ) : (
+                purchasedProfiles.map((item) => (
+                  <div
+                    key={item._id}
+                    className="bg-gray-800 p-4 rounded-lg border border-gray-700 relative"
                   >
-                    Delete
-                  </button>
-                </div>
-              ))}
+                    <h3 className="font-semibold text-lg">
+                      {item.displayName}
+                    </h3>
+                    <p className="text-sm text-gray-400">${item.priceUSD}</p>
+                    <Link to={`/catalog/${item._id}`}>
+                      <p className="text-blue-400 underline hover:text-blue-200 mt-2">
+                        View Profile
+                      </p>
+                    </Link>
+                    <button
+                      onClick={() => handleDelete(item._id)}
+                      className="mt-3 px-4 py-1 text-sm font-bold bg-red-600 hover:bg-red-700 rounded"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                ))
+              )}
             </div>
             <button
               onClick={() => setVisible(false)}

@@ -23,6 +23,8 @@ const Matches = () => {
   const { foundMatches } = location.state || {
     foundMatches: { perfectMatches: [], suggestedMatches: [] },
   };
+  const [purchasedArtists, setPurchasedArtists] = useState([]);
+
 
   const [addedItems, setAddedItems] = useState([]);
   const [justAddedId, setJustAddedId] = useState(null);

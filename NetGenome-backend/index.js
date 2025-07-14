@@ -5,15 +5,23 @@ import dotenv from "dotenv";
 import onboardingRouter from "./api/onboarding.js";
 import matchRoute from "./api/match.js";
 import cartRoutes from "./api/cartRoutes.js";
+import getPurchased from "./api/getPurchased.js";
+import hasPurchased from "./api/hasPurchased.js";
+import deletePurchased from "./api/deletePurchase.js";
 dotenv.config();
-
+import unlock from "./api/unlock.js";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173", "http://localhost:5174"], // React dev servers
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://musiccollab.com", // ✅ Add this
+    ],
     credentials: true,
   })
 );
@@ -25,6 +33,10 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 app.use("/api/onboarding", onboardingRouter);
 app.use("/api/match", matchRoute);
 app.use("/api/cart", cartRoutes);
+app.use("/api/unlock", unlock);
+app.use("/api/purchased", getPurchased);
+app.use("/api/hasPurchased", hasPurchased);
+app.use("/api/deletePurchase", deletePurchased);
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({

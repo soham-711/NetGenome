@@ -68,4 +68,9 @@ export default defineSchema({
     artistId: v.id("artists"), // Convex ID of the artist
     priceUSD: v.number(),
   }).index("by_user", ["userId"]),
+  purchasedArtists: defineTable({
+    userId: v.string(),
+    artistId: v.id("artists"),
+    transactionSignature: v.string(),
+  }).index("by_user", ["userId"]),
 });
