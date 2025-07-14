@@ -15,6 +15,7 @@ import type {
 } from "convex/server";
 import type * as addPurchased from "../addPurchased.js";
 import type * as addToCart from "../addToCart.js";
+import type * as artists from "../artists.js";
 import type * as clearCart from "../clearCart.js";
 import type * as deletePurchase from "../deletePurchase.js";
 import type * as getCartItems from "../getCartItems.js";
@@ -35,6 +36,7 @@ import type * as seedArtists from "../seedArtists.js";
 declare const fullApi: ApiFromModules<{
   addPurchased: typeof addPurchased;
   addToCart: typeof addToCart;
+  artists: typeof artists;
   clearCart: typeof clearCart;
   deletePurchase: typeof deletePurchase;
   getCartItems: typeof getCartItems;

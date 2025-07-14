@@ -10,7 +10,7 @@ import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 
 export default function SolanaProvider({ children }) {
   const network = WalletAdapterNetwork.Devnet;
-  const endpoint = useMemo(() => clusterApiUrl(network), []);
+ const endpoint = useMemo(() => clusterApiUrl(network), []);
 
   const wallets = useMemo(() => [], []); // ✅ Use only detected wallets (via wallet-standard)
 

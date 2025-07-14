@@ -32,6 +32,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import MatchesPage from "./components/MatchesPage";
 import CartPage from "./components/CartPage";
 import WalletConnectPage from "./components/WalletConnectPage";
+import PurchasedList from "./components/PurchasedList";
+import Catalog from "./components/Catalogs";
 
 export default function App() {
   const location = useLocation();
@@ -226,6 +228,22 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <WalletConnectPage/>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/purchased"
+            element={
+              <ProtectedRoute>
+                <PurchasedList/>
+              </ProtectedRoute>
+            }
+          />
+           <Route
+            path="/catalog/:id"
+            element={
+              <ProtectedRoute>
+                <Catalog/>
               </ProtectedRoute>
             }
           />

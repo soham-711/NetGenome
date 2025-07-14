@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "Missing fields" });
   }
 
-  await convex.mutation(api.purchases.deletePurchase, { userId, artistId });
+  await convex.mutation(api.deletePurchase.deletePurchase, { userId, artistId });
 
   res.json({ success: true });
 });

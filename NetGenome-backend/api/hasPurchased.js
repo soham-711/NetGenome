@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
     return res.status(400).json({ error: "Missing fields" });
   }
 
-  const hasPurchased = await convex.query(api.purchases.hasPurchased, {
+  const hasPurchased = await convex.query(api.hasPurchased.hasPurchased, {
     userId,
     artistId,
   });

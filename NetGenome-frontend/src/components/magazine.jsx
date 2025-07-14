@@ -1,29 +1,29 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ShoppingCart } from 'lucide-react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ShoppingCart } from "lucide-react";
 
-import bgImage from '../assets/i14.png';
-import logo from '../assets/logo.png';
+import bgImage from "../assets/i14.png";
+import logo from "../assets/logo.png";
 
 export default function Magazine() {
   const location = useLocation();
   const currentPath = location.pathname;
-  const direction = location.state?.direction === 'left' ? 'left' : 'right';
+  const direction = location.state?.direction === "left" ? "left" : "right";
 
   const navItems = [
-    { name: 'Home', path: '/home' },
-    { name: 'Explore', path: '/explore' },
-    { name: 'AI Chat', path: '/ai_chat_land' },
-    { name: 'Collaborations', path: '/collaborations' },
-    { name: 'Join Community', path: '/join-community' },
-    { name: 'Connect', path: '/connect' },
+    { name: "Home", path: "/home" },
+    { name: "Explore", path: "/explore" },
+    { name: "AI Chat", path: "/ai_chat_land" },
+    { name: "Collaborations", path: "/collaborations" },
+    { name: "Join Community", path: "/join-community" },
+    { name: "Connect", path: "/connect" },
   ];
 
   const pageVariants = {
-    initial: { opacity: 0, x: direction === 'left' ? -100 : 100 },
+    initial: { opacity: 0, x: direction === "left" ? -100 : 100 },
     animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: direction === 'left' ? 100 : -100 },
+    exit: { opacity: 0, x: direction === "left" ? 100 : -100 },
   };
 
   return (
@@ -32,13 +32,13 @@ export default function Magazine() {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ ease: 'easeOut', duration: 0.6 }}
+      transition={{ ease: "easeOut", duration: 0.6 }}
       className="relative w-full h-screen overflow-hidden font-sans"
       style={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {/* Overlay */}
@@ -60,14 +60,17 @@ export default function Magazine() {
               key={index}
               to={item.path}
               className={`relative group text-white/80 hover:text-white transition duration-300 ${
-                currentPath === item.path ? 'font-bold text-white' : ''
+                currentPath === item.path ? "font-bold text-white" : ""
               }`}
             >
               {item.name}
               <span className="absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
             </Link>
           ))}
-          <Link to="/cart" className="hover:text-white text-white/80 transition duration-300">
+          <Link
+            to="/cart"
+            className="hover:text-white text-white/80 transition duration-300"
+          >
             <ShoppingCart className="w-5 h-5" />
           </Link>
         </div>
@@ -91,8 +94,9 @@ export default function Magazine() {
           className="flex items-center justify-center mt-6 max-w-2xl"
         >
           <p className="text-white text-lg font-light leading-relaxed">
-            Dive into stories, interviews, and highlights from the world of music. Stay inspired and
-            informed with our curated magazine articles and spotlights.
+            Dive into stories, interviews, and highlights from the world of
+            music. Stay inspired and informed with our curated magazine articles
+            and spotlights.
           </p>
           <Link
             to="/explore1"

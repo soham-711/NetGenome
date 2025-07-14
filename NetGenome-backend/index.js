@@ -8,6 +8,7 @@ import cartRoutes from "./api/cartRoutes.js";
 import getPurchased from "./api/getPurchased.js";
 import hasPurchased from "./api/hasPurchased.js";
 import deletePurchased from "./api/deletePurchase.js";
+import getArtist from "./api/findArtists.js";
 dotenv.config();
 import unlock from "./api/unlock.js";
 const app = express();
@@ -37,6 +38,7 @@ app.use("/api/unlock", unlock);
 app.use("/api/purchased", getPurchased);
 app.use("/api/hasPurchased", hasPurchased);
 app.use("/api/deletePurchase", deletePurchased);
+app.use("/api/artist", getArtist);
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({

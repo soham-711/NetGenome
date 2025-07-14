@@ -58,7 +58,7 @@ dotenv.config();
 
 const router = express.Router();
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-
+console.log("Gemini API Key:", process.env.GEMINI_API_KEY);
 if (!GEMINI_API_KEY) {
   throw new Error("GEMINI_API_KEY is required in environment variables");
 }
@@ -353,13 +353,17 @@ const createFallbackProfile = (userResponses) => {
 export const processNaturalLanguageResponse = async (req, res) => {
   try {
     const { message, stepIndex } = req.body;
+    console.log("📥 Input message:", message);
+    console.log("🔢 Step index:", stepIndex);
 
     if (stepIndex >= ONBOARDING_STEPS.length) {
       return res.status(400).json({ error: "Invalid step index" });
     }
 
     const currentStep = ONBOARDING_STEPS[stepIndex];
-
+    if (!currentStep?.question) {
+      return res.status(400).json({ error: "Step config missing" });
+    }
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const prompt = `
@@ -368,45 +372,60 @@ Question type: ${currentStep.type}
 Available options: ${currentStep.options ? currentStep.options.join(", ") : "Free text"}
 User's response: "${message}"
 
-Based on their natural language response, extract the relevant information and format it properly.
+Your task is to extract the user's intended answer(s), correcting any minor spelling mistakes or typos, and formatting them clearly.
 
-For multiple choice questions, return matching options from the available list. Be flexible with matching - if they say "hip hop" match it to "Hip-hop", if they say "singing" match it to "Vocalist", etc.
-For text questions, clean and format the response appropriately.
+🔹 If the question is multiple choice:
+- Return all meaningful answers the user gave, even if they're not in the available options.
+- Correct typos (e.g., "hinddi" → "Hindi", "acustic" → "Acoustic").
+- Be flexible in interpretation (e.g., "rap" → "Hip-hop" if relevant).
+- Preserve user creativity — do not limit answers to only what's listed.
+- Do not use "Other" unless the input is completely vague or nonsensical.
 
-Return ONLY a JSON object with this structure:
+🔹 If the question is free text:
+- Clean and correct the text if necessary.
+- Return a single formatted string.
+
+Return ONLY a JSON object like this:
 {
-  "extractedAnswer": "the processed answer in the correct format",
+  "extractedAnswer": [...],  // array for multiple choice, or string for free text
   "confidence": 0.95,
-  "reasoning": "brief explanation of how you interpreted their response"
+  "reasoning": "brief explanation of how you interpreted the response"
 }
-
-If it's a multiple choice question, extractedAnswer should be an array of matching options.
-If it's a text question, extractedAnswer should be a cleaned string.
-If you can't find good matches, return the original message as a string.
 `;
-
-    const result = await model.generateContent(prompt);
-    const text = result.response.text();
-
-    // Parse the AI response
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      const aiResponse = JSON.parse(jsonMatch[0]);
-
-      res.status(200).json({
-        processedAnswer: aiResponse.extractedAnswer,
-        confidence: aiResponse.confidence,
-        reasoning: aiResponse.reasoning,
-        originalMessage: message,
-      });
-    } else {
-      throw new Error("Failed to parse AI response");
+    let result;
+    try {
+      result = await model.generateContent(prompt);
+    } catch (err) {
+      console.error("❌ Gemini API failed:", err.message);
+      return res.status(500).json({ error: "Gemini model call failed" });
     }
+
+    const text = result.response.text();
+    console.log("🧠 Gemini raw response:", text);
+
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch)
+      throw new Error("Could not extract JSON from Gemini output");
+
+    let aiResponse;
+    try {
+      aiResponse = JSON.parse(jsonMatch[0]);
+    } catch (err) {
+      console.error("❌ JSON parse error:", err.message);
+      throw new Error("Malformed JSON from AI");
+    }
+
+    res.status(200).json({
+      processedAnswer: aiResponse.extractedAnswer,
+      confidence: aiResponse.confidence,
+      reasoning: aiResponse.reasoning,
+      originalMessage: message,
+    });
   } catch (error) {
-    console.error("Natural language processing error:", error.message);
+    console.error("❌ NLP processing error:", error.message);
     res.status(500).json({
       error: "Failed to process natural language response",
-      fallback: message, // Return original message as fallback
+      fallback: req.body.message,
     });
   }
 };
