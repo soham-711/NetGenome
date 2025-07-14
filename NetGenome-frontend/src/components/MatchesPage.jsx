@@ -218,7 +218,7 @@ const Matches = () => {
                 }`}
               />
               <span className="text-xs font-medium text-white/90">
-                ${artist.priceUSD || "N/A"}
+                {artist.priceUSD || "N/A"} SOL
               </span>
             </div>
           </div>

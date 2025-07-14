@@ -2,7 +2,7 @@
   {
     "artistID": "a001",
     "displayName": "Falu",
-    "priceUSD": 5000,
+    "priceUSD": 0.01,
     "vibeTags": ["Dreamy", "World Fusion"],
     "identity": {
       "realName": "Falguni Shah",
@@ -56,7 +56,7 @@
   {
     "artistID": "a002",
     "displayName": "Mar Fayos",
-    "priceUSD": 4000,
+    "priceUSD": 0.02,
     "vibeTags": ["Chill", "Lo-Fi", "Late Night"],
     "identity": {
       "realName": "Mar Fayos",
@@ -112,7 +112,7 @@
   {
     "artistID": "a003",
     "displayName": "Chris Andres",
-    "priceUSD": 3000,
+    "priceUSD": 0.01,
     "vibeTags": ["Futuristic", "Experimental"],
     "identity": {
       "realName": "Chris Andres",
@@ -168,7 +168,7 @@
   {
     "artistID": "a004",
     "displayName": "Soul Chatter",
-    "priceUSD": 4500,
+    "priceUSD": 0.02,
     "vibeTags": ["Spiritual", "Melancholic"],
     "identity": {
       "realName": "Soul Chatter Band",
@@ -224,7 +224,7 @@
   {
     "artistID": "a005",
     "displayName": "Prakash Slim",
-    "priceUSD": 3500,
+    "priceUSD": 0.01,
     "vibeTags": ["Groovy", "Urban"],
     "identity": {
       "realName": "Prakash Slim",
@@ -276,5 +276,115 @@
       ]
     },
     "quotes": ["The blues is the truth, and the truth comes from pain."]
+  },
+  {
+    "artistID": "a006",
+    "displayName": "Arijit",
+    "priceUSD": 0.01,
+    "imageUrl":"https://glad-sockeye-129.convex.cloud/api/storage/c73ce753-1ce7-4e13-88c2-52fcb2e10ccc",
+    "vibeTags": ["Dreamy", "World Fusion"],
+    "identity": {
+      "realName": "Arijit Singh",
+      "aliases": ["Singh"],
+      "origin": "Kolkata, India",
+      "location": "Kolkata, India",
+      "languages": ["Hindi", "Bengali"],
+      "gender": "Male"
+    },
+    "artistic_background": {
+      "roles": ["Vocalist", "Composer"],
+      "genres": ["Indian Classical", "Fusion"],
+      "influences": ["A.R. Rahman", "Lata Mangeshkar"],
+      "skills": ["Vocals", "Harmonium"]
+    },
+    "career": {
+      "education": "Trained in Indian classical from age 3",
+      "collaborations": ["A.R. Rahman", "Yo-Yo Ma"],
+      "performances": ["TIME 100 Gala", "White House State Dinner"],
+      "awards": ["Grammy Nominee"]
+    },
+    "discography": [
+      {
+        "title": "Falu’s Bazaar",
+        "type": "Album",
+        "year": 2019,
+        "label": "Independent",
+        "details": "Fusion of Indian classical with western lullabies"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Blends classical melodies with modern themes",
+      "production_process": "Collaborates with western musicians in studio"
+    },
+    "availability": {
+      "current_projects": ["New Fusion Album 2025"],
+      "looking_for": ["Producers", "Booking Agents"]
+    },
+    "online_presence": {
+      "website": "https://www.falusmusic.com",
+      "social_media": [
+        { "platform": "Instagram", "url": "https://instagram.com/falu" },
+        { "platform": "Facebook", "url": "https://facebook.com/falu" }
+      ],
+      "streaming_platforms": [
+        { "platform": "Spotify", "url": "https://open.spotify.com/artist/falu" }
+      ]
+    },
+    "quotes": ["Follow your dreams, and don’t stop until you’ve achieved them."]
+  },
+   {
+    "artistID": "a007",
+    "displayName": "Shreya",
+    "imageUrl":"",
+    "priceUSD": 0.02,
+    "vibeTags": ["Dreamy", "World Fusion"],
+    "identity": {
+      "realName": "Shreya Ghoshal",
+      "aliases": ["Shreya"],
+      "origin": "Mumbai, India",
+      "location": "New York, USA",
+      "languages": ["Hindi", "English", "Bengali"],
+      "gender": "Female"
+    },
+    "artistic_background": {
+      "roles": ["Vocalist", "Composer"],
+      "genres": ["Indian Classical", "Fusion"],
+      "influences": ["A.R. Rahman", "Lata Mangeshkar"],
+      "skills": ["Vocals", "Harmonium"]
+    },
+    "career": {
+      "education": "Trained in Indian classical from age 3",
+      "collaborations": ["A.R. Rahman", "Yo-Yo Ma"],
+      "performances": ["TIME 100 Gala", "White House State Dinner"],
+      "awards": ["Grammy Nominee"]
+    },
+    "discography": [
+      {
+        "title": "Falu’s Bazaar",
+        "type": "Album",
+        "year": 2019,
+        "label": "Independent",
+        "details": "Fusion of Indian classical with western lullabies"
+      }
+    ],
+    "creative_process": {
+      "songwriting_process": "Blends classical melodies with modern themes",
+      "production_process": "Collaborates with western musicians in studio"
+    },
+    "availability": {
+      "current_projects": ["New Fusion Album 2025"],
+      "looking_for": ["Producers", "Booking Agents"]
+    },
+    "online_presence": {
+      "website": "https://www.falusmusic.com",
+      "social_media": [
+        { "platform": "Instagram", "url": "https://instagram.com/falu" },
+        { "platform": "Facebook", "url": "https://facebook.com/falu" }
+      ],
+      "streaming_platforms": [
+        { "platform": "Spotify", "url": "https://open.spotify.com/artist/falu" }
+      ]
+    },
+    "quotes": ["Follow your dreams, and don’t stop until you’ve achieved them."]
   }
 ]

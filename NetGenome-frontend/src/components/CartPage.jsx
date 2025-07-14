@@ -398,7 +398,7 @@ export default function Cart() {
                       <div className="flex items-center gap-2">
                         <img src={solanaLogo} alt="SOL" className="w-5 h-5" />
                         <span className="text-green-300 font-semibold">
-                          {item.price} SOL
+                          {item.priceUSD} SOL
                         </span>
                       </div>
                       <button
