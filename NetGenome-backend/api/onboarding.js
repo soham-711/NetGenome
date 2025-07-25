@@ -268,7 +268,7 @@ export const processStep = async (req, res) => {
 // Generate user profile using AI
 const generateUserProfile = async (userResponses) => {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" } );
 
     const prompt = `
 Based on the following user responses, create a detailed music collaborator profile:
@@ -377,7 +377,8 @@ Your task is to extract the user's intended answer(s), correcting any minor spel
 🔹 If the question is multiple choice:
 - Return all meaningful answers the user gave, even if they're not in the available options.
 - Correct typos (e.g., "hinddi" → "Hindi", "acustic" → "Acoustic").
-- Be flexible in interpretation (e.g., "rap" → "Hip-hop" if relevant).
+- Do not infer moods or meanings based on genres or instruments (e.g., "blues" ≠ "Chill", "rap" ≠ "Energetic").
+- Normalize synonymous roles (e.g., "Vocalist" and "Singer" → "Singer"; "Composer" and "Songwriter" → "Composer").
 - Preserve user creativity — do not limit answers to only what's listed.
 - Do not use "Other" unless the input is completely vague or nonsensical.
 
@@ -392,6 +393,8 @@ Return ONLY a JSON object like this:
   "reasoning": "brief explanation of how you interpreted the response"
 }
 `;
+
+
     let result;
     try {
       result = await model.generateContent(prompt);
