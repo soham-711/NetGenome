@@ -4,6 +4,7 @@ import gifImage from "../assets/gif1.gif";
 import google from "../assets/google-color.png";
 import facebook from "../assets/Facebook_icon.png";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { auth } from "../firebase";
 import {
   createUserWithEmailAndPassword,
@@ -27,7 +28,12 @@ export default function SignUp() {
 
     e.preventDefault();
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+     const cred = await createUserWithEmailAndPassword(auth, email, password);
+     const firebaseUser = cred.user;
+     await axios.post("http://localhost:5000/api/user/create-or-login", {
+      email: firebaseUser.email,
+    });
+     
       navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
@@ -36,7 +42,11 @@ export default function SignUp() {
 
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithPopup(auth, providerGoogle);
+    const cred = await signInWithPopup(auth, providerGoogle);
+    const firebaseUser = cred.user;
+    await axios.post("http://localhost:5000/api/user/create-or-login", {
+      email: firebaseUser.email,
+    });
       navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);
@@ -45,7 +55,11 @@ export default function SignUp() {
 
   const handleFacebookSignIn = async () => {
     try {
-      await signInWithPopup(auth, providerFacebook);
+     const cred = await signInWithPopup(auth, providerFacebook);
+     const firebaseUser = cred.user;
+     await axios.post("http://localhost:5000/api/user/create-or-login", {
+      email: firebaseUser.email,
+    });
       navigate("/home", { replace: true });
     } catch (err) {
       alert(err.message);

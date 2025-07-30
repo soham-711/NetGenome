@@ -29,33 +29,101 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleEmailSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/home", { replace: true });
-    } catch (err) {
-      alert(err.message);
-    }
-  };
+  // const handleEmailSignIn = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await signInWithEmailAndPassword(auth, email, password);
+  //     navigate("/home", { replace: true });
+  //   } catch (err) {
+  //     alert(err.message);
+  //   }
+  // };
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await signInWithPopup(auth, providerGoogle);
-      navigate("/home", { replace: true });
-    } catch (err) {
-      alert(err.message);
+
+const handleEmailSignIn = async (e) => {
+  e.preventDefault();
+  try {
+    const cred = await signInWithEmailAndPassword(auth, email, password);
+    const firebaseUser = cred.user;
+
+    // ✅ Call backend to get user role
+    const res = await axios.get("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
+
+    const role = res.data.role;
+
+    // ✅ Redirect based on role
+    if (role === "artist") {
+      navigate("/artist/dashboard",{ replace: true });
+    } else {
+      navigate("/home",{ replace: true });
     }
-  };
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
+  // const handleGoogleSignIn = async () => {
+  //   try {
+  //     await signInWithPopup(auth, providerGoogle);
+  //     navigate("/home", { replace: true });
+  //   } catch (err) {
+  //     alert(err.message);
+  //   }
+  // };
+
+const handleGoogleSignIn = async () => {
+  try {
+    const cred = await signInWithPopup(auth, providerGoogle);
+    const firebaseUser = cred.user;
+
+    const res = await axios.get("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
+
+    const role = res.data.role;
+
+    if (role === "artist") {
+      navigate("/artist/dashboard", { replace: true });
+    } else {
+      navigate("/home", { replace: true });
+    }
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
+
+
+
+
+  // const handleFacebookSignIn = async () => {
+  //   try {
+  //     await signInWithPopup(auth, providerFacebook);
+  //     navigate("/home", { replace: true });
+  //   } catch (err) {
+  //     alert(err.message);
+  //   }
+  // };
+
+
 
   const handleFacebookSignIn = async () => {
-    try {
-      await signInWithPopup(auth, providerFacebook);
+  try {
+    const cred = await signInWithPopup(auth, providerFacebook);
+    const firebaseUser = cred.user;
+
+    const res = await axios.get("http://localhost:5000/api/user/get-profile", { email: firebaseUser.email });
+
+    const role = res.data.role;
+
+    if (role === "artist") {
+      navigate("/artist/dashboard", { replace: true });
+    } else {
       navigate("/home", { replace: true });
-    } catch (err) {
-      alert(err.message);
     }
-  };
+  } catch (err) {
+    alert(err.message);
+  }
+};
+
 
   return (
     <motion.div

@@ -34,6 +34,8 @@ import CartPage from "./components/CartPage";
 import WalletConnectPage from "./components/WalletConnectPage";
 import PurchasedList from "./components/PurchasedList";
 import Catalog from "./components/Catalogs";
+import UploadMagazine from "./components/UploadMagazine";
+import EditProfile from "./components/EditProfile";
 
 export default function App() {
   const location = useLocation();
@@ -98,7 +100,7 @@ export default function App() {
           <Route
             path="/home"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={["admin", "artist", "user"]}>
                 <Home />
               </ProtectedRoute>
             }
@@ -215,7 +217,7 @@ export default function App() {
               </ProtectedRoute>
             }
           />
-           <Route
+          <Route
             path="/cart"
             element={
               <ProtectedRoute>
@@ -227,7 +229,7 @@ export default function App() {
             path="/wallet-connect"
             element={
               <ProtectedRoute>
-                <WalletConnectPage/>
+                <WalletConnectPage />
               </ProtectedRoute>
             }
           />
@@ -235,15 +237,32 @@ export default function App() {
             path="/purchased"
             element={
               <ProtectedRoute>
-                <PurchasedList/>
+                <PurchasedList />
               </ProtectedRoute>
             }
           />
-           <Route
+          <Route
             path="/catalog/:id"
             element={
               <ProtectedRoute>
-                <Catalog/>
+                <Catalog />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/upload-magazine"
+            element={
+              <ProtectedRoute allowedRoles={["admin"]}>
+                <UploadMagazine />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/artist/edit-profile"
+            element={
+              <ProtectedRoute allowedRoles={["artist"]}>
+                <EditProfile />
               </ProtectedRoute>
             }
           />

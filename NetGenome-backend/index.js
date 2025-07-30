@@ -10,6 +10,8 @@ import hasPurchased from "./api/hasPurchased.js";
 import deletePurchased from "./api/deletePurchase.js";
 import getArtist from "./api/findArtists.js";
 import pdfParserRoute from "./api/uploadParser.js";
+import artistRoutes from "./router/artistRoutes.js";
+import userRoutes from "./router/userRoutes.js";
 dotenv.config();
 import unlock from "./api/unlock.js";
 const app = express();
@@ -41,6 +43,8 @@ app.use("/api/hasPurchased", hasPurchased);
 app.use("/api/deletePurchase", deletePurchased);
 app.use("/api/artist", getArtist);
 app.use("/api/upload-magazine", pdfParserRoute);
+app.use("/api", artistRoutes);
+app.use("/api/user", userRoutes);
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({

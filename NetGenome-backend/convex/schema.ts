@@ -73,4 +73,19 @@ export default defineSchema({
     artistId: v.id("artists"),
     transactionSignature: v.string(),
   }).index("by_user", ["userId"]),
+  users: defineTable({
+    email: v.string(),
+    role: v.union(v.literal("user"), v.literal("artist")),
+    createdAt: v.number(),
+  }),
+  artistRequests: defineTable({
+    userId: v.id("users"),
+    email: v.string(),
+    status: v.union(
+      v.literal("pending"),
+      v.literal("approved"),
+      v.literal("rejected")
+    ),
+    createdAt: v.number(),
+  }).index("by_userId", ["userId"]),
 });

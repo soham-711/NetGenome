@@ -15,8 +15,10 @@ import type {
 } from "convex/server";
 import type * as addPurchased from "../addPurchased.js";
 import type * as addToCart from "../addToCart.js";
+import type * as approveOrRejectArtistRequest from "../approveOrRejectArtistRequest.js";
 import type * as artists from "../artists.js";
 import type * as clearCart from "../clearCart.js";
+import type * as createUserProfile from "../createUserProfile.js";
 import type * as deletePurchase from "../deletePurchase.js";
 import type * as getCartItems from "../getCartItems.js";
 import type * as getPurchase from "../getPurchase.js";
@@ -24,6 +26,7 @@ import type * as hasPurchased from "../hasPurchased.js";
 import type * as matched from "../matched.js";
 import type * as removeFromCart from "../removeFromCart.js";
 import type * as seedArtists from "../seedArtists.js";
+import type * as submitArtistRequest from "../submitArtistRequest.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -36,8 +39,10 @@ import type * as seedArtists from "../seedArtists.js";
 declare const fullApi: ApiFromModules<{
   addPurchased: typeof addPurchased;
   addToCart: typeof addToCart;
+  approveOrRejectArtistRequest: typeof approveOrRejectArtistRequest;
   artists: typeof artists;
   clearCart: typeof clearCart;
+  createUserProfile: typeof createUserProfile;
   deletePurchase: typeof deletePurchase;
   getCartItems: typeof getCartItems;
   getPurchase: typeof getPurchase;
@@ -45,6 +50,7 @@ declare const fullApi: ApiFromModules<{
   matched: typeof matched;
   removeFromCart: typeof removeFromCart;
   seedArtists: typeof seedArtists;
+  submitArtistRequest: typeof submitArtistRequest;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,
