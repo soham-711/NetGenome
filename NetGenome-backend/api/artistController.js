@@ -27,8 +27,9 @@ export const getPendingRequests = async (req, res) => {
 // ✅ 4. Admin: Approve Request
 export const approveRequest = async (req, res) => {
   const { requestId } = req.body;
+  
   try {
-    await convex.mutation("handleArtistRequest", { requestId, action: "approve" });
+    await convex.mutation(api.approveOrRejectArtistRequest.handleArtistRequest, { requestId, action: "approve" });
     res.status(200).json({ message: "Request approved" });
   } catch {
     res.status(500).json({ error: "Approval failed" });
@@ -39,7 +40,7 @@ export const approveRequest = async (req, res) => {
 export const rejectRequest = async (req, res) => {
   const { requestId } = req.body;
   try {
-    await convex.mutation("handleArtistRequest", { requestId, action: "reject" });
+    await convex.mutation(api.approveOrRejectArtistRequest.handleArtistRequest, { requestId, action: "reject" });
     res.status(200).json({ message: "Request rejected" });
   } catch {
     res.status(500).json({ error: "Rejection failed" });

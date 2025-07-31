@@ -22,3 +22,15 @@ export const createUserProfile = mutation({
   },
 });
 
+export const getUserProfileByEmail = query({
+  args: { email: v.string() },
+
+  async handler(ctx, { email }) {
+    const user = await ctx.db
+      .query("users")
+      .filter((q) => q.eq(q.field("email"), email))
+      .first();
+
+    return user ?? null; // ✅ safer than throwing
+  },
+});

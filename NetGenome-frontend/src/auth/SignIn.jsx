@@ -4,6 +4,7 @@ import gifImage from "../assets/gif1.gif";
 import google from "../assets/google-color.png";
 import facebook from "../assets/Facebook_icon.png";
 import { Link, useNavigate } from "react-router-dom"; // Make sure react-router-dom is installed
+import axios from "axios";
 
 import {
   signInWithEmailAndPassword,
@@ -47,7 +48,7 @@ const handleEmailSignIn = async (e) => {
     const firebaseUser = cred.user;
 
     // ✅ Call backend to get user role
-    const res = await axios.get("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
+    const res = await axios.post("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
 
     const role = res.data.role;
 
@@ -76,7 +77,7 @@ const handleGoogleSignIn = async () => {
     const cred = await signInWithPopup(auth, providerGoogle);
     const firebaseUser = cred.user;
 
-    const res = await axios.get("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
+    const res = await axios.post("http://localhost:5000/api/user/get-profile",{ email: firebaseUser.email });
 
     const role = res.data.role;
 
@@ -110,7 +111,7 @@ const handleGoogleSignIn = async () => {
     const cred = await signInWithPopup(auth, providerFacebook);
     const firebaseUser = cred.user;
 
-    const res = await axios.get("http://localhost:5000/api/user/get-profile", { email: firebaseUser.email });
+    const res = await axios.post("http://localhost:5000/api/user/get-profile", { email: firebaseUser.email });
 
     const role = res.data.role;
 

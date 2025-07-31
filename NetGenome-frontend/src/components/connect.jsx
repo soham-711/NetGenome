@@ -208,25 +208,24 @@
 //   );
 // }
 
-
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ShoppingCart, UserPlus, Upload, Search } from 'lucide-react';
-import bgImage from '../assets/i11.png';
-import logo from '../assets/logo.png';
-import gif from '../assets/gif5.gif';
-import axios from 'axios';
-import { getAuth } from 'firebase/auth';
-import { use } from 'react';
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ShoppingCart, UserPlus, Upload, Search } from "lucide-react";
+import bgImage from "../assets/i11.png";
+import logo from "../assets/logo.png";
+import gif from "../assets/gif5.gif";
+import axios from "axios";
+import { getAuth } from "firebase/auth";
+import { use } from "react";
 
 const navItems = [
-  { name: 'Home', path: '/home' },
-  { name: 'Explore', path: '/explore' },
-  { name: 'Ai chat', path: '/ai_chat_land' },
-  { name: 'Collaborations', path: '/collaborations' },
-  { name: 'Join Community', path: '/join-community' },
-  { name: 'Connect', path: '/connect' },
+  { name: "Home", path: "/home" },
+  { name: "Explore", path: "/explore" },
+  { name: "Ai chat", path: "/ai_chat_land" },
+  { name: "Collaborations", path: "/collaborations" },
+  { name: "Join Community", path: "/join-community" },
+  { name: "Connect", path: "/connect" },
 ];
 
 export default function Community() {
@@ -247,7 +246,7 @@ export default function Community() {
       if (deltaY > 100) {
         setDragging(false);
         dragStartY.current = null;
-        navigate('/end');
+        navigate("/end");
       }
     }
   };
@@ -288,13 +287,15 @@ export default function Community() {
         return;
       }
 
-      const profileRes = await axios.post("http://localhost:5000/api/user/get-profile", { email: user.email });
+      const profileRes = await axios.post(
+        "https://netgenome-1.onrender.com/api/user/get-profile",
+        { email: user.email }
+      );
       console.log(profileRes);
-      
 
       const userId = profileRes.data._id;
 
-      await axios.post("http://localhost:5000/api/request-artist", {
+      await axios.post("https://netgenome-1.onrender.com/api/request-artist", {
         userId,
         email: user.email,
       });
@@ -318,7 +319,7 @@ export default function Community() {
         style={{ backgroundImage: `url(${bgImage})` }}
         initial={{ scale: 1.1, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: 'easeOut' }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
       />
 
       {/* Dimmed Overlay */}
@@ -342,7 +343,10 @@ export default function Community() {
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
-          <Link to="/cart" className="hover:text-white text-white/80 transition duration-300">
+          <Link
+            to="/cart"
+            className="hover:text-white text-white/80 transition duration-300"
+          >
             <ShoppingCart className="w-5 h-5" />
           </Link>
         </div>
@@ -356,12 +360,15 @@ export default function Community() {
           animate="show"
           className="max-w-3xl"
         >
-          <p className="text-sm text-white/70 font-semibold uppercase mb-2">Connect</p>
+          <p className="text-sm text-white/70 font-semibold uppercase mb-2">
+            Connect
+          </p>
           <h1 className="text-3xl md:text-4xl font-serif leading-tight">
             Your Gateway to Musical Collaboration
           </h1>
           <p className="text-white/80 text-sm md:text-base mt-4">
-            Join our platform to discover and collaborate with talented artists. It's easy to connect and create music together.
+            Join our platform to discover and collaborate with talented artists.
+            It's easy to connect and create music together.
           </p>
         </motion.div>
 
@@ -377,7 +384,8 @@ export default function Community() {
               <Search size={28} />
               <h3 className="text-base font-semibold">Sign Up</h3>
               <p className="text-white/70 text-sm">
-                Create your profile and start exploring artists that match your musical vision.
+                Create your profile and start exploring artists that match your
+                musical vision.
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 max-w-xs">
@@ -411,16 +419,20 @@ export default function Community() {
           >
             <div className="flex flex-col items-center gap-3 max-w-xs">
               <UserPlus size={28} />
-              <h3 className="text-base font-semibold">Collaborate Effortlessly</h3>
+              <h3 className="text-base font-semibold">
+                Collaborate Effortlessly
+              </h3>
               <p className="text-white/70 text-sm">
-                Communicate and collaborate with your chosen artists through our integrated messaging system.
+                Communicate and collaborate with your chosen artists through our
+                integrated messaging system.
               </p>
             </div>
             <div className="flex flex-col items-center gap-3 max-w-xs">
               <Upload size={28} />
               <h3 className="text-base font-semibold">Share Your Music</h3>
               <p className="text-white/70 text-sm">
-                Upload your tracks and promote them to a wider audience within the community.
+                Upload your tracks and promote them to a wider audience within
+                the community.
               </p>
             </div>
           </motion.div>
@@ -435,7 +447,7 @@ export default function Community() {
           delay: 1.5,
           duration: 0.8,
           repeat: Infinity,
-          repeatType: 'loop',
+          repeatType: "loop",
           repeatDelay: 2,
         }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-base animate-bounce"

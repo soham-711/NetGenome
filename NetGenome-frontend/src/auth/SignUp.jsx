@@ -44,7 +44,7 @@ export default function SignUp() {
     try {
     const cred = await signInWithPopup(auth, providerGoogle);
     const firebaseUser = cred.user;
-    await axios.post("http://localhost:5000/api/user/create-or-login", {
+    await axios.post("https://netgenome-1.onrender.com/api/user/create-or-login", {
       email: firebaseUser.email,
     });
       navigate("/home", { replace: true });
