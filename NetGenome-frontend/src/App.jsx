@@ -35,7 +35,7 @@ import WalletConnectPage from "./components/WalletConnectPage";
 import PurchasedList from "./components/PurchasedList";
 import Catalog from "./components/Catalogs";
 import UploadMagazine from "./components/UploadMagazine";
-import EditProfile from "./components/EditProfile";
+import{EditModal} from "./components/EditModal";
 import ArtistDashboard from "./components/ArtistDashboard";
 import RoleRedirect from "./components/RoleRedirect";
 
@@ -101,18 +101,12 @@ export default function App() {
           {/* 🔐 Protected routes */}
 
           <Route
-            path="/dashboard"
-            element={
-              <ProtectedRoute>
-                <RoleRedirect />
-              </ProtectedRoute>
-            }
-          />
-          <Route
             path="/home"
             element={
-              <ProtectedRoute allowedRoles={["admin", "artist", "user"]}>
-                <Home />
+              <ProtectedRoute>
+                <RoleRedirect>
+                  <Home />
+                </RoleRedirect>
               </ProtectedRoute>
             }
           />
@@ -260,27 +254,27 @@ export default function App() {
               </ProtectedRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/admin/upload-magazine"
             element={
               <ProtectedRoute allowedRoles={["admin"]}>
                 <UploadMagazine />
               </ProtectedRoute>
             }
-          />
+          /> */}
 
           <Route
             path="/artist/edit-profile"
             element={
-              <ProtectedRoute allowedRoles={["artist"]}>
-                <EditProfile />
+              <ProtectedRoute>
+                <EditModal />
               </ProtectedRoute>
             }
           />
           <Route
             path="/artist/dashboard"
             element={
-              <ProtectedRoute allowedRoles={["artist"]}>
+              <ProtectedRoute>
                 <ArtistDashboard />
               </ProtectedRoute>
             }

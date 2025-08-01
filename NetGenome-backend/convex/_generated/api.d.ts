@@ -27,6 +27,7 @@ import type * as matched from "../matched.js";
 import type * as removeFromCart from "../removeFromCart.js";
 import type * as seedArtists from "../seedArtists.js";
 import type * as submitArtistRequest from "../submitArtistRequest.js";
+import type * as uploadImage from "../uploadImage.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -51,6 +52,7 @@ declare const fullApi: ApiFromModules<{
   removeFromCart: typeof removeFromCart;
   seedArtists: typeof seedArtists;
   submitArtistRequest: typeof submitArtistRequest;
+  uploadImage: typeof uploadImage;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

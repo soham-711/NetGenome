@@ -12,6 +12,7 @@ import getArtist from "./api/findArtists.js";
 import pdfParserRoute from "./api/uploadParser.js";
 import artistRoutes from "./router/artistRoutes.js";
 import userRoutes from "./router/userRoutes.js";
+import uploadRoutes from "./router/uploadRoutes.js";
 dotenv.config();
 import unlock from "./api/unlock.js";
 const app = express();
@@ -45,6 +46,7 @@ app.use("/api/artist", getArtist);
 app.use("/api/upload-magazine", pdfParserRoute);
 app.use("/api", artistRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api", uploadRoutes);
 // Health check endpoint
 app.get("/health", (req, res) => {
   res.status(200).json({

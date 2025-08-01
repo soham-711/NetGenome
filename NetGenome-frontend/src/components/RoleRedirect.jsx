@@ -3,23 +3,27 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-export default function RoleRedirect() {
-  const { userData, loading } = useAuth();
+export default function RoleRedirect({children}) {
+  const { user, loading , userData,userDataLoading} = useAuth();
+  
+  console.log(userData);
+
+  
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!loading && userData) {
+    
+    if (!loading && user && userData && !userDataLoading) {
       if (userData.role === "artist") {
-        navigate("/artist/dashboard");
+        navigate("/artist/dashboard",{ replace: true });
+        
       } else {
-        navigate("/home");
-        
-        
+        navigate("/home")
       }
     }
-  }, [userData, loading, navigate]);
+  }, [user, loading, navigate, userData, userDataLoading]);
 
-  if (loading) return <div className="text-white text-center p-10">Loading...</div>;
+  if (loading ||userDataLoading ) return <div className="text-red-500 text-center p-10 m-auto">Loading...</div>;
 
-  return null;
+  return children;
 }
