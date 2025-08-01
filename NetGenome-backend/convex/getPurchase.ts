@@ -27,3 +27,20 @@ export const getPurchasedProfiles = query({
     return matchingArtists;
   },
 });
+
+
+
+export const getPurchasedProfilesAll = query({
+  args: {
+    userId: v.string(),
+  },
+  handler: async (ctx, { userId }) => {
+    const purchased = await ctx.db
+      .query("purchasedArtists")  // your table name
+      .withIndex("by_user", (q) => q.eq("userId", userId))
+      .collect();
+
+    return purchased;
+  },
+});
+

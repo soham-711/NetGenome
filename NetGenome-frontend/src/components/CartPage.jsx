@@ -185,7 +185,7 @@ export default function Cart() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black">
         <div className="flex flex-col items-center">
-          <div className="w-16 h-16 border-4 border-t-green-400 border-r-blue-400 border-b-purple-400 border-l-pink-400 rounded-full animate-spin mb-4"></div>
+          <div className="w-16 h-16 border-4 border-t-gray-400 border-r-gray-700 border-b-red-200 border-l-blue-300 rounded-full animate-spin mb-4"></div>
           <p className="text-white text-lg">Loading your cart...</p>
         </div>
       </div>
@@ -199,7 +199,7 @@ export default function Cart() {
   return (
     <div className="min-h-screen overflow-hidden relative font-sans text-white bg-black px-4 py-8 sm:px-6 sm:py-12">
       {/* Background Gradient */}
-      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 opacity-30 pointer-events-none z-0"></div>
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-brown to-gray-900 opacity-30 pointer-events-none z-0"></div>
 
       {/* Floating Particles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
@@ -240,7 +240,7 @@ export default function Cart() {
         >
           <div className="flex items-center gap-3">
             <FiShoppingCart className="text-3xl text-green-400" />
-            <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-500 via-gray-400 to-gray-400">
               Your Cart
             </h1>
             {cartItems.length > 0 && (
@@ -254,7 +254,7 @@ export default function Cart() {
             {purchasedProfiles.length > 0 && (
               <button
                 onClick={() => setShowPurchasedPopup(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium rounded-md transition-all"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-500 via-gray-400 to-gray-400 hover:from-gray-600 hover:to-gray-600 text-white font-medium rounded-md transition-all"
               >
                 <IoMdMusicalNote />
                 My Purchases
@@ -325,7 +325,7 @@ export default function Cart() {
             </p>
             <button
               onClick={() => navigate("/ai_pop_up")}
-              className="px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-medium rounded-lg transition-all"
+              className="px-6 py-3 bg-gradient-to-r from-gray-500 via-gray-400 to-gray-400 hover:from-gray-600 hover:to-gray-600 text-white font-medium rounded-lg transition-all"
             >
               Browse Artists
             </button>
@@ -454,7 +454,7 @@ export default function Cart() {
                     className={`px-6 py-3 rounded-lg font-bold transition-all shadow-lg ${
                       paying || walletBalance < total
                         ? "bg-gray-600 cursor-not-allowed"
-                        : "bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600"
+                        : "bg-gradient-to-r from-gray-500 via-gray-400 to-gray-400 hover:from-gray-600 hover:to-gray-600"
                     }`}
                   >
                     {paying ? (

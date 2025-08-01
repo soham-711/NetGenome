@@ -35,13 +35,10 @@ export default function AILand() {
     dragStartY.current = null;
   };
 
-  const navItems = [
+    const navItems = [
     { name: 'Home', path: '/home' },
-    { name: 'Explore', path: '/explore' },
     { name: 'AI Chat', path: '/ai_chat_land' },
-    { name: 'Collaborations', path: '/collaborations' },
-    { name: 'Join Community', path: '/join-community' },
-    { name: 'Connect', path: '/connect' },
+    { name: 'My Purchase', path: '/my_purchase' },
   ];
 
   const pageVariants = {
@@ -81,6 +78,7 @@ export default function AILand() {
       onMouseUp={handleMouseUp}
     >
 
+      {/* Navbar */}
       {/* Navbar */}
       <motion.nav
         initial={{ y: -60, opacity: 0 }}

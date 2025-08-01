@@ -9,13 +9,10 @@ export default function AiPopUp() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const navItems = [
-    { label: 'Home', path: '/home' },
-    { label: 'Explore', path: '/explore' },
-    { label: 'AI Chat', path: '/ai_chat_land' },
-    { label: 'Collaborations', path: '/collaborations' },
-    { label: 'Join Community', path: '/join-community' },
-    { label: 'Connect', path: '/connect' },
+    const navItems = [
+    { name: 'Home', path: '/home' },
+    { name: 'AI Chat', path: '/ai_chat_land' },
+    { name: 'My Purchase', path: '/my_purchase' },
   ];
 
   // Auto-redirect after 1 second
@@ -43,6 +40,7 @@ export default function AiPopUp() {
       </div>
 
       {/* Navbar */}
+           {/* Navbar */}
       <motion.nav
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -57,7 +55,7 @@ export default function AiPopUp() {
               to={item.path}
               className="relative group text-white/80 hover:text-white transition duration-300"
             >
-              {item.label}
+              {item.name}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
             </Link>
           ))}

@@ -39,6 +39,7 @@ import{EditModal} from "./components/EditModal";
 import ArtistDashboard from "./components/ArtistDashboard";
 import RoleRedirect from "./components/RoleRedirect";
 import ViewArtistProfile from "./components/ViewArtistProfile";
+import MyPurchase from "./components/MyPurchased";
 
 export default function App() {
   const location = useLocation();
@@ -244,6 +245,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <PurchasedList />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/my_purchase"
+            element={
+              <ProtectedRoute>
+                <MyPurchase />
               </ProtectedRoute>
             }
           />

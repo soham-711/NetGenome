@@ -22,4 +22,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+
+router.post("/purchased-artists", async (req, res) => {
+  const { userId } = req.body;
+
+  try {
+    const purchased = await convex.query(api.getPurchase.getPurchasedProfilesAll, {
+      userId,
+    });
+    res.status(200).json({ purchased });
+  } catch (err) {
+    console.error("Error fetching purchased artists:", err);
+    res.status(500).json({ error: "Failed to fetch purchased artists" });
+  }
+});
+
+
 export default router;

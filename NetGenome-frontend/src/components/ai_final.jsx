@@ -841,13 +841,10 @@ export default function AiFinal() {
     }
   }, [chat, isLoading]); // auto-scroll when new messages arrive or loading starts
 
-  const navItems = [
-    { label: "Home", path: "/home" },
-    { label: "Explore", path: "/explore" },
-    { label: "AI Chat", path: "/ai_chat_land" },
-    { label: "Collaborations", path: "/collaborations" },
-    { label: "Join Community", path: "/join-community" },
-    { label: "Connect", path: "/connect" },
+    const navItems = [
+    { name: 'Home', path: '/home' },
+    { name: 'AI Chat', path: '/ai_chat_land' },
+    { name: 'My Purchase', path: '/my_purchase' },
   ];
 
   // Initialize the conversation
@@ -1700,11 +1697,12 @@ export default function AiFinal() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-0" />
 
       {/* Navbar */}
+     {/* Navbar */}
       <motion.nav
-        initial={{ y: -80, opacity: 0 }}
+        initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-6 md:px-24 z-50"
+        transition={{ duration: 0.8 }}
+        className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-6 md:px-24 z-50 bg-transparent"
       >
         <img src={logo} alt="Logo" className="h-10 w-auto" />
         <div className="hidden md:flex gap-8 items-center text-white text-sm">
@@ -1714,14 +1712,11 @@ export default function AiFinal() {
               to={item.path}
               className="relative group text-white/80 hover:text-white transition duration-300"
             >
-              {item.label}
+              {item.name}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
             </Link>
           ))}
-          <Link
-            to="/cart"
-            className="hover:text-white text-white/80 transition duration-300"
-          >
+          <Link to="/cart" className="hover:text-white text-white/80 transition duration-300">
             <ShoppingCart className="w-5 h-5" />
           </Link>
         </div>

@@ -936,7 +936,7 @@ const navigate = useNavigate()
   const renderCreative = () => (
     <div className="space-y-8">
       <div className="space-y-2">
-        <label className="block text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
+        <label className=" text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
           <Mic className="h-5 w-5 text-indigo-400" />
           Songwriting Process
         </label>
@@ -950,7 +950,7 @@ const navigate = useNavigate()
         />
       </div>
       <div className="space-y-2">
-        <label className="block text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
+        <label className=" text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
           <Headphones className="h-5 w-5 text-indigo-400" />
           Production Process
         </label>
@@ -969,7 +969,7 @@ const navigate = useNavigate()
   const renderAvailability = () => (
     <div className="space-y-8">
       <div className="space-y-4">
-        <label className="block text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
+        <label className=" text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
           <Calendar className="h-5 w-5 text-cyan-400" />
           Current Projects
         </label>
@@ -982,7 +982,7 @@ const navigate = useNavigate()
       </div>
 
       <div className="space-y-4">
-        <label className="block text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
+        <label className=" text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
           <Sparkles className="h-5 w-5 text-cyan-400" />
           Looking For
         </label>
@@ -1143,7 +1143,7 @@ const navigate = useNavigate()
   const renderQuotes = () => (
     <div className="space-y-6">
       <div className="space-y-4">
-        <label className="block text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
+        <label className=" text-sm font-bold text-white flex items-center gap-2 drop-shadow-lg">
           <Quote className="h-5 w-5 text-orange-400" />
           Inspirational Quotes & Philosophy
         </label>
