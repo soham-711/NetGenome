@@ -38,6 +38,7 @@ import UploadMagazine from "./components/UploadMagazine";
 import{EditModal} from "./components/EditModal";
 import ArtistDashboard from "./components/ArtistDashboard";
 import RoleRedirect from "./components/RoleRedirect";
+import ViewArtistProfile from "./components/ViewArtistProfile";
 
 export default function App() {
   const location = useLocation();
@@ -254,14 +255,14 @@ export default function App() {
               </ProtectedRoute>
             }
           />
-          {/* <Route
-            path="/admin/upload-magazine"
+          <Route
+            path="/artist/profile"
             element={
-              <ProtectedRoute allowedRoles={["admin"]}>
-                <UploadMagazine />
+              <ProtectedRoute >
+                <ViewArtistProfile/>
               </ProtectedRoute>
             }
-          /> */}
+          />
 
           <Route
             path="/artist/edit-profile"

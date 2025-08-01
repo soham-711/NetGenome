@@ -113,15 +113,19 @@ export const updateArtistByArtistID = mutation({
     }),
   },
   handler: async (ctx, { artistID, updates }) => {
+    console.log("🔍 Looking for artist with ID:", artistID);
+
     const artist = await ctx.db
       .query("artists")
       .withIndex("by_artistID", (q) => q.eq("artistID", artistID))
       .first();
 
     if (!artist) {
-      throw new Error("Artist not found");
+      console.error("❌ Artist not found in Convex DB:", artistID);
+      throw new Error("Artist not found. Double-check artistID and index.");
     }
 
     await ctx.db.patch(artist._id, updates);
+    console.log("✅ Artist updated:", artistID);
   },
 });

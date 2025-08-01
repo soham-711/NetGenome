@@ -40,10 +40,14 @@ const convex = new ConvexHttpClient(process.env.CONVEX_URL);
 
 export const uploadImageController = async (req, res) => {
   try {
-    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+    if (!req.file) {
+      return res.status(400).json({ error: "No file uploaded" });
+    }
 
+    // Step 1: Get the signed upload URL from Convex
     const uploadUrl = await convex.action(api.uploadImage.getUploadUrl, {});
 
+    // Step 2: Upload file to Convex using fetch
     const uploadRes = await fetch(uploadUrl, {
       method: "POST",
       headers: {
@@ -55,7 +59,13 @@ export const uploadImageController = async (req, res) => {
 
     const { storageId } = await uploadRes.json();
 
-    res.status(200).json({ storageId }); // ✅ return to frontend
+    // Step 3: Use storageId to get a real usable image URL
+    const imageUrl = await convex.action(api.uploadImage.getImageUrl, {
+      storageId,
+    });
+
+    // ✅ Final response to frontend
+    res.status(200).json({ imageUrl });
   } catch (error) {
     console.error("Image upload error:", error);
     res.status(500).json({ error: "Failed to upload image" });

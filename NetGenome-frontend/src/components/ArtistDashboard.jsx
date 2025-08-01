@@ -321,7 +321,7 @@ const navigate = useNavigate();
       if (activeModal === "edit") {
         navigate("/artist/edit-profile", { state: response.data }); // ✅ Pass data via state
       } else if (activeModal === "view") {
-        navigate("/view-artist-profile", { state: response.data });
+        navigate("/artist/profile", { state: response.data });
       }
     } catch (error) {
       console.error("Failed to fetch artist profile:", error);
