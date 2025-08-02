@@ -860,7 +860,7 @@ export default function AiFinal() {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `http://localhost:5000/api/onboarding/step?stepIndex=0`
+        `https://netgenome-1.onrender.com/api/onboarding/step?stepIndex=0`
       );
 
       const data = response.data;
@@ -952,7 +952,7 @@ export default function AiFinal() {
       ) {
         try {
           const nlpResponse = await axios.post(
-            "http://localhost:5000/api/onboarding/process-message",
+            "https://netgenome-1.onrender.com/api/onboarding/process-message",
             {
               message: input,
               stepIndex: currentStepIndex,
@@ -982,7 +982,7 @@ export default function AiFinal() {
 
       // Step 7: Send answer to backend and get next step
       const response = await axios.post(
-        "http://localhost:5000/api/onboarding/step",
+        "https://netgenome-1.onrender.com/api/onboarding/step",
         {
           stepIndex: currentStepIndex,
           answer: processedAnswer,
@@ -1192,7 +1192,7 @@ export default function AiFinal() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/onboarding/chat",
+        "https://netgenome-1.onrender.com/api/onboarding/chat",
         {
           message: message,
           userProfile: userProfile,
@@ -1307,7 +1307,7 @@ export default function AiFinal() {
 
       // Call your matching API
       const matchingResponse = await axios.post(
-        "http://localhost:5000/api/match",
+        "https://netgenome-1.onrender.com/api/match",
         backendData
       );
 

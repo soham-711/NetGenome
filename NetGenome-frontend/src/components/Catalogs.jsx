@@ -868,7 +868,7 @@ const ArtistProfile = () => {
   useEffect(() => {
     const fetchArtist = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/api/artist", {
+        const res = await axios.post("https://netgenome-1.onrender.com/api/artist", {
           artistId: id,
         });
         setArtist(res.data.artist);

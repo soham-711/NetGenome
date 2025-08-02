@@ -381,7 +381,7 @@ const navigate = useNavigate()
         imageForm.append("image", formData.imageFile);
 
         const imageUploadRes = await fetch(
-          "http://localhost:5000/api/upload-image",
+          "https://netgenome-1.onrender.com/api/upload-image",
           {
             method: "POST",
             body: imageForm,
@@ -405,7 +405,7 @@ const navigate = useNavigate()
       validUpdates.imageUrl = imageUrl;
 
       // Step 4: Send to update endpoint
-      const res = await fetch("http://localhost:5000/api/artists/update", {
+      const res = await fetch("https://netgenome-1.onrender.com/api/artists/update", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

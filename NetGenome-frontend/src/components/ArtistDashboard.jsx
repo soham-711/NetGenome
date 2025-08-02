@@ -450,7 +450,7 @@ const ArtistDashboard = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/artist/by-id",
+        "https://netgenome-1.onrender.com/api/artist/by-id",
         {
           artistID: artistId,
         }

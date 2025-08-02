@@ -56,7 +56,7 @@ const Matches = () => {
       for (const artist of allArtists) {
         try {
           const res = await axios.post(
-            "http://localhost:5000/api/hasPurchased",
+            "https://netgenome-1.onrender.com/api/hasPurchased",
             {
               userId: user.uid,
               artistId: artist._id,
@@ -90,7 +90,7 @@ const Matches = () => {
       const userId = user.uid;
       setJustAddedId(artist._id);
 
-      const res = await axios.post("http://localhost:5000/api/cart/add", {
+      const res = await axios.post("https://netgenome-1.onrender.com/api/cart/add", {
         artistId: artist._id,
         userId,
       });

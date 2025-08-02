@@ -31,7 +31,7 @@ export default function MyPurchase() {
         // Using environment variable for API base URL
 
         const response = await axios.post(
-          "http://localhost:5000/api/purchased",
+          "https://netgenome-1.onrender.com/api/purchased",
           {
             userId: user.uid,
           }

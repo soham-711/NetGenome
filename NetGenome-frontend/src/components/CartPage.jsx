@@ -49,10 +49,10 @@ export default function Cart() {
       try {
         setLoading(true);
         const [cartRes, purchasedRes] = await Promise.all([
-          axios.post("http://localhost:5000/api/cart/get", {
+          axios.post("https://netgenome-1.onrender.com/api/cart/get", {
             userId: user.uid,
           }),
-          axios.post("http://localhost:5000/api/purchased", {
+          axios.post("https://netgenome-1.onrender.com/api/purchased", {
             userId: user.uid,
           }),
         ]);
@@ -79,7 +79,7 @@ export default function Cart() {
 
   const handleRemove = async (artistId) => {
     try {
-      await axios.post("http://localhost:5000/api/cart/remove", {
+      await axios.post("https://netgenome-1.onrender.com/api/cart/remove", {
         artistId,
         userId: user.uid,
       });
@@ -147,7 +147,7 @@ export default function Cart() {
       }));
 
       // ✅ Step 3: Notify backend to unlock access
-      const res = await axios.post("http://localhost:5000/api/unlock", {
+      const res = await axios.post("https://netgenome-1.onrender.com/api/unlock", {
         transactionSignature: txSig,
         userId: user.uid,
         purchases,
