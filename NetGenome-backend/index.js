@@ -26,6 +26,7 @@ app.use(
       "http://localhost:5173",
       "http://localhost:5174", // ✅ Add this
       "https://net-genome.vercel.app",
+      "https://net-genome-artist.vercel.app/",
     ],
     credentials: true,
   })
