@@ -34,7 +34,6 @@ import CartPage from "./components/CartPage";
 import WalletConnectPage from "./components/WalletConnectPage";
 import PurchasedList from "./components/PurchasedList";
 import Catalog from "./components/Catalogs";
-import UploadMagazine from "./components/UploadMagazine";
 import{EditModal} from "./components/EditModal";
 import ArtistDashboard from "./components/ArtistDashboard";
 import RoleRedirect from "./components/RoleRedirect";
