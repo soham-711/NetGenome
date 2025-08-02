@@ -36,6 +36,7 @@ export default function MyPurchase() {
             userId: user.uid,
           }
         );
+        
 
         if (response.data?.success && Array.isArray(response.data.data)) {
           setPurchased(response.data.data);
@@ -317,7 +318,9 @@ export default function MyPurchase() {
 
                     {/* Artist Info */}
                     <div className="relative z-10 text-center space-y-3">
-                      <Link to={getCatalogRoute(item.artistID)}>
+                      
+                      <Link to={`/catalog/${item._id}`}>
+                      
                         <motion.h3
                           className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-white bg-clip-text text-transparent hover:from-white hover:to-teal-400 transition-all duration-300 cursor-pointer"
                           whileHover={{ scale: 1.05 }}
@@ -379,13 +382,7 @@ export default function MyPurchase() {
                 Artists
               </div>
             </div>
-            <div className="w-px h-8 bg-slate-600"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">∞</div>
-              <div className="text-xs text-slate-400 uppercase tracking-wide">
-                Possibilities
-              </div>
-            </div>
+           
           </div>
         </motion.div>
       )}

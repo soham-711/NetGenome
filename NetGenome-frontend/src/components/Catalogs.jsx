@@ -326,8 +326,6 @@
 //   );
 // }
 
-
-
 // import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 // import { motion, AnimatePresence } from "framer-motion";
@@ -360,7 +358,7 @@
 //         });
 //         setArtist(res.data.artist);
 //         console.log(res.data.artist);
-        
+
 //       } catch (err) {
 //         console.error("Failed to fetch artist", err);
 //       } finally {
@@ -708,8 +706,6 @@
 //   );
 // }
 
-
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
@@ -851,15 +847,15 @@ const ReviewCard = ({ name, rating, text, width, index }) => (
 // Helper function to get country flag component
 const getCountryFlag = (country) => {
   const flags = {
-    'USA': <FaFlagUsa className="text-red-500" />,
-    'US': <FaFlagUsa className="text-red-500" />,
-    'United States': <FaFlagUsa className="text-red-500" />,
+    USA: <FaFlagUsa className="text-red-500" />,
+    US: <FaFlagUsa className="text-red-500" />,
+    "United States": <FaFlagUsa className="text-red-500" />,
   };
   return flags[country] || <FaFlagUsa className="text-red-500" />;
 };
 
 // Helper function to safely get array data
-const safeArray = (arr) => Array.isArray(arr) ? arr : [];
+const safeArray = (arr) => (Array.isArray(arr) ? arr : []);
 
 const ArtistProfile = () => {
   const { id } = useParams();
@@ -891,20 +887,41 @@ const ArtistProfile = () => {
       <div className="min-h-screen flex items-center justify-center bg-black">
         <div className="text-center relative">
           <div className="relative w-32 h-32 mx-auto mb-8">
-            <div className="absolute inset-0 border border-purple-400 rounded-full animate-pulse"></div>
-            <div className="absolute inset-0 border border-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.33s'}}></div>
-            <div className="absolute inset-0 border border-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.66s'}}></div>
-            <div className="absolute inset-4 bg-purple-500 rounded-full flex items-center justify-center animate-pulse">
-              <svg className="w-8 h-8 text-white animate-spin" fill="none" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                <path className="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            <div className="absolute inset-0 border border-[#1f2937] rounded-full animate-pulse"></div>
+            <div
+              className="absolute inset-0 border border-[#1f2937] rounded-full animate-pulse"
+              style={{ animationDelay: "0.33s" }}
+            ></div>
+            <div
+              className="absolute inset-0 border border-[#1f2937] rounded-full animate-pulse"
+              style={{ animationDelay: "0.66s" }}
+            ></div>
+            <div className="absolute inset-4 bg-[#374151] rounded-full flex items-center justify-center animate-pulse">
+              <svg
+                className="w-8 h-8 text-[#60A5FA] animate-spin"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
             </div>
           </div>
-          <div className="text-xl font-medium text-purple-300 animate-pulse">
+          <div className="text-xl font-medium text-[#D1D5DB] animate-pulse">
             Loading artist profile...
           </div>
-          <div className="text-sm text-gray-400 mt-2">
+          <div className="text-sm text-[#6B7280] mt-2">
             Preparing something amazing ✨
           </div>
         </div>
@@ -918,8 +935,13 @@ const ArtistProfile = () => {
         <div className="text-center">
           <div className="text-6xl mb-4">😞</div>
           <div className="text-2xl font-bold mb-2">Artist not found</div>
-          <div className="text-gray-400">The artist you're looking for doesn't exist or has been removed.</div>
-          <Link to="/catalog" className="mt-4 inline-block px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
+          <div className="text-gray-400">
+            The artist you're looking for doesn't exist or has been removed.
+          </div>
+          <Link
+            to="/home"
+            className="mt-4 inline-block px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+          >
             Back to Catalog
           </Link>
         </div>
@@ -934,40 +956,65 @@ const ArtistProfile = () => {
   const getTabContent = () => {
     switch (activeTab) {
       case "Bio":
+        const name =
+          artist.identity?.realName || artist.displayName || "This artist";
+        const origin = artist.identity?.origin
+          ? `from ${artist.identity.origin}`
+          : "";
+        const location = artist.identity?.location
+          ? `currently based in ${artist.identity.location}`
+          : "";
+        const gender = artist.identity?.gender || "";
+        const languages = safeArray(artist.identity?.languages).join(", ");
+        const aliases = safeArray(artist.identity?.aliases).join(", ");
+
+        const bioParagraph = `
+    ${name} is a ${gender.toLowerCase()} artist ${origin}${
+          location ? `, ${location}` : ""
+        }. 
+    ${aliases ? `Also known as ${aliases}. ` : ""} 
+    They primarily speak ${languages || "an unspecified language"}. 
+    Known for their contributions to the blues and rock scene, ${
+      name.split(" ")[0]
+    } continues to grow their artistic journey with passion and dedication.
+  `;
+
         return (
           <div className="space-y-4">
             <p className="text-sm text-gray-300 leading-relaxed">
-              {artist.identity?.realName && `Real Name: ${artist.identity.realName}`}
+              {bioParagraph.trim().replace(/\s+/g, " ")}
             </p>
-            <p className="text-sm text-gray-300 leading-relaxed">
-              {artist.identity?.origin && `Origin: ${artist.identity.origin}`}
-            </p>
-            {safeArray(artist.identity?.aliases).length > 0 && (
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Also known as: {artist.identity.aliases.join(', ')}
-              </p>
-            )}
             <button className="text-sm text-blue-400 hover:underline">
               VIEW MORE
             </button>
           </div>
         );
+
       case "Artistic Background":
         return (
           <div className="space-y-4">
             {safeArray(artist.artistic_background?.roles).length > 0 && (
               <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Roles:</span> {artist.artistic_background.roles.join(', ')}
+                <span className="font-semibold">Roles:</span>{" "}
+                {artist.artistic_background.roles.join(", ")}
               </p>
             )}
             {safeArray(artist.artistic_background?.genres).length > 0 && (
               <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Genres:</span> {artist.artistic_background.genres.join(', ')}
+                <span className="font-semibold">Genres:</span>{" "}
+                {artist.artistic_background.genres.join(", ")}
               </p>
             )}
             {safeArray(artist.artistic_background?.influences).length > 0 && (
               <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Influences:</span> {artist.artistic_background.influences.join(', ')}
+                <span className="font-semibold">Influences:</span>{" "}
+                {artist.artistic_background.influences.join(", ")}
+              </p>
+            )}
+            {safeArray(artist.artistic_background?.skills).length > 0 && (
+              <p className="text-sm text-gray-300 leading-relaxed">
+                <span className="font-semibold">Skills:</span>{" "}
+                {artist.artistic_background.skills.join(", ")}
               </p>
             )}
             <button className="text-sm text-blue-400 hover:underline">
@@ -975,22 +1022,33 @@ const ArtistProfile = () => {
             </button>
           </div>
         );
+
       case "Career Highlights":
         return (
           <div className="space-y-4">
-            {artist.career?.education && (
-              <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Education:</span> {artist.career.education}
-              </p>
-            )}
+            {artist.career?.education &&
+              artist.career.education !== "Not specified" && (
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  <span className="font-semibold">Education:</span>{" "}
+                  {artist.career.education}
+                </p>
+              )}
             {safeArray(artist.career?.awards).length > 0 && (
               <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Awards:</span> {artist.career.awards.join(', ')}
+                <span className="font-semibold">Awards:</span>{" "}
+                {artist.career.awards.join(", ")}
               </p>
             )}
             {safeArray(artist.career?.performances).length > 0 && (
               <p className="text-sm text-gray-300 leading-relaxed">
-                <span className="font-semibold">Notable Performances:</span> {artist.career.performances.join(', ')}
+                <span className="font-semibold">Notable Performances:</span>{" "}
+                {artist.career.performances.join(", ")}
+              </p>
+            )}
+            {safeArray(artist.career?.collaborations).length > 0 && (
+              <p className="text-sm text-gray-300 leading-relaxed">
+                <span className="font-semibold">Collaborations:</span>{" "}
+                {artist.career.collaborations.join(", ")}
               </p>
             )}
             <button className="text-sm text-blue-400 hover:underline">
@@ -998,6 +1056,7 @@ const ArtistProfile = () => {
             </button>
           </div>
         );
+
       default:
         return null;
     }
@@ -1010,59 +1069,61 @@ const ArtistProfile = () => {
       year: "2020-06-12",
       label: "XO Records",
       details: "A haunting yet melodic journey through heartbreak and mystery.",
-      coverImage: profileImg
+      coverImage: profileImg,
     },
     {
       title: "Dawn FM",
       year: "2022-01-07",
       label: "Republic Records",
       details: "A synthwave experience wrapped in nostalgia and vision.",
-      coverImage: profileImg
+      coverImage: profileImg,
     },
     {
       title: "After Hours",
       year: "2020-03-20",
       label: "XO & Republic",
       details: "Dark, vulnerable, and captivating storytelling through R&B.",
-      coverImage: profileImg
-    }
+      coverImage: profileImg,
+    },
   ];
 
   // Use artist's discography if available, otherwise use default
-  const albums = safeArray(artist.discography).length > 0 ? 
-    safeArray(artist.discography) : 
-    defaultAlbums;
+  const albums = safeArray(artist.discography);
 
   // Default reviews if none provided
   const defaultReviews = [
     {
       reviewerName: "Music Producer",
       rating: 5,
-      comment: "Exceptional talent and professionalism. Working with this artist was a truly inspiring experience.",
+      comment:
+        "Exceptional talent and professionalism. Working with this artist was a truly inspiring experience.",
     },
     {
       reviewerName: "Fellow Artist",
       rating: 4,
-      comment: "Creative vision and dedication to craft are remarkable. Highly recommend for collaborations.",
+      comment:
+        "Creative vision and dedication to craft are remarkable. Highly recommend for collaborations.",
     },
     {
       reviewerName: "Industry Expert",
       rating: 5,
-      comment: "The artist's ability to blend different genres while maintaining a unique sound is unparalleled in the industry today. A true innovator.",
-    }
+      comment:
+        "The artist's ability to blend different genres while maintaining a unique sound is unparalleled in the industry today. A true innovator.",
+    },
   ];
 
   // Use artist's reviews if available, otherwise use default
-  const reviews = safeArray(artist.reviews).length > 0 ? 
-    safeArray(artist.reviews) : 
-    defaultReviews;
+  const reviews =
+    safeArray(artist.reviews).length > 0
+      ? safeArray(artist.reviews)
+      : defaultReviews;
 
   return (
     <div className="min-h-screen bg-black text-white font-sans relative overflow-hidden">
       {/* Top Background with Overlay */}
       <motion.div
         className="relative w-full h-[220px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgImg})` }}
+        style={{ backgroundImage: `url(${artist.imageUrl || bgImg})` }}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -1081,21 +1142,21 @@ const ArtistProfile = () => {
         <div className="lg:w-1/3 flex flex-col items-center lg:items-start">
           <img
             src={artist.imageUrl || profileImg}
-            alt={artist.displayName || 'Artist'}
+            alt={artist.displayName || "Artist"}
             className="rounded-full w-40 h-40 object-cover border-4 border-gray-700"
           />
           <div className="mt-6">
             <p className="uppercase text-gray-400 text-sm">Location</p>
             <div className="flex items-center space-x-2 mt-1">
-              {getCountryFlag(artist.identity?.location || 'USA')}
-              <span>{artist.identity?.location || 'Unknown'}</span>
+              {getCountryFlag(artist.identity?.location || "USA")}
+              <span>{artist.identity?.location || "Unknown"}</span>
             </div>
           </div>
 
           <div className="mt-6">
             <p className="uppercase text-gray-400 text-sm">Languages</p>
             <div className="flex flex-wrap gap-2 mt-2">
-              {safeArray(artist.identity?.languages).length > 0 ? 
+              {safeArray(artist.identity?.languages).length > 0 ? (
                 safeArray(artist.identity.languages).map((lang) => (
                   <span
                     key={lang}
@@ -1103,34 +1164,42 @@ const ArtistProfile = () => {
                   >
                     {lang}
                   </span>
-                )) : (
-                  <span className="px-3 py-1 text-sm rounded-full bg-gray-800">
-                    English
-                  </span>
-                )
-              }
+                ))
+              ) : (
+                <span className="px-3 py-1 text-sm rounded-full bg-gray-800">
+                  English
+                </span>
+              )}
             </div>
           </div>
 
           <div className="mt-6">
             <p className="uppercase text-gray-400 text-sm">Genre</p>
             <div className="flex flex-wrap gap-2 mt-2">
-              {safeArray(artist.artistic_background?.genres).length > 0 ? 
-                safeArray(artist.artistic_background.genres).slice(0, 5).map((genre) => (
-                  <span
-                    key={genre}
-                    className="px-3 py-1 text-sm rounded-full bg-gray-800"
-                  >
-                    {genre}
+              {safeArray(artist.artistic_background?.genres).length > 0 ? (
+                safeArray(artist.artistic_background.genres)
+                  .slice(0, 5)
+                  .map((genre) => (
+                    <span
+                      key={genre}
+                      className="px-3 py-1 text-sm rounded-full bg-gray-800"
+                    >
+                      {genre}
+                    </span>
+                  ))
+              ) : (
+                <>
+                  <span className="px-3 py-1 text-sm rounded-full bg-gray-800">
+                    Rock
                   </span>
-                )) : (
-                  <>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-800">Rock</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-800">Pop</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-gray-800">EDM</span>
-                  </>
-                )
-              }
+                  <span className="px-3 py-1 text-sm rounded-full bg-gray-800">
+                    Pop
+                  </span>
+                  <span className="px-3 py-1 text-sm rounded-full bg-gray-800">
+                    EDM
+                  </span>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -1138,13 +1207,15 @@ const ArtistProfile = () => {
         {/* Right section */}
         <div className="flex-1">
           <p className="text-gray-400 uppercase text-sm">
-            {safeArray(artist.artistic_background?.roles)[0] || 'Artist'}
+            {safeArray(artist.artistic_background?.roles)[0] || "Artist"}
           </p>
-          <h1 className="text-5xl font-bold mt-1">{artist.displayName || 'Unknown Artist'}</h1>
+          <h1 className="text-5xl font-bold mt-1">
+            {artist.displayName || "Unknown Artist"}
+          </h1>
 
           <div className="flex gap-4 mt-4">
             <span className="px-4 py-1 bg-gray-800 rounded-full text-sm">
-              ID : {artist._id || 'Unknown'}
+              ID : {artist._id || "Unknown"}
             </span>
             <span className="px-4 py-1 bg-gray-800 rounded-full text-sm">
               Price : ${artist.priceUSD || 0} USD
@@ -1176,43 +1247,49 @@ const ArtistProfile = () => {
       </motion.div>
 
       {/* Discography Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full min-h-screen bg-black text-white font-monda px-8 py-16"
-      >
-        <div className="flex flex-col lg:flex-row gap-20">
-          {/* Info Section */}
-          <div className="lg:w-[25%] flex flex-col space-y-5">
-            <div className="flex items-center space-x-4">
-              <FaMusic className="text-green-400 text-7xl" />
-              <h1 className="text-3xl md:text-5xl font-bold">DISCOGRAPHY</h1>
+      {albums.length === 0 ? (
+        <div className="h-[300px] flex justify-center items-center text-lg text-gray-400">
+          No discovery found
+        </div>
+      ) : (
+        // carousel logic
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="w-full min-h-screen bg-black text-white font-monda px-8 py-16"
+        >
+          <div className="flex flex-col lg:flex-row gap-20">
+            {/* Info Section */}
+            <div className="lg:w-[25%] flex flex-col space-y-5">
+              <div className="flex items-center space-x-4">
+                <FaMusic className="text-green-400 text-7xl" />
+                <h1 className="text-3xl md:text-5xl font-bold">DISCOGRAPHY</h1>
+              </div>
+              <img src={logo} alt="Logo" className="w-20" />
+              <h2 className="text-xl md:text-3xl font-bold">RECENTS</h2>
+              <p className="text-sm md:text-base leading-relaxed text-justify">
+                Explore the musical evolution through each of these iconic
+                albums. From ethereal sounds to bold lyrical storytelling, this
+                collection showcases versatility and emotional depth. Get lost
+                in melodies, lyrics, and moods.
+              </p>
             </div>
-            <img src={logo} alt="Logo" className="w-20" />
-            <h2 className="text-xl md:text-3xl font-bold">RECENTS</h2>
-            <p className="text-sm md:text-base leading-relaxed text-justify">
-              Explore the musical evolution through each of these iconic albums.
-              From ethereal sounds to bold lyrical storytelling, this collection
-              showcases versatility and emotional depth. Get lost in melodies,
-              lyrics, and moods.
-            </p>
-          </div>
 
-          {/* Album Carousel */}
-          <div className="flex-1 overflow-x-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-green-500 rounded-md">
-            <div className="flex gap-6 h-[500px] md:h-[600px]">
-              {albums.map((album, index) => {
-                const isHovered = hovered === index;
-                const isAnyHovered = hovered !== null;
+            {/* Album Carousel */}
+            <div className="flex-1 overflow-x-auto scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-green-500 rounded-md">
+              <div className="flex gap-6 h-[500px] md:h-[600px]">
+                {albums.map((album, index) => {
+                  const isHovered = hovered === index;
+                  const isAnyHovered = hovered !== null;
 
-                return (
-                  <div
-                    key={index}
-                    onMouseEnter={() => setHovered(index)}
-                    onMouseLeave={() => setHovered(null)}
-                    className={`relative rounded-xl overflow-hidden transition-all duration-500 flex-shrink-0
+                  return (
+                    <div
+                      key={index}
+                      onMouseEnter={() => setHovered(index)}
+                      onMouseLeave={() => setHovered(null)}
+                      className={`relative rounded-xl overflow-hidden transition-all duration-500 flex-shrink-0
                      ${
                        isHovered
                          ? "w-[60vw] md:w-[35vw]"
@@ -1222,116 +1299,142 @@ const ArtistProfile = () => {
                          ? "w-[60vw] md:w-[35vw]"
                          : "w-[10vw] md:w-[8vw]"
                      } h-full group cursor-pointer`}
-                  >
-                    <img
-                      src={album.coverImage || profileImg}
-                      alt={album.title || `Album ${index + 1}`}
-                      className="w-full h-full object-cover rounded-xl"
-                    />
-                    <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-start p-4 text-white">
-                      <p className="text-lg md:text-xl font-bold mb-2">
-                        {album.title || 'Untitled'}
-                      </p>
-                      <p className="text-sm">Release: {album.year || 'Unknown'}</p>
-                      <p className="text-sm">Label: {album.label || 'Independent'}</p>
-                      <p className="text-sm mt-2">{album.details || 'No details available'}</p>
+                    >
+                      {console.log(artist)}
+                      <img
+                        src={artist.imageUrl || profileImg}
+                        alt={album.title || `Album ${index + 1}`}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                      <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-start p-4 text-white">
+                        <p className="text-lg md:text-xl font-bold mb-2">
+                          {album.title || "Untitled"}
+                        </p>
+                        <p className="text-sm">
+                          Release: {album.year || "Unknown"}
+                        </p>
+                        <p className="text-sm">
+                          Label: {album.label || "Independent"}
+                        </p>
+                        <p className="text-sm mt-2">
+                          {album.details || "No details available"}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
+      )}
 
       {/* Creative Process Section */}
-      <section className="relative w-full min-h-screen overflow-hidden">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-          className="absolute inset-0"
-        >
-          <img
-            src={i15}
-            alt="Background"
-            className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto z-0 opacity-60 pointer-events-none"
-            style={{ objectFit: "contain" }}
-          />
-          <div className="absolute inset-0 bg-black/40 z-0" />
-        </motion.div>
-
-        <div className="relative z-10 max-w-6xl w-full mx-auto px-4 py-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-3xl md:text-5xl font-bold mb-10 flex items-center gap-2"
-          >
-            <span>🧠 CREATIVE PROCESSES</span>
-          </motion.h2>
-
+      {/* Creative Process Section */}
+      {(artist.creative_process?.songwriting_process ||
+        artist.creative_process?.production_process ||
+        artist.availability?.current_projects ||
+        artist.availability?.looking_for) && (
+        <section className="relative w-full min-h-screen overflow-hidden">
           <motion.div
-            variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
+            animate="visible"
+            variants={fadeIn}
+            className="absolute inset-0"
           >
-            <motion.div
-              variants={itemVariants}
-              className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-4">
-                Songwriting Process
-              </h3>
-              <p className="text-sm md:text-base">
-                {artist.creative_process?.songwriting_process || 
-                  "I typically start with a melody that comes to me in the early morning hours. I record voice memos on my phone, then build from there. Lyrics usually come last, and I draw inspiration from personal experiences, dreams, and literature."}
-              </p>
-              <p className="mt-4 font-semibold">— {artist.displayName || 'Artist'}</p>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-4">
-                Production Process
-              </h3>
-              <p className="text-sm md:text-base">
-                {artist.creative_process?.production_process || 
-                  "I produce most of my music in my home studio in Los Angeles. I use a combination of analog synths and digital processing to create layered, atmospheric soundscapes. I'm particularly fond of incorporating found sounds and field recordings."}
-              </p>
-              <p className="mt-4 font-semibold">— {artist.displayName || 'Artist'}</p>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-4">
-                Current Projects
-              </h3>
-              <p className="text-sm md:text-base">
-                {artist.availability?.current_projects || 
-                  "Currently working on new material that explores darker themes while pushing sonic boundaries. Collaborating with innovative producers to create something that feels both fresh and authentically Weeknd."}
-              </p>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
-            >
-              <h3 className="text-xl font-semibold mb-4">Looking For</h3>
-              <p className="text-sm md:text-base">
-                {artist.availability?.looking_for || 
-                  "Seeking unique visual artists and directors who can help bring the next chapter to life. Also interested in collaborating with forward-thinking producers who understand the Weeknd aesthetic but can bring new perspectives."}
-              </p>
-            </motion.div>
+            <img
+              src={i15}
+              alt="Background"
+              className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-auto z-0 opacity-60 pointer-events-none"
+              style={{ objectFit: "contain" }}
+            />
+            <div className="absolute inset-0 bg-black/40 z-0" />
           </motion.div>
-        </div>
-      </section>
+
+          <div className="relative z-10 max-w-6xl w-full mx-auto px-4 py-20">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-3xl md:text-5xl font-bold mb-10 flex items-center gap-2"
+            >
+              <span>🧠 CREATIVE PROCESSES</span>
+            </motion.h2>
+
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16"
+            >
+              {/* Songwriting Process */}
+              {artist.creative_process?.songwriting_process && (
+                <motion.div
+                  variants={itemVariants}
+                  className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
+                >
+                  <h3 className="text-xl font-semibold mb-4">
+                    Songwriting Process
+                  </h3>
+                  <p className="text-sm md:text-base">
+                    {artist.creative_process.songwriting_process}
+                  </p>
+                  <p className="mt-4 font-semibold">
+                    — {artist.displayName || "Artist"}
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Production Process */}
+              {artist.creative_process?.production_process && (
+                <motion.div
+                  variants={itemVariants}
+                  className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
+                >
+                  <h3 className="text-xl font-semibold mb-4">
+                    Production Process
+                  </h3>
+                  <p className="text-sm md:text-base">
+                    {artist.creative_process.production_process}
+                  </p>
+                  <p className="mt-4 font-semibold">
+                    — {artist.displayName || "Artist"}
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Current Projects */}
+              {artist.availability?.current_projects && (
+                <motion.div
+                  variants={itemVariants}
+                  className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
+                >
+                  <h3 className="text-xl font-semibold mb-4">
+                    Current Projects
+                  </h3>
+                  <p className="text-sm md:text-base">
+                    {artist.availability.current_projects}
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Looking For */}
+              {artist.availability?.looking_for && (
+                <motion.div
+                  variants={itemVariants}
+                  className="bg-white/10 border border-white/20 p-6 rounded-2xl shadow-md backdrop-blur-sm"
+                >
+                  <h3 className="text-xl font-semibold mb-4">Looking For</h3>
+                  <p className="text-sm md:text-base">
+                    {artist.availability.looking_for.join(", ")}.
+                  </p>
+                </motion.div>
+              )}
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Review Section */}
       <section className="w-full px-4 md:px-20 py-16 bg-black text-white">
@@ -1364,12 +1467,14 @@ const ArtistProfile = () => {
             }}
           >
             {reviews.map((review, idx) => (
-              <ReviewCard 
-                key={idx} 
-                index={idx} 
-                name={review.reviewerName || review.name || 'Anonymous'}
+              <ReviewCard
+                key={idx}
+                index={idx}
+                name={review.reviewerName || review.name || "Anonymous"}
                 rating={review.rating || 5}
-                text={review.comment || review.text || 'Great artist to work with!'}
+                text={
+                  review.comment || review.text || "Great artist to work with!"
+                }
                 width={idx % 3 === 2 ? 898 : 482}
               />
             ))}
@@ -1432,7 +1537,11 @@ const ArtistProfile = () => {
               >
                 <FaInstagram size={28} className="text-pink-500 mb-2" />
                 <span className="uppercase font-semibold">Instagram</span>
-                <span className="text-white/70">@{artist.displayName?.toLowerCase().replace(/\s+/g, '') || 'artist'}</span>
+                <span className="text-white/70">
+                  @
+                  {artist.displayName?.toLowerCase().replace(/\s+/g, "") ||
+                    "artist"}
+                </span>
               </a>
 
               <a
@@ -1443,7 +1552,11 @@ const ArtistProfile = () => {
               >
                 <FaFacebookF size={28} className="text-blue-500 mb-2" />
                 <span className="uppercase font-semibold">Facebook</span>
-                <span className="text-white/70">@{artist.displayName?.toLowerCase().replace(/\s+/g, '') || 'artist'}</span>
+                <span className="text-white/70">
+                  @
+                  {artist.displayName?.toLowerCase().replace(/\s+/g, "") ||
+                    "artist"}
+                </span>
               </a>
             </motion.div>
 
@@ -1474,7 +1587,11 @@ const ArtistProfile = () => {
               >
                 <FaXTwitter size={28} className="text-white mb-2" />
                 <span className="uppercase font-semibold">Twitter</span>
-                <span className="text-white/70">@{artist.displayName?.toLowerCase().replace(/\s+/g, '') || 'artist'}</span>
+                <span className="text-white/70">
+                  @
+                  {artist.displayName?.toLowerCase().replace(/\s+/g, "") ||
+                    "artist"}
+                </span>
               </a>
 
               <a
@@ -1485,7 +1602,12 @@ const ArtistProfile = () => {
               >
                 <FaYoutube size={28} className="text-red-600 mb-2" />
                 <span className="uppercase font-semibold">YouTube</span>
-                <span className="text-white/70">@{artist.displayName?.toLowerCase().replace(/\s+/g, '') || 'artist'}Live</span>
+                <span className="text-white/70">
+                  @
+                  {artist.displayName?.toLowerCase().replace(/\s+/g, "") ||
+                    "artist"}
+                  Live
+                </span>
               </a>
             </motion.div>
           </motion.div>
@@ -1516,10 +1638,10 @@ const ArtistProfile = () => {
               now streaming on various platforms
             </p>
             <p className="text-sm text-white/80 mb-6 leading-relaxed">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat."
+              "Discover the artist's unique sound across global streaming
+              platforms. From chart-topping hits to hidden gems, their music is
+              now available for you to experience on Apple Music, Spotify,
+              SoundCloud, and more. "
             </p>
             <div className="flex flex-wrap gap-6 text-white/90">
               <div className="flex items-center gap-2">
@@ -1548,20 +1670,22 @@ const ArtistProfile = () => {
             <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
               QUOTES
             </h2>
-            <p className="text-sm text-white/80 leading-relaxed mb-4">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla "
-            </p>
-            <p className="text-sm text-white/80 leading-relaxed">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-              <span className="text-blue-300">Ut enim ad minim veniam</span>,
-              quis nostrud in{" "}
-              <span className="text-blue-300">reprehenderit in voluptate</span>{" "}
-              velit esse cillum dolore eu fugiat nulla "
-            </p>
+
+            {Array.isArray(artist.quotes) && artist.quotes.length > 0 ? (
+              artist.quotes.map((quote, index) => (
+                <p
+                  key={index}
+                  className="text-sm text-white/80 leading-relaxed mb-4 last:mb-0"
+                >
+                  &quot;{quote}&quot;
+                </p>
+              ))
+            ) : (
+              <p className="text-sm text-white/80 leading-relaxed">
+                &quot;No quotes found for this artist. Stay tuned for their
+                thoughts and inspirations!&quot;
+              </p>
+            )}
           </motion.div>
         </div>
       </section>
@@ -1578,7 +1702,8 @@ const ArtistProfile = () => {
           <div className="flex flex-col md:flex-row justify-between gap-10">
             <div className="max-w-md">
               <p className="text-lg font-serif">
-                NetGenome is the platform<br />
+                NetGenome is the platform
+                <br />
                 every music artist dreams of.
               </p>
             </div>
