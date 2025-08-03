@@ -15,16 +15,13 @@ import axios from "axios";
 
 import bgImage from "../assets/i11.png";
 import logo from "../assets/logo.png";
-import fallbackImg from "../assets/artist1.jpg";
+import fallbackImg from "../assets/artist.jpg";
 
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Explore", path: "/explore" },
-  { label: "AI Chat", path: "/ai_chat_land" },
-  { label: "Collaborations", path: "/collab" },
-  { label: "Community", path: "/community" },
-  { label: "Connect", path: "/connect" },
-];
+ const navItems = [
+    { name: 'Home', path: '/home' },
+    { name: 'AI Chat', path: '/ai_chat_land' },
+    { name: 'My Purchase', path: '/my_purchase' },
+  ];
 
 const Matches = () => {
   const location = useLocation();
@@ -299,45 +296,30 @@ const Matches = () => {
 
       <div className="absolute inset-0 bg-black/60 z-10" />
 
-      <motion.nav
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-6 lg:px-16 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10"
-      >
-        <Link to="/">
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-10 w-auto hover:opacity-90 transition-opacity"
-          />
-        </Link>
-
-        <div className="hidden md:flex gap-6 items-center text-white">
-          {navItems.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              className="relative group text-white/80 hover:text-white transition duration-300 text-sm font-medium"
+       {/* Navbar */}
+            <motion.nav
+              initial={{ y: -60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-6 md:px-24 z-50 bg-transparent"
             >
-              {item.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white group-hover:w-full transition-all duration-300" />
-            </Link>
-          ))}
-
-          <Link
-            to="/cart"
-            className="relative p-2 hover:text-white text-white/80 transition duration-300"
-          >
-            <ShoppingCart className="w-5 h-5" />
-            {addedItems.length > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center">
-                {addedItems.length}
-              </span>
-            )}
-          </Link>
-        </div>
-      </motion.nav>
+              <img src={logo} alt="Logo" className="h-10 w-auto" />
+              <div className="hidden md:flex gap-8 items-center text-white text-sm">
+                {navItems.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className="relative group text-white/80 hover:text-white transition duration-300"
+                  >
+                    {item.name}
+                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+                  </Link>
+                ))}
+                <Link to="/cart" className="hover:text-white text-white/80 transition duration-300">
+                  <ShoppingCart className="w-5 h-5" />
+                </Link>
+              </div>
+            </motion.nav>
 
       <div className="relative z-20 pt-28 px-6 lg:px-16 pb-16 space-y-12">
         <motion.div
