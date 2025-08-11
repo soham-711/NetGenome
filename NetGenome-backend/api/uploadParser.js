@@ -135,6 +135,7 @@ import {
 import { callGeminiForSchema } from "../parser/geminiParser.js"; // Gemini parser
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api.js";
+import { loadavg } from "os";
 
 dotenv.config();
 
@@ -194,6 +195,7 @@ router.post("/", upload.single("file"), async (req, res) => {
         const parsedArtists = await callGeminiForSchema(chunk);
         
         allArtists.push(...parsedArtists);
+       
       } catch (err) {
         console.warn("⚠ Gemini failed for chunk:", err);
       }
