@@ -40,6 +40,21 @@
 //       .platform-card:hover .platform-icon {
 //         transform: scale(1.1);
 //       }
+//       .glossy-black {
+//         background: linear-gradient(145deg, #030303 0%, #1a1a1a 100%);
+//         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+//         backdrop-filter: blur(10px);
+//         -webkit-backdrop-filter: blur(10px);
+//         border: 1px solid rgba(255, 255, 255, 0.05);
+//       }
+//       .neon-yellow {
+//         color: #e0ff00;
+//         text-shadow: 0 0 5px rgba(224, 255, 0, 0.5);
+//       }
+//       .neon-yellow-bg {
+//         background: rgba(224, 255, 0, 0.1);
+//         box-shadow: 0 0 10px rgba(224, 255, 0, 0.2);
+//       }
 //     `;
 //     document.head.appendChild(style);
 
@@ -48,25 +63,27 @@
 //     };
 //   }, []);
 
-//   // Dark mode color palette
+//   // Updated color palette with requested colors
 //   const colors = {
-//     primary: "bg-gradient-to-r from-indigo-600 to-purple-600",
-//     primaryHover: "hover:from-indigo-700 hover:to-purple-700",
-//     primaryText: "text-indigo-400",
-//     secondary: "bg-gradient-to-r from-emerald-500 to-teal-500",
-//     accent: "bg-gradient-to-r from-rose-500 to-orange-500",
-//     cardBg: "bg-gray-800/80",
-//     cardBorder: "border border-gray-700/50 shadow-lg shadow-gray-900/30",
+//     primary: "bg-gradient-to-r from-gray-700 to-gray-800",
+//     primaryHover: "hover:from-gray-800 hover:to-gray-900",
+//     primaryText: "text-gray-400",
+//     secondary: "bg-gradient-to-r from-gray-600 to-gray-700",
+//     accent: "neon-yellow-bg",
+//     cardBg: "glossy-black",
+//     cardBorder: "border border-gray-800 shadow-lg shadow-black/50",
 //     sectionTitle: "text-gray-100",
-//     bodyText: "text-gray-300",
+//     bodyText: "text-gray-400",
 //     lightBg: "bg-gradient-to-br from-gray-900 to-gray-800",
-//     tagBg: "bg-indigo-900/50 text-indigo-200 border border-indigo-800/50",
-//     tabActive: "bg-gray-700/80 text-white border-gray-600 shadow",
+//     tagBg: "bg-gray-800/80 text-gray-300 border border-gray-700",
+//     tabActive: "bg-gray-800 text-neon-yellow border-gray-700 shadow",
 //     tabInactive:
-//       "bg-gray-700/30 text-gray-300 border-gray-600 hover:bg-gray-700/50",
+//       "bg-gray-800/30 text-gray-400 border-gray-700 hover:bg-gray-800/50",
 //     hoverEffect:
-//       "hover:shadow-xl hover:shadow-indigo-900/20 hover:-translate-y-1 transition-all duration-300 ease-out",
-//     divider: "border-gray-700",
+//       "hover:shadow-xl hover:shadow-black/30 hover:-translate-y-1 transition-all duration-300 ease-out",
+//     divider: "border-gray-800",
+//     neonText: "neon-yellow",
+//     neonBorder: "border border-gray-700 hover:border-neon-yellow",
 //   };
 
 //   const tabs = [
@@ -118,7 +135,7 @@
 //               >
 //                 <div className="flex items-center mb-4">
 //                   <div
-//                     className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center text-white mr-3`}
+//                     className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
 //                   >
 //                     <svg
 //                       className="w-5 h-5"
@@ -140,9 +157,9 @@
 //                 </div>
 //                 <div className="space-y-3">
 //                   <div className="flex items-start space-x-3">
-//                     <div className="w-2 h-2 bg-indigo-400 rounded-full mt-2 flex-shrink-0"></div>
+//                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                     <div>
-//                       <span className="text-xs font-semibold uppercase tracking-wide text-indigo-300">
+//                       <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
 //                         Real Name
 //                       </span>
 //                       <p className={`${colors.bodyText} mt-1`}>
@@ -152,9 +169,9 @@
 //                   </div>
 //                   {safeArray(artist.identity?.aliases).length > 0 && (
 //                     <div className="flex items-start space-x-3">
-//                       <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+//                       <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                       <div>
-//                         <span className="text-xs font-semibold uppercase tracking-wide text-purple-300">
+//                         <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
 //                           Aliases
 //                         </span>
 //                         <p className={`${colors.bodyText} mt-1`}>
@@ -164,9 +181,9 @@
 //                     </div>
 //                   )}
 //                   <div className="flex items-start space-x-3">
-//                     <div className="w-2 h-2 bg-emerald-400 rounded-full mt-2 flex-shrink-0"></div>
+//                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                     <div>
-//                       <span className="text-xs font-semibold uppercase tracking-wide text-emerald-300">
+//                       <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
 //                         Origin
 //                       </span>
 //                       <p className={`${colors.bodyText} mt-1`}>
@@ -175,9 +192,9 @@
 //                     </div>
 //                   </div>
 //                   <div className="flex items-start space-x-3">
-//                     <div className="w-2 h-2 bg-rose-400 rounded-full mt-2 flex-shrink-0"></div>
+//                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                     <div>
-//                       <span className="text-xs font-semibold uppercase tracking-wide text-rose-300">
+//                       <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
 //                         Based In
 //                       </span>
 //                       <p className={`${colors.bodyText} mt-1`}>
@@ -193,7 +210,7 @@
 //               >
 //                 <div className="flex items-center mb-4">
 //                   <div
-//                     className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center text-white mr-3`}
+//                     className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
 //                   >
 //                     <svg
 //                       className="w-5 h-5"
@@ -214,8 +231,8 @@
 //                   </h3>
 //                 </div>
 //                 <div className="grid grid-cols-1 gap-4">
-//                   <div className="p-4 rounded-xl border border-gray-700 bg-gray-700/30">
-//                     <h4 className="font-semibold text-emerald-300 mb-2">
+//                   <div className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+//                     <h4 className={`font-semibold ${colors.neonText} mb-2`}>
 //                       Roles
 //                     </h4>
 //                     <div className="flex flex-wrap gap-2">
@@ -223,7 +240,7 @@
 //                         (role, i) => (
 //                           <span
 //                             key={i}
-//                             className="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-900/50 text-emerald-200"
+//                             className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}
 //                           >
 //                             {role}
 //                           </span>
@@ -231,8 +248,8 @@
 //                       )}
 //                     </div>
 //                   </div>
-//                   <div className="p-4 rounded-xl border border-gray-700 bg-gray-700/30">
-//                     <h4 className="font-semibold text-purple-300 mb-2">
+//                   <div className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+//                     <h4 className={`font-semibold ${colors.neonText} mb-2`}>
 //                       Genres
 //                     </h4>
 //                     <div className="flex flex-wrap gap-2">
@@ -240,7 +257,7 @@
 //                         (genre, i) => (
 //                           <span
 //                             key={i}
-//                             className="px-2.5 py-1 rounded-full text-xs font-medium bg-purple-900/50 text-purple-200"
+//                             className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}
 //                           >
 //                             {genre}
 //                           </span>
@@ -266,14 +283,14 @@
 //                     .map((work, index) => (
 //                       <div
 //                         key={index}
-//                         className="group relative overflow-hidden rounded-xl bg-gray-800/50 border border-gray-700 p-5"
+//                         className={`group relative overflow-hidden rounded-xl ${colors.cardBg} border ${colors.neonBorder} p-5`}
 //                       >
 //                         <div
 //                           className={`absolute top-0 left-0 right-0 h-1 ${colors.primary}`}
 //                         ></div>
 //                         <div className="flex items-center mb-3">
 //                           <div
-//                             className={`w-9 h-9 ${colors.primary} rounded-lg flex items-center justify-center text-white mr-3 text-xs font-bold`}
+//                             className={`w-9 h-9 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3 text-xs font-bold`}
 //                           >
 //                             {getYearDisplay(work.year)}
 //                           </div>
@@ -309,7 +326,7 @@
 //                 className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
 //               >
 //                 <div
-//                   className={`w-12 h-12 ${colors.primary} rounded-xl flex items-center justify-center text-white mx-auto mb-3`}
+//                   className={`w-12 h-12 ${colors.primary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
 //                 >
 //                   <svg
 //                     className="w-5 h-5"
@@ -337,7 +354,7 @@
 //                 className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
 //               >
 //                 <div
-//                   className={`w-12 h-12 ${colors.secondary} rounded-xl flex items-center justify-center text-white mx-auto mb-3`}
+//                   className={`w-12 h-12 ${colors.secondary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
 //                 >
 //                   <svg
 //                     className="w-5 h-5"
@@ -365,7 +382,7 @@
 //                 className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
 //               >
 //                 <div
-//                   className={`w-12 h-12 ${colors.accent} rounded-xl flex items-center justify-center text-white mx-auto mb-3`}
+//                   className={`w-12 h-12 ${colors.accent} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
 //                 >
 //                   <svg
 //                     className="w-5 h-5"
@@ -405,9 +422,9 @@
 //                       .map((collab, i) => (
 //                         <div
 //                           key={i}
-//                           className="flex items-start space-x-3 p-3 rounded-lg bg-gray-700/30"
+//                           className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50"
 //                         >
-//                           <div className="w-2 h-2 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
+//                           <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                           <p className={`text-sm ${colors.bodyText}`}>
 //                             {collab}
 //                           </p>
@@ -436,9 +453,9 @@
 //                       .map((performance, i) => (
 //                         <div
 //                           key={i}
-//                           className="flex items-start space-x-3 p-3 rounded-lg bg-gray-700/30"
+//                           className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50"
 //                         >
-//                           <div className="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></div>
+//                           <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
 //                           <p className={`text-sm ${colors.bodyText}`}>
 //                             {performance}
 //                           </p>
@@ -466,7 +483,7 @@
 //               >
 //                 <div className="flex items-center mb-4">
 //                   <div
-//                     className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center text-white mr-3`}
+//                     className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
 //                   >
 //                     ✍️
 //                   </div>
@@ -496,7 +513,7 @@
 //               >
 //                 <div className="flex items-center mb-4">
 //                   <div
-//                     className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center text-white mr-3`}
+//                     className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
 //                   >
 //                     🎛️
 //                   </div>
@@ -537,9 +554,9 @@
 //                       (project, i) => (
 //                         <div
 //                           key={i}
-//                           className="flex items-center space-x-3 p-3 rounded-lg bg-amber-900/20"
+//                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50"
 //                         >
-//                           <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></div>
+//                           <div className={`w-2 h-2 rounded-full ${colors.neonText} animate-pulse`}></div>
 //                           <span className={`text-sm ${colors.bodyText}`}>
 //                             {project}
 //                           </span>
@@ -568,9 +585,9 @@
 //                       (item, i) => (
 //                         <div
 //                           key={i}
-//                           className="flex items-center space-x-3 p-3 rounded-lg bg-green-900/20"
+//                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50"
 //                         >
-//                           <div className="w-2 h-2 rounded-full bg-green-400"></div>
+//                           <div className={`w-2 h-2 rounded-full ${colors.neonText}`}></div>
 //                           <span className={`text-sm ${colors.bodyText}`}>
 //                             {item}
 //                           </span>
@@ -616,12 +633,12 @@
 //                         className="platform-card group"
 //                       >
 //                         <div
-//                           className={`p-4 rounded-xl border border-gray-700 bg-gray-800/50 flex flex-col items-center text-center ${colors.hoverEffect}`}
+//                           className={`p-4 rounded-xl border ${colors.neonBorder} ${colors.cardBg} flex flex-col items-center text-center ${colors.hoverEffect}`}
 //                         >
 //                           <div className="platform-icon w-12 h-12 text-2xl mb-2 flex items-center justify-center">
 //                             {getPlatformIcon(platform.platform)}
 //                           </div>
-//                           <span className="text-sm font-medium text-gray-200 group-hover:text-white">
+//                           <span className="text-sm font-medium text-gray-200 group-hover:text-neon-yellow">
 //                             {platform.platform}
 //                           </span>
 //                           <span className="text-xs text-gray-400 mt-1">
@@ -693,7 +710,7 @@
 //                           href={platform.url}
 //                           target="_blank"
 //                           rel="noopener noreferrer"
-//                           className="px-3 py-2 rounded-lg bg-gray-700/50 hover:bg-gray-700 text-gray-200 hover:text-white transition-colors duration-300 flex items-center justify-center text-sm font-medium"
+//                           className="px-3 py-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-gray-200 hover:text-neon-yellow transition-colors duration-300 flex items-center justify-center text-sm font-medium"
 //                         >
 //                           {platform.platform}
 //                         </a>
@@ -720,7 +737,7 @@
 //                       key={i}
 //                       className="relative p-4 rounded-xl bg-gray-800/50 border border-gray-700"
 //                     >
-//                       <div className="absolute -top-1 -left-1 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-xs text-white">
+//                       <div className={`absolute -top-1 -left-1 w-6 h-6 ${colors.neonText} bg-opacity-20 rounded-full flex items-center justify-center text-xs`}>
 //                         "
 //                       </div>
 //                       <blockquote
@@ -745,7 +762,7 @@
 //     return (
 //       <div className="flex items-center justify-center min-h-screen bg-gray-900">
 //         <div className="text-center">
-//           <div className="animate-spin rounded-full h-12 w-12 border-4 border-transparent border-t-indigo-500 mx-auto mb-4"></div>
+//           <div className="animate-spin rounded-full h-12 w-12 border-4 border-transparent border-t-neon-yellow mx-auto mb-4"></div>
 //           <div className="text-lg font-medium text-gray-300 animate-pulse">
 //             Loading artist profile...
 //           </div>
@@ -758,7 +775,7 @@
 //     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-6 px-4 sm:px-6">
 //       <div className="max-w-6xl mx-auto">
 //         {/* Hero Section */}
-//         <div className="rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-6 md:p-8 mb-6 shadow-xl overflow-hidden relative border border-gray-700/50">
+//         <div className="rounded-2xl glossy-black p-6 md:p-8 mb-6 shadow-xl overflow-hidden relative border border-gray-800">
 //           {/* Subtle texture overlay */}
 //           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700/10 to-transparent opacity-20"></div>
 
@@ -768,7 +785,7 @@
 //               <div className="relative group">
 //                 {/* Artist image with elegant frame */}
 //                 <div
-//                   className={`w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-indigo-400/30 shadow-lg transition-all duration-500 ${
+//                   className={`w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-gray-700 shadow-lg transition-all duration-500 ${
 //                     isImageLoaded ? "group-hover:scale-105" : ""
 //                   }`}
 //                 >
@@ -785,7 +802,7 @@
 //                   )}
 //                 </div>
 //                 {/* Decorative element */}
-//                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-md">
+//                 <div className={`absolute -bottom-2 -right-2 w-6 h-6 ${colors.neonText} bg-opacity-20 rounded-full flex items-center justify-center text-xs font-bold shadow-md`}>
 //                   ★
 //                 </div>
 //               </div>
@@ -793,19 +810,19 @@
 
 //             <div className="flex-1 text-center md:text-left space-y-4">
 //               {/* Artist name with subtle gradient */}
-//               <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-purple-100 to-gray-100">
+//               <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-gray-100 to-gray-50">
 //                 {artist.displayName || "Unknown Artist"}
 //               </h1>
 
 //               {/* Pricing and tags section */}
 //               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
 //                 {/* Pricing badge */}
-//                 <div className="px-5 py-2.5 bg-indigo-600/20 backdrop-blur-md rounded-xl border border-indigo-400/30 inline-flex items-center justify-center gap-2 hover:bg-indigo-600/30 transition-colors duration-300">
-//                   <span className="font-bold text-indigo-100">
+//                 <div className={`px-5 py-2.5 ${colors.neonText} bg-opacity-20 backdrop-blur-md rounded-xl border ${colors.neonBorder} inline-flex items-center justify-center gap-2 hover:bg-opacity-30 transition-colors duration-300`}>
+//                   <span className="font-bold">
 //                     ${artist.priceUSD?.toLocaleString() || "0"}
 //                   </span>
-//                   <span className="text-sm text-indigo-200/80">Artist Fee</span>
-//                   <div className="w-4 h-4 flex items-center justify-center text-indigo-300">
+//                   <span className="text-sm">Artist Fee</span>
+//                   <div className="w-4 h-4 flex items-center justify-center">
 //                     <svg
 //                       xmlns="http://www.w3.org/2000/svg"
 //                       viewBox="0 0 20 20"
@@ -829,7 +846,7 @@
 //                       .map((tag, i) => (
 //                         <span
 //                           key={i}
-//                           className="px-3 py-1 bg-gray-700/60 backdrop-blur-sm rounded-lg text-xs font-medium text-gray-200 border border-gray-600/50 hover:bg-gray-700/80 transition-colors duration-200"
+//                           className={`px-3 py-1 ${colors.tagBg} rounded-lg text-xs font-medium hover:bg-gray-700 transition-colors duration-200`}
 //                         >
 //                           #{tag}
 //                         </span>
@@ -847,8 +864,8 @@
 //           </div>
 
 //           {/* Decorative corner elements */}
-//           <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-indigo-400/20 rounded-bl-2xl"></div>
-//           <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-indigo-400/20 rounded-tr-2xl"></div>
+//           <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gray-700 rounded-bl-2xl"></div>
+//           <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-gray-700 rounded-tr-2xl"></div>
 //         </div>
 
 //         {/* Tab Navigation */}
@@ -880,24 +897,21 @@
 
 // export default ViewArtistProfile;
 
-
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ViewArtistProfile = () => {
   const { state } = useLocation();
-  const artist = state;
+  const artist = state || {};
   const [activeTab, setActiveTab] = useState("overview");
   const [isLoading, setIsLoading] = useState(true);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);
 
-  // Add custom styles to head
   useEffect(() => {
     const style = document.createElement("style");
     style.textContent = `
@@ -938,15 +952,18 @@ const ViewArtistProfile = () => {
         background: rgba(224, 255, 0, 0.1);
         box-shadow: 0 0 10px rgba(224, 255, 0, 0.2);
       }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     `;
     document.head.appendChild(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
+    return () => document.head.removeChild(style);
   }, []);
 
-  // Updated color palette with requested colors
   const colors = {
     primary: "bg-gradient-to-r from-gray-700 to-gray-800",
     primaryHover: "hover:from-gray-800 hover:to-gray-900",
@@ -960,10 +977,8 @@ const ViewArtistProfile = () => {
     lightBg: "bg-gradient-to-br from-gray-900 to-gray-800",
     tagBg: "bg-gray-800/80 text-gray-300 border border-gray-700",
     tabActive: "bg-gray-800 text-neon-yellow border-gray-700 shadow",
-    tabInactive:
-      "bg-gray-800/30 text-gray-400 border-gray-700 hover:bg-gray-800/50",
-    hoverEffect:
-      "hover:shadow-xl hover:shadow-black/30 hover:-translate-y-1 transition-all duration-300 ease-out",
+    tabInactive: "bg-gray-800/30 text-gray-400 border-gray-700 hover:bg-gray-800/50",
+    hoverEffect: "hover:shadow-xl hover:shadow-black/30 hover:-translate-y-1 transition-all duration-300 ease-out",
     divider: "border-gray-800",
     neonText: "neon-yellow",
     neonBorder: "border border-gray-700 hover:border-neon-yellow",
@@ -974,9 +989,9 @@ const ViewArtistProfile = () => {
     { id: "career", label: "Career", icon: "🎵" },
     { id: "creative", label: "Creative", icon: "🎨" },
     { id: "presence", label: "Online", icon: "🌐" },
+    { id: "story", label: "Story", icon: "📖" },
   ];
 
-  // Helper functions
   const getYearDisplay = (year) => {
     if (!year) return "??";
     const yearStr = String(year);
@@ -985,7 +1000,6 @@ const ViewArtistProfile = () => {
 
   const safeArray = (arr) => (Array.isArray(arr) ? arr : []);
 
-  // Platform icons mapping
   const platformIcons = {
     spotify: "🎵",
     "apple music": "",
@@ -999,6 +1013,7 @@ const ViewArtistProfile = () => {
   };
 
   const getPlatformIcon = (platformName) => {
+    if (!platformName) return platformIcons.default;
     const lowerName = platformName.toLowerCase();
     for (const [key, icon] of Object.entries(platformIcons)) {
       if (lowerName.includes(key)) return icon;
@@ -1006,194 +1021,169 @@ const ViewArtistProfile = () => {
     return platformIcons.default;
   };
 
+  const formatYearsActive = (years) => {
+    if (!years) return "Unknown";
+    if (years.includes("-present")) return `Since ${years.split("-")[0]}`;
+    return years;
+  };
+
   const TabContent = ({ tabId }) => {
     switch (tabId) {
       case "overview":
         return (
           <div className="space-y-8 animate-fadeIn">
-            {/* Identity & Artistic Background */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}
-              >
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}>
                 <div className="flex items-center mb-4">
-                  <div
-                    className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
+                  <div className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
-                  <h3 className={`text-xl font-bold ${colors.sectionTitle}`}>
-                    Identity
-                  </h3>
+                  <h3 className={`text-xl font-bold ${colors.sectionTitle}`}>Identity</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
                     <div>
-                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
-                        Real Name
-                      </span>
-                      <p className={`${colors.bodyText} mt-1`}>
-                        {artist.identity?.realName || "Not specified"}
-                      </p>
+                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Real Name</span>
+                      <p className={`${colors.bodyText} mt-1`}>{artist.identity?.realName || "Not specified"}</p>
                     </div>
                   </div>
                   {safeArray(artist.identity?.aliases).length > 0 && (
                     <div className="flex items-start space-x-3">
                       <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
                       <div>
-                        <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
-                          Aliases
-                        </span>
-                        <p className={`${colors.bodyText} mt-1`}>
-                          {artist.identity.aliases.join(", ")}
-                        </p>
+                        <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Aliases</span>
+                        <p className={`${colors.bodyText} mt-1`}>{artist.identity.aliases.join(", ")}</p>
                       </div>
                     </div>
                   )}
                   <div className="flex items-start space-x-3">
                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
                     <div>
-                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
-                        Origin
-                      </span>
-                      <p className={`${colors.bodyText} mt-1`}>
-                        {artist.identity?.origin || "Not specified"}
-                      </p>
+                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Origin</span>
+                      <p className={`${colors.bodyText} mt-1`}>{artist.identity?.origin || "Not specified"}</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
                     <div>
-                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>
-                        Based In
-                      </span>
-                      <p className={`${colors.bodyText} mt-1`}>
-                        {artist.identity?.location || "Not specified"}
-                      </p>
+                      <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Based In</span>
+                      <p className={`${colors.bodyText} mt-1`}>{artist.identity?.location || "Not specified"}</p>
                     </div>
                   </div>
+                  {artist.identity?.birthYear && (
+                    <div className="flex items-start space-x-3">
+                      <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
+                      <div>
+                        <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Birth Year</span>
+                        <p className={`${colors.bodyText} mt-1`}>{artist.identity.birthYear}</p>
+                      </div>
+                    </div>
+                  )}
+                  {safeArray(artist.identity?.languages).length > 0 && (
+                    <div className="flex items-start space-x-3">
+                      <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
+                      <div>
+                        <span className={`text-xs font-semibold uppercase tracking-wide ${colors.neonText}`}>Languages</span>
+                        <p className={`${colors.bodyText} mt-1`}>{artist.identity.languages.join(", ")}</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}
-              >
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}>
                 <div className="flex items-center mb-4">
-                  <div
-                    className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      />
+                  <div className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
-                  <h3 className={`text-xl font-bold ${colors.sectionTitle}`}>
-                    Artistic Background
-                  </h3>
+                  <h3 className={`text-xl font-bold ${colors.sectionTitle}`}>Artistic Background</h3>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                   <div className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
-                    <h4 className={`font-semibold ${colors.neonText} mb-2`}>
-                      Roles
-                    </h4>
+                    <h4 className={`font-semibold ${colors.neonText} mb-2`}>Roles</h4>
                     <div className="flex flex-wrap gap-2">
-                      {safeArray(artist.artistic_background?.roles).map(
-                        (role, i) => (
-                          <span
-                            key={i}
-                            className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}
-                          >
-                            {role}
-                          </span>
-                        )
-                      )}
+                      {safeArray(artist.artistic_background?.roles).map((role, i) => (
+                        <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}>
+                          {role}
+                        </span>
+                      ))}
                     </div>
                   </div>
                   <div className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
-                    <h4 className={`font-semibold ${colors.neonText} mb-2`}>
-                      Genres
-                    </h4>
+                    <h4 className={`font-semibold ${colors.neonText} mb-2`}>Genres</h4>
                     <div className="flex flex-wrap gap-2">
-                      {safeArray(artist.artistic_background?.genres).map(
-                        (genre, i) => (
-                          <span
-                            key={i}
-                            className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}
-                          >
-                            {genre}
-                          </span>
-                        )
-                      )}
+                      {safeArray(artist.artistic_background?.genres).map((genre, i) => (
+                        <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}>
+                          {genre}
+                        </span>
+                      ))}
                     </div>
                   </div>
+                  {artist.artistic_background?.signature_style && (
+                    <div className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+                      <h4 className={`font-semibold ${colors.neonText} mb-2`}>Signature Style</h4>
+                      <p className={`text-sm ${colors.bodyText}`}>{artist.artistic_background.signature_style}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
 
-            {/* Discography Preview */}
-            {safeArray(artist.discography).length > 0 && (
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-6`}>
-                  Latest Releases
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {safeArray(artist.discography)
-                    .slice(0, 4)
-                    .map((work, index) => (
-                      <div
-                        key={index}
-                        className={`group relative overflow-hidden rounded-xl ${colors.cardBg} border ${colors.neonBorder} p-5`}
-                      >
-                        <div
-                          className={`absolute top-0 left-0 right-0 h-1 ${colors.primary}`}
-                        ></div>
-                        <div className="flex items-center mb-3">
-                          <div
-                            className={`w-9 h-9 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3 text-xs font-bold`}
-                          >
-                            {getYearDisplay(work.year)}
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-gray-100">
-                              {work.title || "Untitled"}
-                            </h4>
-                            <p className="text-xs text-gray-400">
-                              {work.type || "Unknown"}
-                            </p>
-                          </div>
-                        </div>
-                        <p className="text-xs font-medium text-gray-400">
-                          Label: {work.label || "Independent"}
-                        </p>
-                        <p className="mt-2 text-xs text-gray-300 line-clamp-2">
-                          {work.details || "No details available"}
-                        </p>
-                      </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {safeArray(artist.artistic_background?.influences).length > 0 && (
+                <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Influences</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {safeArray(artist.artistic_background.influences).map((influence, i) => (
+                      <span key={i} className={`px-3 py-1.5 rounded-lg text-sm font-medium ${colors.tagBg}`}>
+                        {influence}
+                      </span>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {safeArray(artist.artistic_background?.skills).length > 0 && (
+                <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Skills</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {safeArray(artist.artistic_background.skills).map((skill, i) => (
+                      <span key={i} className={`px-3 py-1.5 rounded-lg text-sm font-medium ${colors.tagBg}`}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {safeArray(artist.discography).length > 0 && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-6`}>Latest Releases</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {safeArray(artist.discography).slice(0, 4).map((work, index) => (
+                    <div key={index} className={`group relative overflow-hidden rounded-xl ${colors.cardBg} border ${colors.neonBorder} p-5`}>
+                      <div className={`absolute top-0 left-0 right-0 h-1 ${colors.primary}`}></div>
+                      <div className="flex items-center mb-3">
+                        <div className={`w-9 h-9 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3 text-xs font-bold`}>
+                          {getYearDisplay(work.year)}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-100">{work.title || "Untitled"}</h4>
+                          <p className="text-xs text-gray-400">{work.type || "Unknown"}</p>
+                        </div>
+                      </div>
+                      <p className="text-xs font-medium text-gray-400">Label: {work.label || "Independent"}</p>
+                      {work.details && (
+                        <p className="mt-2 text-xs text-gray-300 line-clamp-2">{work.details}</p>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -1203,157 +1193,98 @@ const ViewArtistProfile = () => {
       case "career":
         return (
           <div className="space-y-8 animate-fadeIn">
-            {/* Career Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div
-                className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
-              >
-                <div
-                  className={`w-12 h-12 ${colors.primary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
+              <div className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}>
+                <div className={`w-12 h-12 ${colors.primary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>
-                  Education
-                </h3>
-                <p className={`${colors.bodyText} text-xs`}>
-                  {artist.career?.education || "Not specified"}
-                </p>
+                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>Education</h3>
+                <p className={`${colors.bodyText} text-xs`}>{artist.career?.education || "Not specified"}</p>
               </div>
 
-              <div
-                className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
-              >
-                <div
-                  className={`w-12 h-12 ${colors.secondary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
+              <div className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}>
+                <div className={`w-12 h-12 ${colors.secondary} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>
-                  Collaborations
-                </h3>
-                <p className={`${colors.bodyText} text-xs`}>
-                  {safeArray(artist.career?.collaborations).length} projects
-                </p>
+                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>Collaborations</h3>
+                <p className={`${colors.bodyText} text-xs`}>{safeArray(artist.career?.collaborations).length} projects</p>
               </div>
 
-              <div
-                className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}
-              >
-                <div
-                  className={`w-12 h-12 ${colors.accent} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-                    />
+              <div className={`p-5 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} text-center group`}>
+                <div className={`w-12 h-12 ${colors.accent} rounded-xl flex items-center justify-center ${colors.neonText} mx-auto mb-3`}>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                   </svg>
                 </div>
-                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>
-                  Awards
-                </h3>
-                <p className={`${colors.bodyText} text-xs`}>
-                  {safeArray(artist.career?.awards).length} recognitions
-                </p>
+                <h3 className={`text-sm font-bold ${colors.sectionTitle} mb-1`}>Awards</h3>
+                <p className={`${colors.bodyText} text-xs`}>{safeArray(artist.career?.awards).length} recognitions</p>
               </div>
             </div>
 
-            {/* Detailed Career Info */}
+            {artist.career?.career_evolution && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Career Evolution</h3>
+                <p className={`${colors.bodyText} text-sm leading-relaxed`}>{artist.career.career_evolution}</p>
+                {artist.career?.years_active && (
+                  <div className="mt-4 flex items-center">
+                    <div className={`w-2 h-2 rounded-full ${colors.neonText} mr-2`}></div>
+                    <span className={`text-xs ${colors.neonText} font-medium`}>{formatYearsActive(artist.career.years_active)}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>
-                  Recent Collaborations
-                </h3>
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Recent Collaborations</h3>
                 <div className="space-y-3">
                   {safeArray(artist.career?.collaborations).length > 0 ? (
-                    safeArray(artist.career.collaborations)
-                      .slice(0, 5)
-                      .map((collab, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50"
-                        >
-                          <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
-                          <p className={`text-sm ${colors.bodyText}`}>
-                            {collab}
-                          </p>
-                        </div>
-                      ))
+                    safeArray(artist.career.collaborations).slice(0, 5).map((collab, i) => (
+                      <div key={i} className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50">
+                        <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
+                        <p className={`text-sm ${colors.bodyText}`}>{collab}</p>
+                      </div>
+                    ))
                   ) : (
-                    <p
-                      className={`${colors.bodyText} text-center italic text-sm`}
-                    >
-                      No collaborations listed
-                    </p>
+                    <p className={`${colors.bodyText} text-center italic text-sm`}>No collaborations listed</p>
                   )}
                 </div>
               </div>
 
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>
-                  Notable Performances
-                </h3>
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Notable Performances</h3>
                 <div className="space-y-3">
                   {safeArray(artist.career?.performances).length > 0 ? (
-                    safeArray(artist.career.performances)
-                      .slice(0, 5)
-                      .map((performance, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50"
-                        >
-                          <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
-                          <p className={`text-sm ${colors.bodyText}`}>
-                            {performance}
-                          </p>
-                        </div>
-                      ))
+                    safeArray(artist.career.performances).slice(0, 5).map((performance, i) => (
+                      <div key={i} className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50">
+                        <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
+                        <p className={`text-sm ${colors.bodyText}`}>{performance}</p>
+                      </div>
+                    ))
                   ) : (
-                    <p
-                      className={`${colors.bodyText} text-center italic text-sm`}
-                    >
-                      No performances listed
-                    </p>
+                    <p className={`${colors.bodyText} text-center italic text-sm`}>No performances listed</p>
                   )}
                 </div>
               </div>
             </div>
+
+            {safeArray(artist.career?.awards).length > 0 && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Awards & Recognitions</h3>
+                <div className="space-y-3">
+                  {safeArray(artist.career.awards).map((award, i) => (
+                    <div key={i} className="flex items-start space-x-3 p-3 rounded-lg bg-gray-800/50">
+                      <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${colors.neonText} bg-opacity-20`}></div>
+                      <p className={`text-sm ${colors.bodyText}`}>{award}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         );
 
@@ -1361,128 +1292,211 @@ const ViewArtistProfile = () => {
         return (
           <div className="space-y-8 animate-fadeIn">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}
-              >
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}>
                 <div className="flex items-center mb-4">
-                  <div
-                    className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
-                  >
-                    ✍️
-                  </div>
-                  <h3 className={`text-lg font-bold ${colors.sectionTitle}`}>
-                    Songwriting Process
-                  </h3>
+                  <div className={`w-10 h-10 ${colors.primary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}>✍️</div>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle}`}>Songwriting Process</h3>
                 </div>
                 <div className={`text-sm ${colors.bodyText} space-y-3`}>
                   {artist.creative_process?.songwriting_process ? (
-                    artist.creative_process.songwriting_process
-                      .split("\n")
-                      .map((paragraph, i) => (
-                        <p key={i} className="leading-relaxed">
-                          {paragraph}
-                        </p>
-                      ))
+                    artist.creative_process.songwriting_process.split("\n").map((paragraph, i) => (
+                      <p key={i} className="leading-relaxed">{paragraph}</p>
+                    ))
                   ) : (
-                    <p className="italic">
-                      No songwriting process information available
-                    </p>
+                    <p className="italic">No songwriting process information available</p>
                   )}
                 </div>
               </div>
 
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}
-              >
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect} group`}>
                 <div className="flex items-center mb-4">
-                  <div
-                    className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}
-                  >
-                    🎛️
-                  </div>
-                  <h3 className={`text-lg font-bold ${colors.sectionTitle}`}>
-                    Production Process
-                  </h3>
+                  <div className={`w-10 h-10 ${colors.secondary} rounded-lg flex items-center justify-center ${colors.neonText} mr-3`}>🎛️</div>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle}`}>Production Process</h3>
                 </div>
                 <div className={`text-sm ${colors.bodyText} space-y-3`}>
                   {artist.creative_process?.production_process ? (
-                    artist.creative_process.production_process
-                      .split("\n")
-                      .map((paragraph, i) => (
-                        <p key={i} className="leading-relaxed">
-                          {paragraph}
-                        </p>
-                      ))
+                    artist.creative_process.production_process.split("\n").map((paragraph, i) => (
+                      <p key={i} className="leading-relaxed">{paragraph}</p>
+                    ))
                   ) : (
-                    <p className="italic">
-                      No production process information available
-                    </p>
+                    <p className="italic">No production process information available</p>
                   )}
                 </div>
               </div>
             </div>
 
-            {/* Current Availability */}
+            {artist.creative_process?.creative_rituals && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Creative Rituals</h3>
+                <div className={`text-sm ${colors.bodyText} space-y-3`}>
+                  {artist.creative_process.creative_rituals.split("\n").map((paragraph, i) => (
+                    <p key={i} className="leading-relaxed">{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>
-                  Current Projects
-                </h3>
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Current Projects</h3>
                 <div className="space-y-2">
-                  {safeArray(artist.availability?.current_projects).length >
-                  0 ? (
-                    safeArray(artist.availability.current_projects).map(
-                      (project, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50"
-                        >
-                          <div className={`w-2 h-2 rounded-full ${colors.neonText} animate-pulse`}></div>
-                          <span className={`text-sm ${colors.bodyText}`}>
-                            {project}
-                          </span>
-                        </div>
-                      )
-                    )
+                  {safeArray(artist.availability?.current_projects).length > 0 ? (
+                    safeArray(artist.availability.current_projects).map((project, i) => (
+                      <div key={i} className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50">
+                        <div className={`w-2 h-2 rounded-full ${colors.neonText} animate-pulse`}></div>
+                        <span className={`text-sm ${colors.bodyText}`}>{project}</span>
+                      </div>
+                    ))
                   ) : (
-                    <p
-                      className={`${colors.bodyText} text-center italic text-sm`}
-                    >
-                      No current projects listed
-                    </p>
+                    <p className={`${colors.bodyText} text-center italic text-sm`}>No current projects listed</p>
                   )}
                 </div>
               </div>
 
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>
-                  Looking For
-                </h3>
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Looking For</h3>
                 <div className="space-y-2">
                   {safeArray(artist.availability?.looking_for).length > 0 ? (
-                    safeArray(artist.availability.looking_for).map(
-                      (item, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50"
-                        >
-                          <div className={`w-2 h-2 rounded-full ${colors.neonText}`}></div>
-                          <span className={`text-sm ${colors.bodyText}`}>
-                            {item}
-                          </span>
-                        </div>
-                      )
-                    )
+                    safeArray(artist.availability.looking_for).map((item, i) => (
+                      <div key={i} className="flex items-center space-x-3 p-3 rounded-lg bg-gray-800/50">
+                        <div className={`w-2 h-2 rounded-full ${colors.neonText}`}></div>
+                        <span className={`text-sm ${colors.bodyText}`}>{item}</span>
+                      </div>
+                    ))
                   ) : (
-                    <p
-                      className={`${colors.bodyText} text-center italic text-sm`}
-                    >
-                      No specific requirements listed
-                    </p>
+                    <p className={`${colors.bodyText} text-center italic text-sm`}>No specific requirements listed</p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {artist.social_impact && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4`}>Social Impact</h3>
+                <p className={`text-sm ${colors.bodyText}`}>{artist.social_impact}</p>
+              </div>
+            )}
+          </div>
+        );
+
+      case "presence":
+        return (
+          <div className="space-y-8 animate-fadeIn">
+            <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+              <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-6 flex items-center`}>
+                <span className="mr-2">🎧</span> Streaming Platforms
+              </h3>
+              {safeArray(artist.online_presence?.streaming_platforms).length > 0 ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {safeArray(artist.online_presence.streaming_platforms).map((platform, i) => (
+                    <a key={i} href={platform.url} target="_blank" rel="noopener noreferrer" className="platform-card group">
+                      <div className={`p-4 rounded-xl border ${colors.neonBorder} ${colors.cardBg} flex flex-col items-center text-center ${colors.hoverEffect}`}>
+                        <div className="platform-icon w-12 h-12 text-2xl mb-2 flex items-center justify-center">
+                          {getPlatformIcon(platform.platform)}
+                        </div>
+                        <span className="text-sm font-medium text-gray-200 group-hover:text-neon-yellow">{platform.platform}</span>
+                        {platform.stats && <span className="text-xs text-gray-400 mt-1">{platform.stats}</span>}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <p className={`${colors.bodyText} text-center italic`}>No streaming platforms listed</p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {artist.online_presence?.website && (
+                <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}>
+                    <span className="mr-2">🌐</span> Official Website
+                  </h3>
+                  <div className="flex items-center">
+                    <div className={`w-2 h-2 rounded-full ${colors.neonText} mr-2`}></div>
+                    <a href={artist.online_presence.website} target="_blank" rel="noopener noreferrer" className={`text-sm ${colors.bodyText} hover:${colors.neonText} underline underline-offset-4`}>
+                      {artist.online_presence.website.replace(/^https?:\/\//, "")}
+                    </a>
+                  </div>
+                </div>
+              )}
+
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}>
+                  <span className="mr-2">📱</span> Social Media
+                </h3>
+                <div className="space-y-3">
+                  {safeArray(artist.online_presence?.social_media).length > 0 ? (
+                    safeArray(artist.online_presence.social_media).map((platform, i) => (
+                      <div key={i} className="flex items-center">
+                        <div className={`w-2 h-2 rounded-full ${colors.neonText} mr-2`}></div>
+                        <a href={platform.url} target="_blank" rel="noopener noreferrer" className={`text-sm ${colors.bodyText} hover:${colors.neonText} flex items-center`}>
+                          <span className="mr-2">
+                            {platform.platform === "instagram" && "📷"}
+                            {platform.platform === "twitter" && "🐦"}
+                            {platform.platform === "facebook" && "👍"}
+                            {platform.platform === "tiktok" && "🎵"}
+                            {platform.platform === "youtube" && "▶️"}
+                            {(!platform.platform || !["instagram", "twitter", "facebook", "tiktok", "youtube"].includes(platform.platform)) && "🔗"}
+                          </span>
+                          {platform.handle || platform.platform}
+                          {platform.followers && <span className="ml-2 text-xs text-gray-400">({platform.followers})</span>}
+                        </a>
+                      </div>
+                    ))
+                  ) : (
+                    <p className={`${colors.bodyText} italic text-sm`}>No social media links available</p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {artist.commerce && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}>
+                  <span className="mr-2">🛒</span> Merch & Store
+                </h3>
+                <p className={`text-sm ${colors.bodyText}`}>{artist.commerce}</p>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {artist.online_presence?.press_kit && (
+                <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                  <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}>
+                    <span className="mr-2">📰</span> Press Kit
+                  </h3>
+                  <a href={artist.online_presence.press_kit} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center px-4 py-2 rounded-lg ${colors.neonBorder} ${colors.neonText} hover:bg-gray-800/50 transition-colors`}>
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                    </svg>
+                    Download Press Kit
+                  </a>
+                </div>
+              )}
+
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}>
+                  <span className="mr-2">✉️</span> Contact
+                </h3>
+                <div className="space-y-3">
+                  {artist.online_presence?.contact_email && (
+                    <div className="flex items-center">
+                      <div className={`w-2 h-2 rounded-full ${colors.neonText} mr-2`}></div>
+                      <a href={`mailto:${artist.online_presence.contact_email}`} className={`text-sm ${colors.bodyText} hover:${colors.neonText}`}>
+                        {artist.online_presence.contact_email}
+                      </a>
+                    </div>
+                  )}
+                  {artist.online_presence?.booking_email && (
+                    <div className="flex items-center">
+                      <div className={`w-2 h-2 rounded-full ${colors.neonText} mr-2`}></div>
+                      <a href={`mailto:${artist.online_presence.booking_email}`} className={`text-sm ${colors.bodyText} hover:${colors.neonText}`}>
+                        Booking: {artist.online_presence.booking_email}
+                      </a>
+                    </div>
+                  )}
+                  {!artist.online_presence?.contact_email && !artist.online_presence?.booking_email && (
+                    <p className={`${colors.bodyText} italic text-sm`}>No contact information available</p>
                   )}
                 </div>
               </div>
@@ -1490,144 +1504,115 @@ const ViewArtistProfile = () => {
           </div>
         );
 
-      case "presence":
+      case "story":
         return (
           <div className="space-y-8 animate-fadeIn">
-            {/* Enhanced Streaming Section */}
-            <div
-              className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-            >
-              <h3
-                className={`text-xl font-bold ${colors.sectionTitle} mb-6 flex items-center`}
-              >
-                <span className="mr-2">🎧</span> Streaming Platforms
-              </h3>
-
-              {safeArray(artist.online_presence?.streaming_platforms).length >
-              0 ? (
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {safeArray(artist.online_presence.streaming_platforms).map(
-                    (platform, i) => (
-                      <a
-                        key={i}
-                        href={platform.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="platform-card group"
-                      >
-                        <div
-                          className={`p-4 rounded-xl border ${colors.neonBorder} ${colors.cardBg} flex flex-col items-center text-center ${colors.hoverEffect}`}
-                        >
-                          <div className="platform-icon w-12 h-12 text-2xl mb-2 flex items-center justify-center">
-                            {getPlatformIcon(platform.platform)}
-                          </div>
-                          <span className="text-sm font-medium text-gray-200 group-hover:text-neon-yellow">
-                            {platform.platform}
-                          </span>
-                          <span className="text-xs text-gray-400 mt-1">
-                            Stream now
-                          </span>
-                        </div>
-                      </a>
-                    )
-                  )}
-                </div>
-              ) : (
-                <p className={`${colors.bodyText} text-center italic`}>
-                  No streaming platforms listed
-                </p>
-              )}
+            <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+              <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-4`}>Artist Narrative</h3>
+              <div className={`prose prose-invert max-w-none ${colors.bodyText}`}>
+                {artist.long_narrative ? (
+                  artist.long_narrative.split("\n\n").map((paragraph, i) => (
+                    <p key={i} className="mb-4 leading-relaxed">{paragraph}</p>
+                  ))
+                ) : (
+                  <p className="italic">No narrative available</p>
+                )}
+              </div>
             </div>
 
-            {/* Social Media & Website */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Website */}
-              {artist.online_presence?.website && (
-                <div
-                  className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-                >
-                  <h3
-                    className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}
-                  >
-                    <span className="mr-2">🌐</span> Official Website
-                  </h3>
-                  <a
-                    href={artist.online_presence.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center w-full px-4 py-3 ${colors.primary} ${colors.primaryHover} text-white rounded-xl font-medium transition-all duration-300`}
-                  >
-                    Visit Website
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
+            {artist.personal_philosophy && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-4`}>Personal Philosophy</h3>
+                <div className={`prose prose-invert max-w-none ${colors.bodyText}`}>
+                  {artist.personal_philosophy.split("\n\n").map((paragraph, i) => (
+                    <p key={i} className="mb-4 leading-relaxed italic">"{paragraph}"</p>
+                  ))}
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* Social Media */}
-              {safeArray(artist.online_presence?.social_media).length > 0 && (
-                <div
-                  className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-                >
-                  <h3
-                    className={`text-lg font-bold ${colors.sectionTitle} mb-4 flex items-center`}
-                  >
-                    <span className="mr-2">📱</span> Social Media
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {safeArray(artist.online_presence.social_media).map(
-                      (platform, i) => (
-                        <a
-                          key={i}
-                          href={platform.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="px-3 py-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 text-gray-200 hover:text-neon-yellow transition-colors duration-300 flex items-center justify-center text-sm font-medium"
-                        >
-                          {platform.platform}
-                        </a>
-                      )
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Quotes Section */}
             {safeArray(artist.quotes).length > 0 && (
-              <div
-                className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}
-              >
-                <h3
-                  className={`text-xl font-bold ${colors.sectionTitle} mb-6 text-center`}
-                >
-                  Artist Quotes
-                </h3>
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-4`}>Quotes</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {safeArray(artist.quotes).map((quote, i) => (
-                    <div
-                      key={i}
-                      className="relative p-4 rounded-xl bg-gray-800/50 border border-gray-700"
-                    >
-                      <div className={`absolute -top-1 -left-1 w-6 h-6 ${colors.neonText} bg-opacity-20 rounded-full flex items-center justify-center text-xs`}>
-                        "
+                    <div key={i} className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+                      <p className={`italic ${colors.bodyText} mb-3`}>"{quote}"</p>
+                      <div className="flex items-center">
+                        <div className={`w-8 h-8 rounded-full ${colors.primary} flex items-center justify-center text-xs font-bold mr-2`}>
+                          {artist.displayName ? artist.displayName.charAt(0) : "?"}
+                        </div>
+                        <p className="text-sm font-medium text-gray-200">{artist.displayName || "Unknown"}</p>
                       </div>
-                      <blockquote
-                        className={`italic ${colors.bodyText} text-sm leading-relaxed`}
-                      >
-                        {quote}
-                      </blockquote>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {safeArray(artist.fan_press_quotes).length > 0 && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-4`}>Fan & Press Quotes</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {safeArray(artist.fan_press_quotes).map((quote, i) => (
+                    <div key={i} className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+                      <p className={`italic ${colors.bodyText} mb-3`}>"{quote}"</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {artist.lazie_indie_association && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-4`}>Lazie Indie Association</h3>
+                <p className={`text-sm ${colors.bodyText}`}>{artist.lazie_indie_association}</p>
+              </div>
+            )}
+
+            {safeArray(artist.career_highlights).length > 0 && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-6`}>Career Highlights</h3>
+                <div className="relative">
+                  <div className={`absolute left-5 top-0 h-full w-0.5 ${colors.primary}`}></div>
+                  {safeArray(artist.career_highlights).map((highlight, i) => (
+                    <div key={i} className="relative pl-12 pb-6 group last:pb-0">
+                      <div className={`absolute left-5 top-1 w-3 h-3 rounded-full ${colors.neonText} transform -translate-x-1/2 z-10`}></div>
+                      <div className={`p-4 rounded-xl ${colors.cardBg} border ${colors.neonBorder} ${colors.hoverEffect}`}>
+                        <div className="flex justify-between items-start">
+                          <h4 className="font-bold text-gray-100">{highlight.title}</h4>
+                          {highlight.year && (
+                            <span className={`text-xs px-2 py-1 rounded ${colors.tagBg}`}>{highlight.year}</span>
+                          )}
+                        </div>
+                        {highlight.description && (
+                          <p className={`mt-2 text-sm ${colors.bodyText} line-clamp-3`}>{highlight.description}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {safeArray(artist.testimonials).length > 0 && (
+              <div className={`p-6 rounded-2xl ${colors.cardBg} ${colors.cardBorder} ${colors.hoverEffect}`}>
+                <h3 className={`text-xl font-bold ${colors.sectionTitle} mb-6`}>Testimonials</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {safeArray(artist.testimonials).map((testimonial, i) => (
+                    <div key={i} className={`p-4 rounded-xl border ${colors.neonBorder} bg-gray-900/50`}>
+                      <p className={`italic ${colors.bodyText} mb-3`}>"{testimonial.quote}"</p>
+                      <div className="flex items-center">
+                        <div className={`w-8 h-8 rounded-full ${colors.primary} flex items-center justify-center text-xs font-bold mr-2`}>
+                          {testimonial.source ? testimonial.source.charAt(0) : "?"}
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-200">{testimonial.source || "Unknown"}</p>
+                          {testimonial.relation && (
+                            <p className="text-xs text-gray-400">{testimonial.relation}</p>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -1641,136 +1626,105 @@ const ViewArtistProfile = () => {
     }
   };
 
-  if (isLoading || !artist) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-4 border-transparent border-t-neon-yellow mx-auto mb-4"></div>
-          <div className="text-lg font-medium text-gray-300 animate-pulse">
-            Loading artist profile...
+  return (
+    <div className={`min-h-screen ${colors.lightBg} text-gray-100 pb-20`}>
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900/90">
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-neon-yellow border-t-transparent rounded-full animate-spin"></div>
+            <p className="mt-4 text-neon-yellow animate-pulse">Loading artist profile...</p>
+          </div>
+        </div>
+      )}
+
+      <div className="relative">
+        <div className="h-48 md:h-64 lg:h-80 w-full bg-gradient-to-r from-gray-800 to-gray-900 overflow-hidden">
+          {artist.imageUrl && (
+            <img
+              src={artist.imageUrl}
+              alt={`${artist.displayName || "Artist"}'s cover`}
+              className="w-full h-full object-cover opacity-70"
+              onLoad={() => setIsImageLoaded(true)}
+            />
+          )}
+        </div>
+
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative -mt-16 md:-mt-20">
+          <div className="flex flex-col md:flex-row items-start md:items-end gap-6">
+            <div className={`w-32 h-32 md:w-40 md:h-40 rounded-full ${colors.cardBg} border-4 border-gray-800 shadow-xl overflow-hidden relative`}>
+              {artist.imageUrl ? (
+                <img
+                  src={artist.imageUrl}
+                  alt={artist.displayName || "Artist"}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${isImageLoaded ? "opacity-100" : "opacity-0"}`}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-700 text-4xl font-bold">
+                  {artist.displayName ? artist.displayName.charAt(0) : "?"}
+                </div>
+              )}
+            </div>
+
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-1">{artist.displayName || "Unknown Artist"}</h1>
+              <div className="flex flex-wrap items-center gap-2 mb-3">
+                {safeArray(artist.vibeTags).slice(0, 3).map((tag, i) => (
+                  <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}>
+                    {tag}
+                  </span>
+                ))}
+                {artist.identity?.origin && (
+                  <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${colors.tagBg}`}>
+                    {artist.identity.origin}
+                  </span>
+                )}
+              </div>
+              <p className={`max-w-3xl ${colors.bodyText} line-clamp-2`}>
+                {artist.long_narrative ? artist.long_narrative.split("\n\n")[0] : "No description available"}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {safeArray(artist.online_presence?.social_media).slice(0, 4).map((platform, i) => (
+                
+                <a
+                  key={i}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-10 h-10 rounded-full ${colors.cardBg} border ${colors.neonBorder} flex items-center justify-center hover:${colors.neonText} hover:bg-gray-800/50 transition-colors`}
+                  title={platform.platform}
+                >
+                  {platform.platform === "instagram" && "📷"}
+                  {platform.platform === "twitter" && "🐦"}
+                  {platform.platform === "facebook" && "👍"}
+                  {platform.platform === "tiktok" && "🎵"}
+                  {platform.platform === "youtube" && "▶️"}
+                  {(!platform.platform || !["instagram", "twitter", "facebook", "tiktok", "youtube"].includes(platform.platform)) && "🔗"}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 py-6 px-4 sm:px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Hero Section */}
-        <div className="rounded-2xl glossy-black p-6 md:p-8 mb-6 shadow-xl overflow-hidden relative border border-gray-800">
-          {/* Subtle texture overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-700/10 to-transparent opacity-20"></div>
-
-          {/* Content container */}
-          <div className="relative z-10 flex flex-col md:flex-row gap-6 items-center">
-            {artist.imageUrl && (
-              <div className="relative group">
-                {/* Artist image with elegant frame */}
-                <div
-                  className={`w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-gray-700 shadow-lg transition-all duration-500 ${
-                    isImageLoaded ? "group-hover:scale-105" : ""
-                  }`}
-                >
-                  <img
-                    src={artist.imageUrl}
-                    alt={artist.displayName || "Artist"}
-                    className={`w-full h-full object-cover transition-opacity duration-500 ${
-                      isImageLoaded ? "opacity-100" : "opacity-0"
-                    }`}
-                    onLoad={() => setIsImageLoaded(true)}
-                  />
-                  {!isImageLoaded && (
-                    <div className="absolute inset-0 bg-gray-700 animate-pulse"></div>
-                  )}
-                </div>
-                {/* Decorative element */}
-                <div className={`absolute -bottom-2 -right-2 w-6 h-6 ${colors.neonText} bg-opacity-20 rounded-full flex items-center justify-center text-xs font-bold shadow-md`}>
-                  ★
-                </div>
-              </div>
-            )}
-
-            <div className="flex-1 text-center md:text-left space-y-4">
-              {/* Artist name with subtle gradient */}
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-200 via-gray-100 to-gray-50">
-                {artist.displayName || "Unknown Artist"}
-              </h1>
-
-              {/* Pricing and tags section */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                {/* Pricing badge */}
-                <div className={`px-5 py-2.5 ${colors.neonText} bg-opacity-20 backdrop-blur-md rounded-xl border ${colors.neonBorder} inline-flex items-center justify-center gap-2 hover:bg-opacity-30 transition-colors duration-300`}>
-                  <span className="font-bold">
-                    ${artist.priceUSD?.toLocaleString() || "0"}
-                  </span>
-                  <span className="text-sm">Artist Fee</span>
-                  <div className="w-4 h-4 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-3 h-3"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                {/* Tags */}
-                {safeArray(artist.vibeTags).length > 0 && (
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                    {safeArray(artist.vibeTags)
-                      .slice(0, 3)
-                      .map((tag, i) => (
-                        <span
-                          key={i}
-                          className={`px-3 py-1 ${colors.tagBg} rounded-lg text-xs font-medium hover:bg-gray-700 transition-colors duration-200`}
-                        >
-                          #{tag}
-                        </span>
-                      ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Optional subtitle */}
-              <p className="text-gray-400 text-sm md:text-base max-w-lg">
-                {artist.artistic_background?.roles?.join(" • ") ||
-                  "Professional Artist"}
-              </p>
-            </div>
-          </div>
-
-          {/* Decorative corner elements */}
-          <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-gray-700 rounded-bl-2xl"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-gray-700 rounded-tr-2xl"></div>
-        </div>
-
-        {/* Tab Navigation */}
-        <div className="mb-6 overflow-x-auto">
-          <div className="flex space-x-2 pb-2">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 mt-8">
+        <div className="flex overflow-x-auto pb-2 mb-6 scrollbar-hide">
+          <div className="flex space-x-2">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 flex items-center space-x-2 whitespace-nowrap ${
-                  activeTab === tab.id ? colors.tabActive : colors.tabInactive
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200 border ${activeTab === tab.id ? colors.tabActive : colors.tabInactive}`}
               >
-                <span className="text-base">{tab.icon}</span>
-                <span>{tab.label}</span>
+                <span className="mr-2">{tab.icon}</span>
+                {tab.label}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Tab Content */}
-        <div className="min-h-[400px]">
+        <div className="mt-6">
           <TabContent tabId={activeTab} />
         </div>
       </div>
