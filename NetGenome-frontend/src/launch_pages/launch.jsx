@@ -117,25 +117,8 @@ function Launch() {
       </div>
 
       {/* 🌙 Mode Toggle */}
-      <div className="absolute bottom-6 left-6 z-50">
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className={`px-5 py-2 text-sm rounded-full border ${borderColor} ${textColor} bg-transparent backdrop-blur-md overflow-hidden group relative transition-all duration-500`}
-        >
-          <span className="relative z-10">Switch to {darkMode ? 'Light' : 'Dark'} Mode</span>
-          <span className="absolute inset-0 z-0 bg-white opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500 rounded-full blur-2xl"></span>
-        </button>
-      </div>
-
+      
       {/* 👆 Swipe Up Blinking Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-lg font-light z-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [1, 0, 1] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
-        <span className={textColor}>⬆️ Swipe up to See</span>
-      </motion.div>
 
       {/* Stripe Animation */}
       <style>{`

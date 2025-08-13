@@ -648,7 +648,7 @@ const ArtistDashboard = () => {
               </Card>
 
               {/* Collab Invites Card - removed glass effect from items */}
-              <Card className="h-[220px] flex flex-col bg-gradient-to-br from-blue-900/80 to-black">
+              <Card className="h-[220px] flex flex-col bg-gradient-to-br from-blue-900/80 to-black ">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-black font-bold">
                     CI
@@ -657,7 +657,7 @@ const ArtistDashboard = () => {
                     COLLAB INVITES
                   </h3>
                 </div>
-                <div className="space-y-2 overflow-y-auto flex-grow">
+                <div className="space-y-2 overflow-y-auto flex-grow scrollbar-hide">
                   {[
                     "New request from DJ Khaled",
                     "Producer XYZ wants to work",

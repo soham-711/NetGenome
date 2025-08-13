@@ -2286,7 +2286,7 @@ import defaultAlbum6 from "../assets/trilogy.jpg";
 import defaultI15 from "../assets/gif5.gif";
 import defaultLaunch1 from "../assets/launch1.png";
 import defaultGif6 from "../assets/gif6.gif";
-import defaultFooterImg from "../assets/footer.png";
+import defaultFooterImg from "../assets/footer-removebg-preview.png";
 import defaultBgImage from "../assets/i17.png";
 import defaultArtist6 from "../assets/artist6.jpg";
 import defaultArtist7 from "../assets/artist7.jpg";
@@ -2564,6 +2564,16 @@ const ArtistProfile = () => {
   const albums = getArray(artist.discography).map((item, index) => ({
     src:
       [
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
+        artist.imageUrl,
         artist.imageUrl,
         artist.imageUrl,
         artist.imageUrl,
@@ -3123,7 +3133,14 @@ const ArtistProfile = () => {
                 </div>
 
                 {/* Year filter options */}
-                {[...new Set(artist.discography.map((album) => album.year))]
+                {/* Year filter options (0 removed) */}
+                {[
+                  ...new Set(
+                    artist.discography
+                      .map((album) => album.year)
+                      .filter((year) => typeof year === "number" && year > 0)
+                  ),
+                ]
                   .sort((a, b) => b - a)
                   .map((year) => (
                     <div
@@ -3482,25 +3499,26 @@ const ArtistProfile = () => {
               searchActive ? "hidden" : "block"
             }`}
           >
-<div 
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out pointer-events-none z-20 flex items-center justify-center"
-        style={{
-          background: "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%)",
-          backdropFilter: "blur(15px) saturate(150%)",
-          WebkitBackdropFilter: "blur(15px) saturate(150%)",
-          borderRadius: "12px",
-          boxShadow: "0 8px 32px rgba(255, 255, 255, 0.2)"
-        }}
-      >
-        <div className="text-center">
-          <h3 className="text-black text-2xl font-bold mb-2 drop-shadow-lg">
-            ACTIVE COLLABORATIONS
-          </h3>
-          <p className="text-black/80 text-lg font-medium drop-shadow-md">
-            Currently working on these exciting projects
-          </p>
-        </div>
-      </div>
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out pointer-events-none z-20 flex items-center justify-center"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 100%)",
+                backdropFilter: "blur(15px) saturate(150%)",
+                WebkitBackdropFilter: "blur(15px) saturate(150%)",
+                borderRadius: "12px",
+                boxShadow: "0 8px 32px rgba(255, 255, 255, 0.2)",
+              }}
+            >
+              <div className="text-center">
+                <h3 className="text-black text-2xl font-bold mb-2 drop-shadow-lg">
+                  ACTIVE COLLABORATIONS
+                </h3>
+                <p className="text-black/80 text-lg font-medium drop-shadow-md">
+                  Currently working on these exciting projects
+                </p>
+              </div>
+            </div>
 
             {getArray(artist.availability?.current_projects)
               .slice(0, 4)
@@ -3586,7 +3604,6 @@ const ArtistProfile = () => {
             </motion.div>
           </div>
 
-     
           {/* Middle Cards */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -3711,13 +3728,13 @@ const ArtistProfile = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative scrollbar-hide"
           >
             <div
-              className="flex gap-5 overflow-x-auto pb-4 scroll-smooth"
+              className="flex gap-5 overflow-x-auto max-w-[100%] pb-4 scroll-smooth scrollbar-hide"
               style={{
-                scrollbarWidth: "thin",
-                scrollbarColor: "rgba(255,255,255,0.3) rgba(255,255,255,0.1)",
+                scrollbarWidth: "none", // Firefox
+                msOverflowStyle: "none", // IE 10+
               }}
             >
               {reviews.map((review, idx) => (
@@ -3733,7 +3750,7 @@ const ArtistProfile = () => {
       </section>
 
       {/* Social Media Section */}
-      <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center">
+      {/* <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -3772,7 +3789,7 @@ const ArtistProfile = () => {
               transition={{ staggerChildren: 0.1 }}
               className="flex flex-col md:flex-row items-center justify-around gap-12 w-full"
             >
-              {/* Left Socials */}
+             
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -3809,7 +3826,7 @@ const ArtistProfile = () => {
                   ))}
               </motion.div>
 
-              {/* Center Globe GIF */}
+              
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 0.4 }}
@@ -3824,7 +3841,7 @@ const ArtistProfile = () => {
                 />
               </motion.div>
 
-              {/* Right Socials */}
+              
               <motion.div
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -3867,6 +3884,125 @@ const ArtistProfile = () => {
             </div>
           )}
         </div>
+      </section> */}
+
+      <section className="relative w-full min-h-screen bg-black overflow-hidden flex items-center justify-center">
+        {/* Background Hands */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="absolute inset-0"
+        >
+          <img
+            src={defaultLaunch1}
+            alt="Top Right Hands"
+            className="absolute right-0 bottom-35 w-[50vw] max-w-[900px] rotate-[260deg] z-0 opacity-80"
+          />
+          <img
+            src={defaultLaunch1}
+            alt="Bottom Left Hands"
+            className="absolute top-35 left-0 w-[50vw] max-w-[900px] rotate-[90deg] z-0 opacity-80"
+          />
+          <div className="absolute inset-0 bg-black/60 z-10" />
+        </motion.div>
+
+        {/* Content */}
+        <div className="relative z-20 flex flex-col items-center justify-between h-full py-16 px-6 text-white w-full max-w-7xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-3xl md:text-4xl font-bold w-full mb-12"
+          >
+            SOCIAL MEDIA
+          </motion.h2>
+
+          {getArray(artist.online_presence?.social_media).length > 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col md:flex-row items-center justify-around gap-8 w-full"
+            >
+              {/* Left Socials */}
+              <div className="flex flex-col items-center md:items-start gap-10 text-sm">
+                {getArray(artist.online_presence?.social_media)
+                  .slice(0, 2)
+                  .map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center md:items-start text-center md:text-left hover:scale-105 transition-transform"
+                    >
+                      {social.platform === "Instagram" && (
+                        <FaInstagram size={28} className="text-pink-500 mb-2" />
+                      )}
+                      {social.platform === "Facebook" && (
+                        <FaFacebookF size={28} className="text-blue-400 mb-2" />
+                      )}
+                      <span className="uppercase font-semibold">
+                        {social.platform}
+                      </span>
+                      <span className="text-white/70">
+                        {social.url.split("/").pop()}
+                      </span>
+                      <span className="text-white/70">
+                        {social.followers || "Followers not specified"}
+                      </span>
+                    </a>
+                  ))}
+              </div>
+
+              {/* Center Globe */}
+              <div className="flex-shrink-0 w-52 md:w-72 lg:w-96 opacity-70">
+                <img
+                  src={defaultGif6}
+                  alt="Globe Animation"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* Right Socials */}
+              <div className="flex flex-col items-center md:items-end gap-10 text-sm">
+                {getArray(artist.online_presence?.social_media)
+                  .slice(2)
+                  .map((social, idx) => (
+                    <a
+                      key={idx}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col items-center md:items-end text-center md:text-right hover:scale-105 transition-transform"
+                    >
+                      {social.platform === "YouTube" && (
+                        <FaYoutube size={28} className="text-red-600 mb-2" />
+                      )}
+                      {social.platform === "Twitter/X" && (
+                        <FaXTwitter size={28} className="text-white mb-2" />
+                      )}
+                      <span className="uppercase font-semibold">
+                        {social.platform}
+                      </span>
+                      <span className="text-white/70">
+                        {social.url.split("/").pop()}
+                      </span>
+                      <span className="text-white/70">
+                        {social.followers || "Followers not specified"}
+                      </span>
+                    </a>
+                  ))}
+              </div>
+            </motion.div>
+          ) : (
+            <div className="text-center text-gray-400">
+              No social media links available
+            </div>
+          )}
+        </div>
       </section>
 
       {/* Professional Press Coverage Section */}
@@ -3892,10 +4028,10 @@ const ArtistProfile = () => {
             className="relative"
           >
             <div
-              className="flex gap-5 overflow-x-auto pb-4 scroll-smooth"
+              className="flex gap-5 overflow-x-auto pb-4 scroll-smooth scrollbar-hide"
               style={{
-                scrollbarWidth: "thin",
-                scrollbarColor: "rgba(255,255,255,0.3) rgba(255,255,255,0.1)",
+                scrollbarWidth: "none", // Firefox
+                msOverflowStyle: "none", // IE 10+
               }}
             >
               {reviews.map((review, idx) => (
@@ -3911,164 +4047,174 @@ const ArtistProfile = () => {
       </section>
 
       {/* Streaming Platforms and Quotes Section with Background GIF */}
-<section className="relative w-full min-h-screen flex items-center justify-center px-4 py-16 overflow-hidden">
-  {/* Background with overlay */}
-  <div className="absolute inset-0 w-full h-full">
-    <img
-      src={defaultV2Gif}
-      alt="Background Animation"
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-black/60" />
-  </div>
-
-  {/* Content container with proper z-index and max-width */}
-  <div className="relative z-10 w-full max-w-6xl px-4">
-    {/* Flex container for cards with responsive layout */}
-    <div className="flex flex-col lg:flex-row gap-8 w-full">
-      {/* Streaming Platforms Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="w-full lg:w-1/2 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 font-monda"
-      >
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-green-500/20 p-2 rounded-full">
-            <FaMusic className="text-green-400" size={20} />
-          </div>
-          <h2 className="text-xl md:text-2xl font-bold text-white font-recoleta">
-            STREAMING PLATFORMS
-          </h2>
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-16 overflow-hidden">
+        {/* Background with overlay */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={defaultV2Gif}
+            alt="Background Animation"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        <p className="text-sm text-white/60 mb-4 font-gilroy-regular">
-          Now streaming on various platforms with{" "}
-          {artist.online_presence?.streaming_platforms?.[0]?.stats ||
-            "thousands of monthly listeners"}
-        </p>
-
-        {artist.online_presence?.streaming_platforms?.length > 0 ? (
-          <div className="space-y-3 overflow-y-auto max-h-[300px] scrollbar-hide">
-            {artist.online_presence.streaming_platforms.map((platform, idx) => (
-              <a
-                key={idx}
-                href={platform.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 font-gilroy-regular"
-              >
-                <div className="bg-black/30 p-2 rounded-lg">
-                  {platform.platform === "Apple Music" && (
-                    <FaApple size={20} className="text-rose-500" />
-                  )}
-                  {platform.platform === "Spotify" && (
-                    <FaSpotify size={20} className="text-green-500" />
-                  )}
-                  {platform.platform === "SoundCloud" && (
-                    <FaSoundcloud size={20} className="text-orange-500" />
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-medium text-white truncate">
-                    {platform.platform}
-                  </h3>
-                  {platform.stats && (
-                    <p className="text-xs text-white/60 truncate">
-                      {platform.stats}
-                    </p>
-                  )}
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-white/50"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-6 font-gilroy-regular">
-            <p className="text-white/60">No streaming platforms listed</p>
-            {artist.online_presence?.website && (
-              <a
-                href={artist.online_presence.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-3 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200 text-white text-sm"
-              >
-                Visit Official Website
-              </a>
-            )}
-          </div>
-        )}
-      </motion.div>
-
-      {/* Quotes Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="w-full lg:w-1/2 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 font-monda"
-      >
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-purple-500/20 p-2 rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-purple-400"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+        {/* Content container with proper z-index and max-width */}
+        <div className="relative z-10 w-full max-w-6xl px-4">
+          {/* Flex container for cards with responsive layout */}
+          <div className="flex flex-col lg:flex-row gap-8 w-full">
+            {/* Streaming Platforms Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="w-full lg:w-1/2 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 font-monda"
             >
-              <path
-                fillRule="evenodd"
-                d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-          <h2 className="text-xl md:text-2xl font-bold text-white font-recoleta">
-            QUOTES & TESTIMONIALS
-          </h2>
-        </div>
-
-        {artist.quotes?.length > 0 ? (
-          <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-hide">
-            {artist.quotes.map((quote, idx) => (
-              <div key={idx} className="relative pl-5 mb-4 font-gilroy-regular">
-                <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-purple-400 to-purple-600 rounded-full"></div>
-                <p className="text-white/80 text-sm md:text-base">"{quote}"</p>
-                <p className="mt-1 text-xs md:text-sm text-purple-300 font-medium font-gilroy-ultralight-italic">
-                  — {artist.displayName}
-                </p>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-green-500/20 p-2 rounded-full">
+                  <FaMusic className="text-green-400" size={20} />
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-white font-recoleta">
+                  STREAMING PLATFORMS
+                </h2>
               </div>
-            ))}
+
+              <p className="text-sm text-white/60 mb-4 font-gilroy-regular">
+                Now streaming on various platforms with{" "}
+                {artist.online_presence?.streaming_platforms?.[0]?.stats ||
+                  "thousands of monthly listeners"}
+              </p>
+
+              {artist.online_presence?.streaming_platforms?.length > 0 ? (
+                <div className="space-y-3 overflow-y-auto max-h-[300px] scrollbar-hide">
+                  {artist.online_presence.streaming_platforms.map(
+                    (platform, idx) => (
+                      <a
+                        key={idx}
+                        href={platform.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 font-gilroy-regular"
+                      >
+                        <div className="bg-black/30 p-2 rounded-lg">
+                          {platform.platform === "Apple Music" && (
+                            <FaApple size={20} className="text-rose-500" />
+                          )}
+                          {platform.platform === "Spotify" && (
+                            <FaSpotify size={20} className="text-green-500" />
+                          )}
+                          {platform.platform === "SoundCloud" && (
+                            <FaSoundcloud
+                              size={20}
+                              className="text-orange-500"
+                            />
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-medium text-white truncate">
+                            {platform.platform}
+                          </h3>
+                          {platform.stats && (
+                            <p className="text-xs text-white/60 truncate">
+                              {platform.stats}
+                            </p>
+                          )}
+                        </div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-white/50"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    )
+                  )}
+                </div>
+              ) : (
+                <div className="text-center py-6 font-gilroy-regular">
+                  <p className="text-white/60">No streaming platforms listed</p>
+                  {artist.online_presence?.website && (
+                    <a
+                      href={artist.online_presence.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-3 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200 text-white text-sm"
+                    >
+                      Visit Official Website
+                    </a>
+                  )}
+                </div>
+              )}
+            </motion.div>
+
+            {/* Quotes Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="w-full lg:w-1/2 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 font-monda"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-purple-500/20 p-2 rounded-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-purple-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-white font-recoleta">
+                  QUOTES & TESTIMONIALS
+                </h2>
+              </div>
+
+              {artist.quotes?.length > 0 ? (
+                <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2 scrollbar-hide">
+                  {artist.quotes.map((quote, idx) => (
+                    <div
+                      key={idx}
+                      className="relative pl-5 mb-4 font-gilroy-regular"
+                    >
+                      <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-purple-400 to-purple-600 rounded-full"></div>
+                      <p className="text-white/80 text-sm md:text-base">
+                        "{quote}"
+                      </p>
+                      <p className="mt-1 text-xs md:text-sm text-purple-300 font-medium font-gilroy-ultralight-italic">
+                        — {artist.displayName}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-6 font-gilroy-regular">
+                  <p className="text-white/60">No quotes available yet</p>
+                  {artist.fan_press_quotes?.length > 0 && (
+                    <button
+                      onClick={() => setShowPressQuotes(true)}
+                      className="inline-block mt-3 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200 text-white text-sm"
+                    >
+                      View Press Quotes
+                    </button>
+                  )}
+                </div>
+              )}
+            </motion.div>
           </div>
-        ) : (
-          <div className="text-center py-6 font-gilroy-regular">
-            <p className="text-white/60">No quotes available yet</p>
-            {artist.fan_press_quotes?.length > 0 && (
-              <button
-                onClick={() => setShowPressQuotes(true)}
-                className="inline-block mt-3 px-4 py-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors duration-200 text-white text-sm"
-              >
-                View Press Quotes
-              </button>
-            )}
-          </div>
-        )}
-      </motion.div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* Footer Section */}
       <motion.section
