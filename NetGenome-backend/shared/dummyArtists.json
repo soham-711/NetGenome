@@ -1,2679 +1,448 @@
+
+
 [
- {
-  "artistID": "will-johns",
+  {
+  "artistID": "will_johns",
   "displayName": "Will Johns",
   "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["blues", "guitar", "rock"],
+  "imageUrl": null,
+  "vibeTags": ["heritage blues", "british rock", "authentic", "emotional", "storytelling"],
   "identity": {
     "realName": "Will Johns",
     "aliases": [],
-    "origin": "UK",
-    "location": "UK",
+    "origin": "United Kingdom",
+    "location": "United Kingdom",
     "languages": ["English"],
-    "gender": "Male"
+    "gender": "Male",
+    "birthYear": 1973
   },
   "artistic_background": {
-    "roles": ["Singer", "Guitarist", "Composer"],
-    "genres": ["Blues", "Rock"],
-    "influences": ["Eric Clapton", "Ronnie Wood", "George Harrison", "Led Zeppelin"],
-    "skills": ["Guitar", "Songwriting", "Live Performance"]
+    "roles": ["Singer", "Guitarist", "Songwriter"],
+    "genres": ["Blues Rock", "Classic Rock", "British Blues"],
+    "influences": ["B.B. King", "Robert Johnson", "Peter Green", "Ry Cooder", "Eric Clapton", "Johns family"],
+    "skills": ["Vocals", "Guitar", "Songwriting", "Live Performance"],
+    "signature_style": "Expressive British blues phrasing with modern storytelling, emotional authenticity, gritty vocals, and rich guitar tones."
   },
   "career": {
-    "education": "Not specified",
-    "collaborations": [
-      "Kofi Baker",
-      "Malcolm Bruce",
-      "Robben Ford",
-      "Glenn Hughes",
-      "Nile Rogers",
-      "Ronnie Wood",
-      "Steve Winwood",
-      "Roger Waters",
-      "Kenny Jones",
-      "Steve Gadd"
+    "education": "Studied Performing Arts at Oxford",
+    "collaborations": ["Jack Bruce", "Ronnie Wood", "Mick Taylor", "Eric Clapton", "Steve Winwood", "Bill Wyman", "Nile Rodgers"],
+    "performances": [
+      "Global tours in India, Guatemala, Europe, Russia, US and Canada",
+      "Headlined festivals across UK, Germany, Netherlands, Belgium",
+      "Lead performer of The Cream of Clapton Band"
     ],
-    "performances": ["Ginger Baker Tribute Concert", "The Music of Cream Tour"],
-    "awards": ["British Blues Awards - 3 nominations for Best Original Song"]
+    "awards": [
+      "Multiple nominations at British Blues Awards (Best Guitarist, Best Blues Album)",
+      "BBC Blues Broadcaster's Album of the Month for 'Bluesdaddy'"
+    ],
+    "career_evolution": "From local UK circuits to global festival headliner, balancing heritage roots with modern blues identity.",
+    "years_active": "1998–present"
   },
   "discography": [
+    {
+      "title": "Count on Me",
+      "type": "Album",
+      "year": 2009,
+      "label": "Independent / Various Blues Labels",
+      "details": "Debut release"
+    },
+    {
+      "title": "Hooks and Lines",
+      "type": "Album",
+      "year": 2012,
+      "label": "Independent / Various Blues Labels",
+      "details": "Breakout album, praised for raw emotion and classic tones"
+    },
+    {
+      "title": "Something Old, Something New",
+      "type": "Album",
+      "year": 2016,
+      "label": "Independent / Various Blues Labels",
+      "details": "Blend of rootsy covers and introspective originals"
+    },
     {
       "title": "Bluesdaddy",
       "type": "Album",
       "year": 2021,
-      "label": "GaleTone Records",
-      "details": "Traditional Blues with one original title track 'Bluesdaddy'"
+      "label": "Independent / Various Blues Labels",
+      "details": "Mature work as songwriter/frontman; reached #1 Roots Music Report UK chart"
+    },
+    {
+      "title": "Yin & Yang",
+      "type": "Album",
+      "year": 2023,
+      "label": "Independent / Various Blues Labels",
+      "details": "Ongoing tour support"
     }
   ],
   "creative_process": {
-    "songwriting_process": "Starts with a riff or vocal hook; sometimes done in 30 mins, sometimes over years",
-    "production_process": "Builds around initial idea; varies by project"
+    "songwriting_process": "Focuses on emotional honesty and storytelling, drawing from personal experiences of heartbreak, joy, addiction, and recovery.",
+    "production_process": "Minimal, analog-focused production to preserve authenticity and warmth.",
+    "creative_rituals": "Honors analog purity, minimal production, and spontaneity in sound."
   },
   "availability": {
-    "current_projects": ["New album", "Tour plans"],
-    "looking_for": ["Collaborations", "Live tours", "India/Asia tour"]
+    "current_projects": ["Yin & Yang Tour 2023–2024", "The Cream of Clapton Band performances"],
+    "looking_for": ["Festival bookings", "Collaborations with blues and rock musicians"]
   },
   "online_presence": {
-    "website": "https://www.willjohns.com",
-    "social_media": [],
-    "streaming_platforms": []
+    "website": "https://willjohns.com",
+    "social_media": [
+      { "platform": "Instagram", "url": "https://instagram.com/willjohnsmusic", "followers": "2.3K" },
+      { "platform": "Facebook", "url": "https://facebook.com/willjohnsmusic", "followers": "5K" },
+      { "platform": "YouTube", "url": "https://youtube.com/@willjohnsmusic", "followers": "2.2K" },
+      { "platform": "Twitter/X", "url": "https://twitter.com/willjohnsmusic", "followers": "1.5K" }
+    ],
+    "streaming_platforms": [
+      { "platform": "Spotify", "url": "https://open.spotify.com/artist/WillJohns", "stats": "~18,000 monthly listeners" },
+      { "platform": "Apple Music", "url": "https://music.apple.com/us/artist/will-johns", "stats": null }
+    ]
   },
+  "commerce": "Albums and merch available via Bandcamp and official store links on willjohns.com",
+  "social_impact": "Ambassador for Island Dolphin Care and Turn Up for Recovery, supporting recovery-focused charity communities.",
   "quotes": [
-    "Be kind. Be kind to yourself and everyone you meet along the way.",
-    "Listen to the Blues, listen to the Masters... That’s where the magic is!"
-  ]
+    "There’s a lot of me in the songs. I’m not trying to be B.B. King or Clapton. I’m trying to be Will Johns—someone who’s had heartbreak, joy, addiction, recovery... and wants to tell that story.",
+    "The blues isn’t stuck in time. It evolves with whoever plays it with truth.",
+    "It’s a tough road not having the machine behind you. But every fan I gain, I gain by being myself.",
+    "With Bluesdaddy, I wanted to bring in all those layers—my own pain, my humor, the old-school grooves I grew up with.",
+    "Blues is not just a sound, it's a way of storytelling. I carry my family's legacy forward while crafting my own voice."
+  ],
+  "fan_press_quotes": [
+    "If Clapton is God, Will Johns is definitely a worthy successor to the blues holy trinity. — photogroupie.com"
+  ],
+  "classification": "Legacy-affiliated Blues Artists",
+  "lazie_indie_association": "Judge for John Anthony Guitar Contest 2024 in Lazie Indie Magazine; featured in 60th Anniversary Edition cover story.",
+  "long_narrative": "Born into rock royalty but determined to chart his own course, Will Johns grew up surrounded by legendary figures in British music. The son of famed producer Andy Johns—who worked with Led Zeppelin and The Rolling Stones—and the nephew of Eric Clapton, Will’s early life unfolded in a blur of guitars, studio sessions, and backstage passes. Yet, despite his lineage, he carved his identity the hard way—through clubs, pubs, and indie blues circuits. Having battled personal demons, including addiction and self-doubt, music became his sanctuary. His sound blends British blues traditions with modern vulnerability, guitar grit, and heartfelt vocals. Over the years, he’s played over 200 shows worldwide, collaborated with icons, judged guitar contests, and advocated for mental health and recovery. Will Johns isn’t just keeping the blues alive—he’s redefining it."
 }
-
 ,
- {
-  "artistID": "fatiniza",
-  "displayName": "Fatiniza",
+{
+  "artistID": "anslom",
+  "displayName": "Anslom Nakikus",
   "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["latin", "pop", "bilingual", "uplifting"],
+  "imageUrl": null,
+  "vibeTags": ["reggae", "pacific fusion", "uplifting", "socially conscious", "cultural ambassador"],
   "identity": {
-    "realName": "Fatiniza",
-    "aliases": [],
-    "origin": "Colombia",
-    "location": "Costa Rica",
-    "languages": ["Spanish", "English"],
-    "gender": "Female"
+    "realName": "Ronald Nakikus",
+    "aliases": ["Anslom"],
+    "origin": "Matupit Island, Rabaul, East New Britain Province, Papua New Guinea",
+    "location": "Papua New Guinea",
+    "languages": ["English", "Tok Pisin"],
+    "gender": "Male",
+    "birthYear": 1978
   },
   "artistic_background": {
     "roles": ["Singer", "Songwriter", "Performer"],
-    "genres": ["Latin Pop", "Fusion"],
-    "influences": ["Pink", "Shakira", "Alicia Keys"],
-    "skills": ["Songwriting", "Live Performance", "Recording"]
+    "genres": ["Reggae", "Pacificstyle Reggae Fusion"],
+    "influences": [
+      "Bob Marley",
+      "Peter Tosh",
+      "Lucky Dube",
+      "Toots Hibbert",
+      "Inner Circle"
+    ],
+    "skills": ["Vocals", "Songwriting", "Guitar"],
+    "signature_style": "Uplifting reggae with soulful vocals, diplomatic lyrical content, and themes of peace, love, and unity, blending Pacific influences with African-reggae fusion."
   },
   "career": {
-    "education": "Not specified",
-    "collaborations": [],
-    "performances": ["Top venues in Costa Rica", "Various international events"],
+    "education": "Degree in Political Science; Postgraduate Diploma in Literature",
+    "collaborations": [
+      "Chaka Demus",
+      "Quino (Big Mountain)",
+      "Aston Barrett Jr.",
+      "The Wailers",
+      "Lucky Dube Band",
+      "JBoog",
+      "Leonard Kania",
+      "Lia Osbourne",
+      "Sharzy",
+      "X-Vibes",
+      "Fedyz",
+      "Kuakumba",
+      "Barike Band"
+    ],
+    "performances": [
+      "IIMF Kerala 2022 (India)",
+      "Expo 2020 Dubai",
+      "Festival of Pacific Arts & Culture, Hawaii",
+      "One Love Festival, Jamaica",
+      "Meganesia Celebration, Port Moresby",
+      "Vanuatu Independence Day Week",
+      "Pacific Games Closing Ceremony"
+    ],
     "awards": [
-      "Top 100 most influential International Colombians",
-      "Top 5 most influential Colombians in Music",
-      "One of the 10 best-selling artists ever in the UAE"
-    ]
+      "Refugee Ambassador – UNHCR PNG (2015)",
+      "HIV/AIDS Awareness Ambassador – National AIDS Council PNG (2020)",
+      "Icon Award (Best of Africa – Reggae), InterContinental Music Awards (2022)",
+      "Cover Artist Feature – Lazie Indie Magazine Issue 26 (2022)",
+      "Band of the Year – ISSA Gold Award (2023)",
+      "PNG Cultural Ambassador – PNG National Cultural Commission (2023)",
+      "Global Record Deal – Kingmaker Music / Virgin Music / Universal Music Group (2024)"
+    ],
+    "career_evolution": "From independent Pacific artist performing locally to globally recognized reggae figure, now signed with a major label and touring internationally.",
+    "years_active": "1998–present"
   },
   "discography": [
-    {
-      "title": "Stay Here / Quédate Aquí",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Released January 1st, 2021"
-    },
-    {
-      "title": "Ojos Cafés",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Released May 10th, 2021"
-    }
+    { "title": "Don’t You Lie", "type": "Album", "year": 1999, "label": "Independent", "details": "Debut solo album" },
+    { "title": "Aross", "type": "Album", "year": 2001, "label": "Independent", "details": "" },
+    { "title": "Bongbong", "type": "Album", "year": 2002, "label": "Independent", "details": "" },
+    { "title": "Crazy Best of Anslom", "type": "Compilation Album", "year": 2005, "label": "Independent", "details": "" },
+    { "title": "Fool Moon", "type": "Album", "year": 2007, "label": "Mangrove Productions", "details": "" },
+    { "title": "Rabaul Dust", "type": "Album", "year": 2010, "label": "Independent", "details": "" },
+    { "title": "Pee N Gee", "type": "Album", "year": 2014, "label": "Mangrove Productions", "details": "" },
+    { "title": "Biriz Simen", "type": "Album", "year": 2014, "label": "Independent", "details": "" },
+    { "title": "Love Me Again", "type": "Album", "year": 2019, "label": "Independent", "details": "Recorded in Johannesburg with Lucky Dube’s One People Band" },
+    { "title": "Cool Jamm’ Love", "type": "EP", "year": 2020, "label": "Independent", "details": "4-track collection" },
+    { "title": "Break the Barrier", "type": "EP", "year": 2023, "label": "Big Records", "details": "Includes socially themed songs" },
+    { "title": "One Love", "type": "Album", "year": 2024, "label": "Kingmaker Music / Universal Music Group", "details": "Collaborations with Chaka Demus and Quino" }
   ],
   "creative_process": {
-    "songwriting_process": "A melody pops into her head at random times; often inspired by personal events of friends or family.",
-    "production_process": "Sends ideas to long-time producer Joshua F. Williams; studio sessions evolve the song."
+    "songwriting_process": "Message-driven, inspired by reggae legends to address social justice, unity, and hope.",
+    "production_process": "Works with both Pacific and international producers; blends reggae with Pacific flavor.",
+    "creative_rituals": "Carries a guitar for spontaneous idea capture."
   },
   "availability": {
-    "current_projects": ["3rd Studio Album", "Ongoing single releases"],
-    "looking_for": ["International exposure", "Live shows"]
+    "current_projects": ["One Love album promotion", "Upcoming USA tour (Oct 2025)", "International reggae festivals"],
+    "looking_for": ["Collaborations", "Festival bookings", "Cultural exchange projects"]
   },
   "online_presence": {
-    "website": "",
-    "social_media": [],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": ""
-      },
-      {
-        "platform": "Apple Music",
-        "url": ""
-      },
-      {
-        "platform": "YouTube",
-        "url": ""
-      }
-    ]
-  },
-  "quotes": [
-    "Stay tough and resilient. It’s not easy.",
-    "The ones that persevere, adapt and stay creative will have the best chance of succeeding."
-  ]
-}
-,
- {
-  "artistID": "lorraine-mccauley",
-  "displayName": "Lorraine McCauley",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["folk", "soulful", "healing", "acoustic", "storytelling"],
-  "identity": {
-    "realName": "Lorraine McCauley",
-    "aliases": [],
-    "origin": "Ireland",
-    "location": "Edinburgh, Scotland",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Poet", "Workshop Facilitator"],
-    "genres": ["Folk", "Acoustic", "Soulful"],
-    "influences": ["Joni Mitchell", "Sinead O'Connor", "Damien Rice"],
-    "skills": ["Vocals", "Lyricism", "Community Engagement", "Songwriting"]
-  },
-  "career": {
-    "education": "Creative writing and vocal performance background",
-    "collaborations": ["Community musicians", "Local storytelling collectives"],
-    "performances": ["Edinburgh festivals", "UK folk venues", "Online events"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Courage",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "An intimate album exploring vulnerability and empowerment"
-    },
-    {
-      "title": "We Will Get Through This",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A song of resilience and collective hope during the pandemic"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Emerges from personal reflection and emotional healing; integrates themes of courage and identity.",
-    "production_process": "Prefers simple acoustic settings; records in relaxed environments for authenticity."
-  },
-  "availability": {
-    "current_projects": ["Online songwriting circles", "Community creative writing workshops"],
-    "looking_for": ["Listeners who seek emotional connection", "Collaborative songwriting partners"]
-  },
-  "online_presence": {
-    "website": "https://www.lorrainemccauley.com",
+    "website": "http://www.anslommuzic.com/",
     "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/LorraineMcCauleyMusic"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/lorraine_mccauley"
-      }
+      { "platform": "Instagram", "url": "https://instagram.com/anslommuzic", "followers": "1,782" },
+      { "platform": "Facebook", "url": "https://facebook.com/anslommuzic", "followers": "55,985" }
     ],
     "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/0Vmb5kKRC1l9YvTe6AvPXE"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/user/lorraineceltic"
-      }
+      { "platform": "Spotify", "url": "https://open.spotify.com/artist/anslom", "stats": "~20,483 monthly listeners; top track 'Love Me Again' ~1.3M plays" },
+      { "platform": "Apple Music", "url": "https://music.apple.com/artist/anslom", "stats": null }
     ]
   },
+  "commerce": "Music available for purchase via Apple Music, Amazon MP3, eMusic, Juno Download; no official merch channel",
+  "social_impact": "Active in refugee rights, HIV/AIDS awareness, climate advocacy, youth empowerment, and cultural diplomacy.",
   "quotes": [
-    "I sing to give others courage to speak their own truths.",
-    "Music is a bridge between hearts — it doesn’t matter where we start."
-  ]
-}
-
-,
- {
-  "artistID": "ronn-van-etten",
-  "displayName": "Ronn van Etten",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["rock", "prog", "indie", "symphonic", "storytelling"],
-  "identity": {
-    "realName": "Ronn van Etten",
-    "aliases": [],
-    "origin": "Netherlands",
-    "location": "The Hague, Netherlands",
-    "languages": ["Dutch", "English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Composer", "Guitarist", "Keyboardist", "Producer"],
-    "genres": ["Rock", "Symphonic Rock", "Prog Rock", "Indie"],
-    "influences": ["Pink Floyd", "Genesis", "King Crimson", "Camel", "Yes", "Alan Parsons Project"],
-    "skills": ["Vocals", "Guitar", "Keyboards", "Composition", "Studio Production"]
-  },
-  "career": {
-    "education": "Self-taught musician; formal background not mentioned",
-    "collaborations": ["Guy Little", "Dave de Jong", "Silvia Reijbroek", "Harry Den Hartog"],
-    "performances": ["Live solo shows", "Band performances in Netherlands", "Streaming performances during pandemic"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "The Corona Tapes",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A double CD album with songs reflecting on the COVID-19 pandemic and lockdown"
-    },
-    {
-      "title": "Dreams",
-      "type": "Album",
-      "year": 2017,
-      "label": "Ronn's Music",
-      "details": "Album with themes of dreams, time, and reflection"
-    },
-    {
-      "title": "Memories",
-      "type": "Album",
-      "year": 2018,
-      "label": "Ronn's Music",
-      "details": "A sequel to Dreams – introspective and emotional"
-    }
+    "Music completes me.",
+    "I don’t do music for competition; I do music because it makes me feel good.",
+    "I want to farewell each performance, knowing that I have contributed to spread and ignite the influence of peace, love, and unity.",
+    "As long as the music is great, you can conquer the world.",
+    "Give thanks."
   ],
-  "creative_process": {
-    "songwriting_process": "Draws from life experiences, dreams, and political/social topics. Often builds from a concept or melody line.",
-    "production_process": "Records at own studio; uses digital production tools and collaborators for instrumentation and mixing."
-  },
-  "availability": {
-    "current_projects": ["New concept album under development", "Collaboration with European artists"],
-    "looking_for": ["International exposure", "Digital distribution", "Licensing opportunities"]
-  },
-  "online_presence": {
-    "website": "http://www.ronnvanetten.nl",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/ronnvanetten"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/6mKkdV6lDpTtAE4rZxOB56"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/channel/UCB5zSVTwcB7LZvwSwC3_sJw"
-      }
-    ]
-  },
-  "quotes": [
-    "Music must tell a story, paint a picture, and touch a soul.",
-    "I want to make people feel, reflect, and sometimes even act through my songs."
-  ]
+  "fan_press_quotes": [
+    "Described as fantastic with emotion, power and swag — Lazie Indie Magazine (IIMF 2022 coverage)",
+    "Audiences thrilled to sing along at Pacific Games closing performance (2015)"
+  ],
+  "classification": "Transitioning artist – from independent to mainstream",
+  "lazie_indie_association": "Featured in Lazie Indie Magazine Issue 26 (2022) and headlined IIMF Kerala 2022; ongoing collaboration on PNG music tourism initiatives.",
+  "long_narrative": "Anslom Nakikus, born Ronald Nakikus on Matupit Island, PNG, grew up surrounded by music, performing with the Barike Band as a teen. Over two decades, he has released multiple albums, blending reggae’s core themes with Pacific cultural roots. His international breakthrough came with Love Me Again (2019), recorded with Lucky Dube’s band. In 2024, he became the first PNG artist to sign with a major label (Kingmaker/Universal), releasing One Love with reggae legends Chaka Demus and Quino. A cultural ambassador and advocate, Anslom uses his music for refugee rights, HIV/AIDS awareness, and youth empowerment, performing at global festivals including Expo 2020 Dubai, One Love Festival Jamaica, and FestPAC Hawaii. He continues to bridge local authenticity with global reach."
 }
 ,
- {
-  "artistID": "yee-loi",
-  "displayName": "Yee Loi",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["punk", "rock", "teen", "garage", "DIY"],
-  "identity": {
-    "realName": "Yee Loi",
-    "aliases": [],
-    "origin": "UK",
-    "location": "Southampton, United Kingdom",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Guitarist", "Vocalist", "Songwriter"],
-    "genres": ["Garage Rock", "Punk Rock", "Indie Rock"],
-    "influences": ["The Ramones", "Green Day", "Joan Jett", "The Donnas"],
-    "skills": ["Guitar", "Songwriting", "Vocals", "Live Performance"]
-  },
-  "career": {
-    "education": "Still in school (Teen artist)",
-    "collaborations": ["Tizz (sister, drummer of the band)", "Lazie Records"],
-    "performances": ["Local gigs", "Online streaming shows", "Rock band showcases"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Noisy Neighbours",
-      "type": "EP",
-      "year": 2021,
-      "label": "Lazie Records",
-      "details": "Garage rock tracks with raw punk energy recorded by teenage sisters"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Lyrics and riffs are created based on teenage experiences and social frustration. Fast, fun, and spontaneous.",
-    "production_process": "DIY recording setup; supported by local producers and label."
-  },
-  "availability": {
-    "current_projects": ["Writing new songs", "Local performances", "Promoting debut EP"],
-    "looking_for": ["Fans", "Live show opportunities", "Exposure in punk communities"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/YeeLoiMusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/7HFSNcfR7c3uWLp0oEp4Dy"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/channel/UCBqN3ZP9pxFPGNLm_6EZXew"
-      }
-    ]
-  },
-  "quotes": [
-    "We just want to play loud, have fun, and let people know what it’s like growing up our way.",
-    "You don't need to wait to be older – just start now and make some noise."
-  ]
-},
 {
-  "artistID": "sharon-lia",
-  "displayName": "Sharon Lia",
+  "artistID": "sami_chohfi",
+  "displayName": "Sami Chohfi",
   "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["pop", "rock", "inspirational", "piano", "orchestral"],
+  "imageUrl": null,
+  "vibeTags": ["alternative rock", "emotional", "storytelling", "global", "independent"],
   "identity": {
-    "realName": "Sharon Lia",
+    "realName": "Sami Chohfi",
     "aliases": [],
-    "origin": "USA",
-    "location": "Philadelphia, Pennsylvania, USA",
-    "languages": ["English"],
-    "gender": "Female"
+    "origin": "United States (California)",
+    "location": "Seattle, Washington, USA",
+    "languages": ["English", "Portuguese"],
+    "gender": "Male",
+    "birthYear": null
   },
   "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Pianist", "Producer"],
-    "genres": ["Pop Rock", "Alternative", "Orchestral Rock"],
-    "influences": ["Evanescence", "Tori Amos", "Sarah McLachlan", "Pink"],
-    "skills": ["Vocals", "Piano", "Songwriting", "Production"]
+    "roles": ["Singer", "Songwriter", "Guitarist", "Performer"],
+    "genres": ["Alternative Rock", "Grunge", "Pop Rock", "Indie Rock"],
+    "influences": [
+      "Chris Cornell",
+      "Freddie Mercury",
+      "Soundgarden",
+      "The Smashing Pumpkins",
+      "Radiohead",
+      "The Beatles"
+    ],
+    "skills": ["Vocals", "Guitar", "Songwriting", "Music Video Production"],
+    "signature_style": "Alternative rock with pristine vocals, heartfelt lyrics, and stripped-down instrumentation, often paired with culturally rich visuals filmed across multiple countries."
   },
   "career": {
-    "education": "Not specified",
-    "collaborations": ["The Sharon Lia Band"],
-    "performances": ["Hard Rock Cafe", "Women Who Rock Benefit Concerts", "Veteran Fundraisers"],
+    "education": "",
+    "collaborations": [
+      "Blue Helix",
+      "Kellii Scott",
+      "Douglas Coronel",
+      "Rosemarie",
+      "Lemak",
+      "Jean Dolabella",
+      "Dave Collins",
+      "Alexandre Suplicy",
+      "Shalini Mohan",
+      "Niveditha Ode Linda",
+      "Mr. Legacy"
+    ],
+    "performances": [
+      "Aurora Borealis, Rendezvous, Jazz Bones (Seattle/Tacoma, WA)",
+      "State Fair, Capital Lakefair, RoadHouse Saloon (Puyallup/Olympia, ID)",
+      "Hard Rock Café, Herman’s Hideaway, Rock Pub Live (Denver, CO & Phoenix, AZ)",
+      "International Indie Music Festival, Kerala, India",
+      "Multi-city tours in Brazil",
+      "Philippines, Japan, Armenia, Cambodia, Costa Rica"
+    ],
     "awards": [
-      "GMA IMEA Award Winner",
-      "Women in Music Honoree",
-      "Billboard Emerging Artist"
-    ]
+      "Male Vocalist of the Year – Music Mafia Radio (2022)",
+      "World Songwriting Awards (Multiple Years)",
+      "ISSA Awards – Various categories",
+      "Global Music Award – International Artist (2020, 2023)",
+      "Battle of the Bands – Jack FM / Muckleshoot (2015)",
+      "Sua Banda Dá um Show Contest Winner (2014, 2017)",
+      "50K+ Radio Spins",
+      "CBS SEAL Team sync feature"
+    ],
+    "career_evolution": "Began with alternative rock band Blue Helix, transitioned to solo career in 2019 focusing on acoustic-driven, globally inspired storytelling.",
+    "years_active": "2008–present"
   },
   "discography": [
-    {
-      "title": "Fairytales",
-      "type": "Album",
-      "year": 2019,
-      "label": "The Sharon Lia Band / Independent",
-      "details": "Emotive, orchestral pop rock with themes of strength and perseverance"
-    },
-    {
-      "title": "Why Can't We Pretend",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A dramatic single blending symphonic elements with rock storytelling"
-    }
+    { "title": "Metamorphosis", "type": "EP", "year": 2024, "label": "Independent", "details": "Includes 'AntiSocial Butterfly', 'This Tragedy'" },
+    { "title": "Extraordinary World", "type": "Album", "year": 2020, "label": "Independent", "details": "Written across six countries" },
+    { "title": "Tidal Wave", "type": "Digital Album", "year": 2020, "label": "Independent", "details": "Independent release" },
+    { "title": "Little One", "type": "Single", "year": 2021, "label": "Independent", "details": "Inspired by TV show; high radio exposure" },
+    { "title": "All Over Again", "type": "Single", "year": 2022, "label": "Independent", "details": "" },
+    { "title": "Sing You to Me", "type": "Single", "year": 2023, "label": "Independent", "details": "" },
+    { "title": "AntiSocial Butterfly", "type": "Single", "year": 2023, "label": "Independent", "details": "" },
+    { "title": "Take on Me", "type": "Cover", "year": 2023, "label": "Independent", "details": "Cover of A-ha classic" },
+    { "title": "AntiSocial Butterfly", "type": "Album", "year": 2017, "label": "Independent", "details": "With Blue Helix" },
+    { "title": "The Awakening", "type": "Single", "year": 2022, "label": "Independent", "details": "With Blue Helix" },
+    { "title": "Tale of Two Halves", "type": "Album", "year": 2014, "label": "Independent", "details": "" },
+    { "title": "Coda", "type": "Track", "year": null, "label": "Independent", "details": "Early Blue Helix material" },
+    { "title": "Light the Wick", "type": "Track", "year": null, "label": "Independent", "details": "Early Blue Helix material" }
   ],
   "creative_process": {
-    "songwriting_process": "Draws inspiration from personal struggles and triumphs; lyrics often reflect emotion and empowerment.",
-    "production_process": "Uses digital orchestration and piano foundations; collaborates with full band for arrangements."
+    "songwriting_process": "Draws on personal experiences, travels, and cultural encounters to craft emotionally resonant songs.",
+    "production_process": "Uses minimal instrumentation like acoustic guitar and finger snaps to highlight emotion, often collaborating with trusted producers and engineers.",
+    "creative_rituals": null
   },
   "availability": {
-    "current_projects": ["New single release", "Ongoing charity events", "Expanding the Sharon Lia Foundation"],
-    "looking_for": ["Collaboration opportunities", "Streaming platform visibility", "Sync/licensing"]
+    "current_projects": ["Metamorphosis EP promotion", "International touring", "Blue Helix projects"],
+    "looking_for": ["Global festival slots", "Collaborations with indie and alternative rock artists"]
   },
   "online_presence": {
-    "website": "https://www.sharonlia.com",
+    "website": "https://samichohfimusic.com/",
     "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/SharonLiaBand"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/sharonliamusic"
-      }
+      { "platform": "Instagram", "url": "https://instagram.com/samichohfimusic", "followers": "22,000" },
+      { "platform": "Facebook", "url": "https://facebook.com/samichohfimusic", "followers": "41,000" },
+      { "platform": "YouTube", "url": "https://youtube.com", "followers": "6,600" },
+      { "platform": "Twitter/X", "url": "https://twitter.com/SamiChohfiMusic", "followers": null }
     ],
     "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2yFBAg8rfHwZPPO7MTU0ZI"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/channel/UCmVtM-GJW1xOpVg6pwiIK8g"
-      }
+      { "platform": "Spotify", "url": "https://open.spotify.com/artist/sami_chohfi", "stats": null },
+      { "platform": "Apple Music", "url": "https://music.apple.com/artist/sami-chohfi", "stats": null }
     ]
   },
+  "commerce": "Merchandise, CDs, and downloads available via official website, Bandcamp, Apple Music, Amazon Music.",
+  "social_impact": "Promotes cultural inclusion, mental health awareness, female representation in rock, and global unity through music and visual storytelling.",
   "quotes": [
-    "Everyone has a story. Music helps us tell ours.",
-    "Even in the darkest moments, art and community can light the way."
-  ]
+    "People inspire me, even the bad ones.",
+    "I think that the true gift this world has to offer is human connection.",
+    "Being an artist can be a lonely journey, but it is a fulfilling journey nonetheless.",
+    "The chances of being the next Foo Fighters or Queen are very unlikely, so enjoy the little moments."
+  ],
+  "fan_press_quotes": [
+    "Performance described as electrifying and intense, compared to Foo Fighters and Smashing Pumpkins.",
+    "Fans call themselves the 'Bad Batch Crew', showing strong community engagement.",
+    "Audience in São Paulo was 'super empolgada', singing along to every song."
+  ],
+  "classification": "Independent Artist",
+  "lazie_indie_association": "Featured in Lazie Indie Magazine Edition 3 (August 2020), focus on Extraordinary World album and music video storytelling.",
+  "long_narrative": "Sami Chohfi’s journey bridges cultures, music, and human stories. Born to a Brazilian mother and Middle Eastern father, he grew up between traditions, fueling his empathy and artistic worldview. Starting as frontman of alternative rock band Blue Helix, he earned success in the U.S. and Brazil before shifting to a solo career with the album Extraordinary World (2020), written and filmed across six countries. His work blends emotional alternative rock with culturally rich visuals, often tackling themes like loneliness, resilience, and identity. Beyond music, Sami is committed to mental health awareness, cultural inclusion, and cross-border unity. He continues to tour globally, engage deeply with fans, and produce authentic, independent art."
 }
 ,
 {
-  "artistID": "diana-ringo",
-  "displayName": "Diana Ringo",
+  "artistID": "lyia_meta",
+  "displayName": "Lyia Meta",
   "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["neo-classical", "cinematic", "sci-fi", "experimental"],
+  "imageUrl": null,
+  "vibeTags": ["blues rock", "soul", "jazz", "symphonic rock", "gothic ballads", "visual artist", "independent"],
   "identity": {
-    "realName": "Diana Ringo",
+    "realName": "Lyia Meta",
     "aliases": [],
-    "origin": "Finland",
-    "location": "Helsinki, Finland",
-    "languages": ["Finnish", "English", "Russian"],
-    "gender": "Female"
+    "origin": "Malaysia",
+    "location": "Kuala Lumpur / Melaka, Malaysia",
+    "languages": ["English", "Malay"],
+    "gender": "Female",
+    "birthYear": null
   },
   "artistic_background": {
-    "roles": ["Composer", "Film Director", "Pianist", "Visual Artist"],
-    "genres": ["Neo-Classical", "Cinematic", "Soundtrack"],
-    "influences": ["Hans Zimmer", "John Williams", "Tangerine Dream", "Jean-Michel Jarre"],
-    "skills": ["Composition", "Piano", "Orchestration", "Film Direction"]
+    "roles": ["Singer", "Songwriter", "Guitarist", "Producer", "Visual Artist", "Writer"],
+    "genres": ["Jazz", "Blues Rock", "Soul", "Adult Contemporary", "Symphonic Rock", "Gothic Ballads"],
+    "influences": [],
+    "skills": ["Vocals", "Acoustic Guitar", "Songwriting", "Production", "Visual Art", "Music Journalism"],
+    "signature_style": "Deep, baritone-rich vocals with lush arrangements and narrative songwriting, blending emotional honesty with sonic sophistication."
   },
   "career": {
-    "education": "Classically trained in music; studied art and filmmaking",
-    "collaborations": ["Global orchestras", "Indie film actors", "Visual effects artists"],
-    "performances": ["Film festivals", "Gallery screenings", "Composer showcases"],
+    "education": "",
+    "collaborations": [
+      "Manjoo Singh Rana",
+      "Independent producers across UK, US, and Europe",
+      "Grammy-recognized international collaborations"
+    ],
+    "performances": [
+      "Live shows across Malaysia, India, and select US showcases",
+      "International Indie Music Festival (Kerala, India)",
+      "Multiple global indie virtual concerts"
+    ],
     "awards": [
-      "Best Composer – IndieX Film Festival",
-      "Official Selection – Cannes World Film Festival",
-      "Multiple international soundtrack awards"
-    ]
+      "Cannes Music Award – 'Always You'",
+      "Featured in Grammy-nominated album (2024)",
+      "Josie Music Awards – multiple wins and nominations",
+      "Honors from Indie Music Hall of Fame",
+      "Hollywood Independent Music Awards",
+      "Various global contests"
+    ],
+    "career_evolution": "From blues-rock frontwoman in Malaysia's live scene to globally recognized independent artist, also acclaimed as a visual artist and music journalist.",
+    "years_active": "2009–present"
   },
   "discography": [
-    {
-      "title": "Quarantine Trilogy",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A cinematic soundtrack album created during lockdown with dramatic and dystopian themes"
-    }
+    { "title": "This is Lyia Meta", "type": "EP", "year": 2017, "label": "Independent", "details": "Debut EP introducing her voice to global audiences" },
+    { "title": "Slumber", "type": "Album", "year": 2020, "label": "Independent", "details": "Haunting, cinematic ballad collection" },
+    { "title": "15013", "type": "Album", "year": 2021, "label": "Independent", "details": "Dark, introspective project reflecting solitude and struggle" },
+    { "title": "You Think About Me", "type": "Single", "year": 2023, "label": "Independent", "details": "Soul single nominated internationally" },
+    { "title": "Always You", "type": "Single", "year": 2023, "label": "Independent", "details": "Award-winning anthem including Cannes Music Award" },
+    { "title": "Alive", "type": "Single", "year": 2024, "label": "Independent", "details": "Empowering track for global healing initiatives" }
   ],
   "creative_process": {
-    "songwriting_process": "Built around visual moods; often composes by imagining film scenes or abstract concepts first.",
-    "production_process": "Mixes digital orchestration and synthesizers; records in home studio and edits using film scoring tools."
+    "songwriting_process": "Driven by emotional honesty and lived experience, exploring themes of womanhood, cultural identity, and resilience.",
+    "production_process": "Designs immersive sonic and visual experiences, creating her own artwork and album covers.",
+    "creative_rituals": null
   },
   "availability": {
-    "current_projects": ["Post-production on feature film 'Quarantine'", "New soundtrack releases"],
-    "looking_for": ["Soundtrack licensing", "Film festival placements", "Composer commissions"]
+    "current_projects": ["Editorial work for Lazie Indie Magazine", "New music releases", "Visual art commissions"],
+    "looking_for": ["Collaborations", "Global live performances", "Media features"]
   },
   "online_presence": {
-    "website": "https://www.dianaringo.com",
+    "website": "https://www.lyiameta.com",
     "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/dianaringo"
-      }
+      { "platform": "Instagram", "url": "https://instagram.com/lyiameta", "followers": "3.1K" },
+      { "platform": "Facebook", "url": "https://facebook.com/lyiameta", "followers": "6K" },
+      { "platform": "YouTube", "url": "https://youtube.com/@lyiameta", "followers": "2.5K" },
+      { "platform": "Twitter/X", "url": "https://twitter.com/lyiameta", "followers": "1,200" }
     ],
     "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/0aLB7wQxvHK6wTuDyi2UuI"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/c/DianaRingo"
-      }
+      { "platform": "Spotify", "url": "https://open.spotify.com/artist/lyiameta", "stats": "~14,000 monthly listeners" },
+      { "platform": "Apple Music", "url": "https://music.apple.com/artist/lyia-meta", "stats": null }
     ]
   },
+  "commerce": "Merchandise, digital downloads, and signed artwork via official site and Bandcamp; personalized art commissions available.",
+  "social_impact": "Advocates for women’s rights, artistic independence, and mental wellness; participates in charity performances and global healing initiatives.",
   "quotes": [
-    "Music can become your escape or your mirror – I try to offer both.",
-    "Soundtracks are the soul of a visual story."
-  ]
+    "My music is not about genre. It’s about emotion. If it makes you feel something, it has already done its job.",
+    "We don’t write songs just for stages. We write to survive. To reclaim. To speak.",
+    "As an indie artist, I don’t need a machine. I need a heart, a story, and a microphone.",
+    "Gothic doesn’t mean dark—it means deep. We descend into feeling to rise into the light."
+  ],
+  "fan_press_quotes": [
+    "When Lyia sings, it’s as if the Earth stops to listen. — ReverbNation comment"
+  ],
+  "classification": "Independent Musician – Established Independent Women Artist",
+  "lazie_indie_association": "Lazie Indie Magazine cover story feature (Edition 47, November 2023); contributing columnist with 33 interviews and 6 cover stories.",
+  "long_narrative": "Lyia Meta’s journey spans from Malaysia’s blues clubs to Grammy-nominated collaborations. A multi-genre vocalist, visual artist, and writer, she has built a global reputation for emotional authenticity and fearless creativity. Her breakout single 'Always You' earned multiple awards including the Cannes Music Award, and in 2024 her voice featured on a Grammy-nominated album. As a Lazie Indie Magazine columnist, she has conducted 33 interviews and authored six cover stories, championing indie voices worldwide. Lyia merges music with visual art, creating immersive storytelling experiences that reflect her belief that authenticity is the most radical art of all."
 }
-,
-{
-  "artistID": "boom-boom-deluxe",
-  "displayName": "Boom Boom Deluxe",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["rockabilly", "retro", "high-energy", "vintage"],
-  "identity": {
-    "realName": "Boom Boom Deluxe",
-    "aliases": [],
-    "origin": "New Zealand",
-    "location": "Auckland, New Zealand",
-    "languages": ["English"],
-    "gender": "Group"
-  },
-  "artistic_background": {
-    "roles": ["Band", "Performers", "Recording Artists"],
-    "genres": ["Rockabilly", "1950s Rock and Roll", "Psychobilly"],
-    "influences": ["Elvis Presley", "Stray Cats", "Eddie Cochran", "Johnny Cash"],
-    "skills": ["Live Performance", "Retro Styling", "Songwriting", "Audience Engagement"]
-  },
-  "career": {
-    "education": "Not specified",
-    "collaborations": ["Local NZ rockabilly scene", "Lazie Records"],
-    "performances": ["Rockabilly festivals in NZ", "Live club shows", "Online lockdown performances"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Teenage Zombie Rock 'n' Roll",
-      "type": "Album",
-      "year": 2020,
-      "label": "Lazie Records",
-      "details": "Fun, horror-themed retro rockabilly tracks with modern humor and vintage sound"
-    },
-    {
-      "title": "The Big One",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "High-octane retro rock album with covers and originals"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Mixes 1950s themes with modern twists; lyrics often humorous or spooky; inspired by B-movie culture.",
-    "production_process": "Vintage analog-inspired sound; self-produced and mixed for old-school vinyl feel."
-  },
-  "availability": {
-    "current_projects": ["New singles and videos", "Live shows across NZ", "Online merch and fan campaigns"],
-    "looking_for": ["Rockabilly fans", "Festival gigs", "Media exposure"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/BoomBoomDeluxeNZ"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2Hp2nFRH4kjrp7NYmvTzDr"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@boomboomdeluxeband"
-      }
-    ]
-  },
-  "quotes": [
-    "We're here to bring back the good times – loud suits, loud music, and louder laughs.",
-    "Rockabilly isn't old – it's timeless."
-  ]
-}
-,
-{
-  "artistID": "madison-mueller",
-  "displayName": "Madison Mueller",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["indie", "pop", "piano", "youthful", "storytelling"],
-  "identity": {
-    "realName": "Madison Mueller",
-    "aliases": [],
-    "origin": "Canada",
-    "location": "Barrie, Ontario, Canada",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Pianist", "Performer"],
-    "genres": ["Indie Pop", "Singer-Songwriter"],
-    "influences": ["Sara Bareilles", "Alicia Keys", "Coldplay", "Ed Sheeran"],
-    "skills": ["Piano", "Vocals", "Songwriting", "Live Performance"]
-  },
-  "career": {
-    "education": "Not specified",
-    "collaborations": [],
-    "performances": ["Local Canadian festivals", "Radio shows", "Online concerts"],
-    "awards": [
-      "Best Pop Song – World Songwriting Awards",
-      "Female Vocalist of the Year – Josie Music Awards",
-      "Finalist – Canadian Songwriting Competition"
-    ]
-  },
-  "discography": [
-    {
-      "title": "Too Nice",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A catchy pop ballad about the emotional cost of being overly kind"
-    },
-    {
-      "title": "Exhale",
-      "type": "Single",
-      "year": 2020,
-      "label": "Independent",
-      "details": "An empowering indie anthem about letting go and moving on"
-    },
-    {
-      "title": "Breath of Air",
-      "type": "Single",
-      "year": 2019,
-      "label": "Independent",
-      "details": "Signature piano-led song that helped define her early style"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Lyrics often come first; inspired by personal growth, relationships, and real emotions.",
-    "production_process": "Usually starts at the piano; tracks evolve in home or small studio setups with digital editing."
-  },
-  "availability": {
-    "current_projects": ["EP in progress", "New music video", "Upcoming live performances"],
-    "looking_for": ["Collaborators", "International promotion", "Spotify playlist placement"]
-  },
-  "online_presence": {
-    "website": "https://www.maddiemakesmusic.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/maddiemakesmusic"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/maddiemakesmusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2zBkX1G5Eou5kXSkTTzHDs"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/maddiemakesmusic"
-      }
-    ]
-  },
-  "quotes": [
-    "Your voice matters – even when it shakes.",
-    "If you can feel it, you can write it. That’s where the magic begins."
-  ]
-}
-,
-{
-  "artistID": "sonja-kristina",
-  "displayName": "Sonja Kristina",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["prog rock", "classic rock", "female vocals", "psychedelic", "experimental"],
-  "identity": {
-    "realName": "Sonja Kristina",
-    "aliases": [],
-    "origin": "UK",
-    "location": "London, United Kingdom",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Vocalist", "Performer", "Actress", "Band Leader"],
-    "genres": ["Progressive Rock", "Folk Rock", "Psychedelic Rock"],
-    "influences": ["Jefferson Airplane", "Janis Joplin", "David Bowie"],
-    "skills": ["Vocals", "Stage Performance", "Songwriting"]
-  },
-  "career": {
-    "education": "Drama Centre London; early career in musical theatre",
-    "collaborations": ["Curved Air", "Stewart Copeland (The Police)"],
-    "performances": ["Woodstock-related festivals", "International tours with Curved Air", "Theatrical productions"],
-    "awards": [
-      "CRS Award for Outstanding Contribution to Music",
-      "Prog Magazine’s 'Guiding Light Award'",
-      "Various heritage rock honors"
-    ]
-  },
-  "discography": [
-    {
-      "title": "Air Conditioning",
-      "type": "Album",
-      "year": 1970,
-      "label": "Warner Bros.",
-      "details": "Debut Curved Air album featuring the hit 'It Happened Today'"
-    },
-    {
-      "title": "North Star",
-      "type": "Album",
-      "year": 2014,
-      "label": "Curved Air Records",
-      "details": "Modern studio album blending classic and new sounds"
-    },
-    {
-      "title": "Harmonics of Love",
-      "type": "Solo Album",
-      "year": 2017,
-      "label": "Cherry Red",
-      "details": "A retrospective solo album of her most expressive songs"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Draws on personal philosophy, dreams, and theatrical roots; lyrics often symbolic or story-driven.",
-    "production_process": "Collaborates with musicians from Curved Air and trusted producers; blends vintage instrumentation with digital remastering."
-  },
-  "availability": {
-    "current_projects": ["Curved Air live performances", "Reissue campaigns", "New solo collaborations"],
-    "looking_for": ["Progressive music fans", "Festival bookings", "Legacy rock media features"]
-  },
-  "online_presence": {
-    "website": "https://www.curvedair.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/sonjakristinamusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2TnXh9sAYdK9YoOpYEGfco"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/user/CurvedAirOfficial"
-      }
-    ]
-  },
-  "quotes": [
-    "Music has always been the language of transformation.",
-    "Prog rock allowed me to be theatrical, emotional, and real — all at once."
-  ]
-}
-,
-{
-  "artistID": "bonnie-legion",
-  "displayName": "Bonnie Legion",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["eclectic", "alt rock", "trip hop", "edm", "cinematic"],
-  "identity": {
-    "realName": "Bonnie Legion",
-    "aliases": ["Reality of Yourself (R.O.Y)"],
-    "origin": "USA",
-    "location": "California, USA",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Vocalist", "Producer", "Songwriter", "Performer"],
-    "genres": ["Alternative Rock", "Electronic", "Trip Hop", "EDM", "Pop"],
-    "influences": ["Portishead", "Massive Attack", "Nine Inch Nails", "Imogen Heap"],
-    "skills": ["Vocals", "Sound Design", "Lyricism", "Video Editing"]
-  },
-  "career": {
-    "education": "Self-taught; background in digital audio production and vocal layering",
-    "collaborations": ["Ink Project", "Greg Fogg (Songbuilderz)", "ChillSelect", "R.O.Y Collective"],
-    "performances": ["Virtual stages", "International collaborations", "Online music shows"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Antigravity",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Genre-blending sonic experience; part of Songbuilderz collaboration"
-    },
-    {
-      "title": "Warrior",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Powerful vocal performance with cinematic instrumental backing"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Improvisational – often records spontaneous vocal takes and builds lyrics organically.",
-    "production_process": "Handles much of the mixing/mastering herself; heavy use of loops, atmospheric layers, and experimental beats."
-  },
-  "availability": {
-    "current_projects": ["New collab projects with electronic producers", "Reality of Yourself live content"],
-    "looking_for": ["Cross-genre collaborations", "Playlisting", "Sync licensing"]
-  },
-  "online_presence": {
-    "website": "https://www.realityofyourself.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/bonnielegion"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/realityofyourself"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/1oqB8oPSqFJQ9oXR6QsqZo"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/c/BonnieLegion"
-      }
-    ]
-  },
-  "quotes": [
-    "Reality of Yourself is more than music — it’s a message of emotional liberation.",
-    "I love blending beauty with distortion, clarity with chaos."
-  ]
-}
-,
-{
-  "artistID": "monica-ortiz",
-  "displayName": "Monica Ortiz",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["soulful", "emotional", "americana", "country", "healing"],
-  "identity": {
-    "realName": "Monica Ortiz",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Nashville, Tennessee, USA",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Author", "Life Coach"],
-    "genres": ["Americana", "Country", "Soft Rock", "Pop"],
-    "influences": ["Faith Hill", "Shania Twain", "Jewel"],
-    "skills": ["Vocals", "Songwriting", "Emotional Healing", "Storytelling"]
-  },
-  "career": {
-    "education": "Background in life coaching and emotional intelligence; transitioned into music and writing",
-    "collaborations": ["Troy Castellano", "Session musicians in Nashville"],
-    "performances": ["Nashville venues", "Podcast appearances", "Wellness events"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Journey Home",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Songs centered around emotional growth, forgiveness, and healing"
-    },
-    {
-      "title": "The Best Thing I Never Did",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Reflective song about making peace with past decisions"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Deeply tied to emotional experiences and life lessons; often writes with a message of self-love or growth.",
-    "production_process": "Works closely with producers to maintain authenticity in vocals and storytelling."
-  },
-  "availability": {
-    "current_projects": ["New self-help music project", "Live coaching and music hybrid shows"],
-    "looking_for": ["Like-minded artists", "Podcast features", "Emotional wellness tie-ins"]
-  },
-  "online_presence": {
-    "website": "https://www.monicaortiz.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/themonicaortiz"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/monicaortizlife"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/3yG9XZpEp2Grb7ljQMeoXD"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@themonicaortiz"
-      }
-    ]
-  },
-  "quotes": [
-    "Music is a mirror to our inner world. I use it to help others heal.",
-    "The right song can do more than entertain — it can transform."
-  ]
-}
-,
-{
-  "artistID": "yohan-jara",
-  "displayName": "Yohan Jara",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["instrumental", "ambient", "fusion", "latin", "meditative"],
-  "identity": {
-    "realName": "Yohan Jara",
-    "aliases": [],
-    "origin": "Chile",
-    "location": "Valparaíso, Chile",
-    "languages": ["Spanish", "English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Guitarist", "Composer", "Performer"],
-    "genres": ["Instrumental", "Latin Fusion", "World", "Ambient"],
-    "influences": ["Carlos Santana", "Ottmar Liebert", "Steve Vai", "Paco de Lucía"],
-    "skills": ["Guitar", "Improvisation", "Composition", "Live Performance"]
-  },
-  "career": {
-    "education": "Self-taught with years of performance experience",
-    "collaborations": ["Local Chilean musicians", "Cultural music festivals"],
-    "performances": ["Street shows", "Latin America music festivals", "Online instrumental sessions"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Latidos del Sur",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A melodic instrumental journey blending Latin, world, and ambient elements"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Draws from emotion, nature, and cultural rhythm; builds compositions around improvisational guitar phrases.",
-    "production_process": "Minimalist; favors natural reverb, analog tones, and acoustic textures."
-  },
-  "availability": {
-    "current_projects": ["New instrumental EP", "International digital outreach"],
-    "looking_for": ["Global streaming audience", "Festival invites", "World music collabs"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/YohanJaraMusica"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2e8yaQEsnnSGM7HGejjzqb"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@YohanJara"
-      }
-    ]
-  },
-  "quotes": [
-    "My guitar speaks when words fall short.",
-    "I aim to create a space of peace and presence with every note."
-  ]
-}
-,
-{
-  "artistID": "amr-mohsen",
-  "displayName": "Amr Mohsen",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["instrumental", "cinematic", "world", "middle eastern", "ambient"],
-  "identity": {
-    "realName": "Amr Mohsen",
-    "aliases": [],
-    "origin": "Egypt",
-    "location": "Cairo, Egypt",
-    "languages": ["Arabic", "English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Composer", "Producer", "Multi-instrumentalist"],
-    "genres": ["Cinematic", "World Music", "Ambient", "Fusion"],
-    "influences": ["Yanni", "Hans Zimmer", "Vangelis", "Middle Eastern folk traditions"],
-    "skills": ["Composition", "Sound Design", "Instrumental Performance"]
-  },
-  "career": {
-    "education": "Background in music composition; self-developed studio production skills",
-    "collaborations": ["Middle Eastern musicians", "Online instrumental artists"],
-    "performances": ["Online concerts", "Virtual collabs", "Festival placements"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Dimensions",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Cinematic fusion of modern ambient and Middle Eastern instrumental styles"
-    },
-    {
-      "title": "Odyssey",
-      "type": "EP",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A journey through soundscapes blending electronic and traditional tones"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Focuses on mood and thematic development; builds tracks around sonic storytelling.",
-    "production_process": "Blends live instrumentation with synth layers; mixes in home studio environment."
-  },
-  "availability": {
-    "current_projects": ["New soundtrack-style releases", "International collaborations"],
-    "looking_for": ["Sync licensing", "Film score opportunities", "Global exposure"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/amrmohsen.music"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/3EuGHQOVa29b0Z0YBQ4k2e"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@amrmohsenmusic"
-      }
-    ]
-  },
-  "quotes": [
-    "I compose to paint emotions with sound.",
-    "Music can connect cultures in ways words never could."
-  ]
-}
-,
-{
-  "artistID": "michael-p-cullen",
-  "displayName": "Michael P. Cullen",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["dark romance", "spoken word", "indie rock", "gothic", "emotive"],
-  "identity": {
-    "realName": "Michael P. Cullen",
-    "aliases": [],
-    "origin": "Australia",
-    "location": "Sydney, Australia",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Performer", "Poet"],
-    "genres": ["Alternative Rock", "Indie", "Spoken Word"],
-    "influences": ["Nick Cave", "Leonard Cohen", "Tom Waits"],
-    "skills": ["Lyricism", "Vocal Performance", "Live Shows", "Poetic Writing"]
-  },
-  "career": {
-    "education": "Not specified",
-    "collaborations": ["The Soul Searchers"],
-    "performances": ["Australian indie venues", "Online global showcases"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "True Believer",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "A poetic blend of gothic pop, romance, and lyrical introspection"
-    },
-    {
-      "title": "Do You Believe",
-      "type": "Single",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Philosophical rock ballad driven by haunting delivery"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Often begins with a lyrical phrase or poem; melodies evolve afterward.",
-    "production_process": "Layered instrumentation with a focus on voice and mood; prefers analog textures."
-  },
-  "availability": {
-    "current_projects": ["New album in development", "Poetry-music hybrid content"],
-    "looking_for": ["Collaborative musicians", "Spoken-word enthusiasts", "Alternative radio features"]
-  },
-  "online_presence": {
-    "website": "https://www.michaelpcullen.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/MichaelPCullenMusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/1vuR9RMZyOXGVo5fUzVYgm"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/user/michaelpcullenmusic"
-      }
-    ]
-  },
-  "quotes": [
-    "The songs are vehicles for emotional truth. Even the ugly truths.",
-    "I write to feel less alone. If someone else feels less alone too, then I’ve done my job."
-  ]
-},
-{
-  "artistID": "gary-dranow-manic-emotions",
-  "displayName": "Gary Dranow and The Manic Emotions",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["classic rock", "emotive", "guitar-driven", "blues", "personal"],
-  "identity": {
-    "realName": "Gary Dranow",
-    "aliases": ["The Manic Emotions"],
-    "origin": "USA",
-    "location": "Park City, Utah, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Guitarist", "Vocalist", "Songwriter", "Band Leader"],
-    "genres": ["Rock", "Blues", "Alternative"],
-    "influences": ["Jimi Hendrix", "Eric Clapton", "Bruce Springsteen"],
-    "skills": ["Guitar", "Lyricism", "Vocals", "Band Arrangement"]
-  },
-  "career": {
-    "education": "Self-taught musician; started after athletic and entrepreneurial careers",
-    "collaborations": ["The Manic Emotions", "Local Utah musicians"],
-    "performances": ["Live shows across Utah", "Online music promotions"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Destiny Road",
-      "type": "Album",
-      "year": 2006,
-      "label": "Independent",
-      "details": "Personal reflections on life struggles, recovery, and triumph through blues-rock"
-    },
-    {
-      "title": "Never Give Up",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A message of resilience and mental health awareness through rock"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Lyrics are based on real-life experiences with mental health, love, and perseverance.",
-    "production_process": "Band-based studio setup; classic rock instrumentation with a raw emotional edge."
-  },
-  "availability": {
-    "current_projects": ["New concept album", "Mental health music outreach"],
-    "looking_for": ["Fans of emotional rock", "Podcast features", "Live show bookings"]
-  },
-  "online_presence": {
-    "website": "https://www.garydranow.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/GaryDranowMusic"
-      },
-      {
-        "platform": "Twitter",
-        "url": "https://twitter.com/garydranow"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/7nXtMBPXcuD5e77eI9GRwY"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@GaryDranow"
-      }
-    ]
-  },
-  "quotes": [
-    "Rock and roll is how I speak the truth — especially when it hurts.",
-    "If you’ve been through hell, put it in a song and play your way out."
-  ]
-}
-,
-{
-  "artistID": "southbound-snake-charmers",
-  "displayName": "Southbound Snake Charmers",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["blues rock", "southern", "gritty", "slide guitar", "aussie rock"],
-  "identity": {
-    "realName": "Southbound Snake Charmers",
-    "aliases": [],
-    "origin": "Australia",
-    "location": "Melbourne, Australia",
-    "languages": ["English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Band", "Performers", "Songwriters"],
-    "genres": ["Blues Rock", "Southern Rock", "Slide Blues"],
-    "influences": ["ZZ Top", "Lynyrd Skynyrd", "Joe Bonamassa"],
-    "skills": ["Guitar Riffs", "Slide Guitar", "Live Shows", "Songwriting"]
-  },
-  "career": {
-    "education": "Not specified",
-    "collaborations": [],
-    "performances": ["Australian blues festivals", "Local pubs and venues"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "The Dirty Blues",
-      "type": "EP",
-      "year": 2016,
-      "label": "Independent",
-      "details": "Raw slide-driven blues rock with strong southern influences"
-    },
-    {
-      "title": "Voodoo Lightning",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "Expanded sound exploring darker tones and swampy blues"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Collaborative; often jam-based; draws from blues and classic rock themes.",
-    "production_process": "Live-in-studio style to retain gritty sound; minimal overdubbing."
-  },
-  "availability": {
-    "current_projects": ["Working on a new EP", "Expanding digital reach"],
-    "looking_for": ["Label support", "Global playlisting", "Festival circuits"]
-  },
-  "online_presence": {
-    "website": "https://southboundsnakecharmers.bandcamp.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/SouthboundSnakeCharmers"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/4xAi5Ad2KYm6EEqJr5lAsP"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@SouthboundSnakeCharmers"
-      }
-    ]
-  },
-  "quotes": [
-    "We don’t polish our sound — we let the grit speak.",
-    "Slide guitar is where the soul of our songs lies."
-  ]
-}
-,
-{
-  "artistID": "john-fishell",
-  "displayName": "John Fishell",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["rock", "blues", "studio", "retro", "american"],
-  "identity": {
-    "realName": "John Fishell",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Indiana, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Musician", "Producer", "Sound Engineer", "Composer"],
-    "genres": ["Rock", "Blues", "Classic Rock"],
-    "influences": ["The Beatles", "Led Zeppelin", "Tom Petty", "The Rolling Stones"],
-    "skills": ["Guitar", "Studio Production", "Mixing", "Songwriting"]
-  },
-  "career": {
-    "education": "Degree in Audio Engineering and Music Production",
-    "collaborations": ["Independent US artists", "Studio session musicians"],
-    "performances": ["Local US stages", "Studio concerts"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "American University",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A nostalgic rock album with strong lyrical and production value"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Focuses on melody-driven structure with storytelling; influenced by classic rock forms.",
-    "production_process": "Hands-on studio recording using both analog and digital gear; emphasizes tone."
-  },
-  "availability": {
-    "current_projects": ["Promoting 'American University'", "Producing new indie acts"],
-    "looking_for": ["Label distribution", "Film/TV licensing", "Mixing/mastering gigs"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/JohnFishellMusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/0DRRD3wUHZKpo8jLMiCDK2"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@johnfishell1163"
-      }
-    ]
-  },
-  "quotes": [
-    "Production is as much a performance as playing live.",
-    "I love capturing the raw American sound in a polished way."
-  ]
-}
-,
-{
-  "artistID": "bob-madsen-2nd-player-score",
-  "displayName": "Bob Madsen (2nd Player Score)",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["prog rock", "gaming", "conceptual", "narrative", "cinematic"],
-  "identity": {
-    "realName": "Bob Madsen",
-    "aliases": ["2nd Player Score"],
-    "origin": "USA",
-    "location": "Oregon, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Bassist", "Composer", "Producer", "Storyteller"],
-    "genres": ["Progressive Rock", "Alternative Rock", "Concept Rock"],
-    "influences": ["Rush", "Dream Theater", "Coheed and Cambria"],
-    "skills": ["Bass Guitar", "Music Composition", "Creative Direction", "Concept Writing"]
-  },
-  "career": {
-    "education": "Not specified",
-    "collaborations": ["2nd Player Score band members", "Comic book writers"],
-    "performances": ["Portland rock venues", "Online streams", "Conventions"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "The Noble Rot",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Part of a larger narrative universe that ties music with comic book storytelling"
-    },
-    {
-      "title": "Player Two",
-      "type": "Album",
-      "year": 2015,
-      "label": "Independent",
-      "details": "Prog-punk album based on a video game-inspired concept world"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Heavily concept-based; aligns each song with character arcs and story developments.",
-    "production_process": "Studio-built sound; blends prog rock instrumentation with story narration and gaming aesthetics."
-  },
-  "availability": {
-    "current_projects": ["Expanding concept universe", "New concept album", "Collaborations in comics/gaming"],
-    "looking_for": ["Cross-media collaborations", "Graphic novel sync", "Festival features"]
-  },
-  "online_presence": {
-    "website": "https://www.2ndplayerscore.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/2ndplayerscore"
-      },
-      {
-        "platform": "Twitter",
-        "url": "https://twitter.com/2ndplayerscore"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/1nWObObKjDmw0gaW3QzGZI"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@2ndplayerscore"
-      }
-    ]
-  },
-  "quotes": [
-    "Music is just one level — our universe has lore, characters, and consequences.",
-    "We write for gamers, rebels, and storytellers alike."
-  ]
-}
-,
-{
-  "artistID": "lizard-band",
-  "displayName": "Lizard",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["progressive rock", "experimental", "instrumental", "European prog", "symphonic"],
-  "identity": {
-    "realName": "Lizard",
-    "aliases": [],
-    "origin": "Poland",
-    "location": "Bielsko-Biała, Poland",
-    "languages": ["Polish", "English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Band", "Composers", "Performers"],
-    "genres": ["Progressive Rock", "Instrumental", "Fusion", "Jazz Rock"],
-    "influences": ["King Crimson", "Yes", "ELP", "Mahavishnu Orchestra"],
-    "skills": ["Composition", "Live Improvisation", "Polyrhythmic Structures", "Instrumental Virtuosity"]
-  },
-  "career": {
-    "education": "Classically and technically trained musicians",
-    "collaborations": [],
-    "performances": ["European prog rock festivals", "Live shows across Poland"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Half-Live",
-      "type": "Album",
-      "year": 2020,
-      "label": "Lynx Music",
-      "details": "Hybrid of live and studio recordings showcasing their technical depth"
-    },
-    {
-      "title": "W Galerii Czasu",
-      "type": "Album",
-      "year": 2018,
-      "label": "Lynx Music",
-      "details": "A conceptual progressive rock album inspired by time and philosophical themes"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Rooted in instrumental experimentation; strong focus on tempo, meter, and harmony.",
-    "production_process": "Studio and live sessions blended; captures the raw dynamics of a live band."
-  },
-  "availability": {
-    "current_projects": ["Upcoming album exploring math rock", "Experimental concept live tour"],
-    "looking_for": ["Prog rock festivals", "Label partnerships", "Distribution in Asia"]
-  },
-  "online_presence": {
-    "website": "https://www.facebook.com/Lizardband",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/Lizardband"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/4doVWeeFEAh2AlonJ5GvFF"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@LizardPolska"
-      }
-    ]
-  },
-  "quotes": [
-    "For us, progressive rock is a journey, not a genre.",
-    "We don’t just play music — we build sonic architecture."
-  ]
-}
-,
-{
-  "artistID": "crimson-bridge-ministry",
-  "displayName": "Crimson Bridge Ministry",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["christian rock", "faith-based", "uplifting", "acoustic rock", "inspirational"],
-  "identity": {
-    "realName": "Crimson Bridge Ministry",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Maryland, USA",
-    "languages": ["English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Band", "Worship Leaders", "Songwriters"],
-    "genres": ["Christian Rock", "Contemporary Christian", "Worship"],
-    "influences": ["Third Day", "Casting Crowns", "MercyMe"],
-    "skills": ["Live Worship", "Faith-Based Lyricism", "Acoustic Arrangement"]
-  },
-  "career": {
-    "education": "Faith and church-based music education",
-    "collaborations": ["Local churches", "Community ministries"],
-    "performances": ["Church events", "Faith-based festivals", "Online worship sessions"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Crossing Over",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "Blends personal testimony with acoustic-driven worship and rock"
-    },
-    {
-      "title": "Walk With Me",
-      "type": "Single",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A prayerful anthem about guidance through life's trials"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Centered on scripture, personal experience, and prayer-led inspiration.",
-    "production_process": "Built around acoustic core; studio sessions often led by spiritual intent."
-  },
-  "availability": {
-    "current_projects": ["Writing new worship songs", "Community outreach events"],
-    "looking_for": ["Church partnerships", "Faith-based radio", "Christian playlist features"]
-  },
-  "online_presence": {
-    "website": "https://www.crimsonbridgeministry.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/CrimsonBridgeMinistry"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/6RtuG8sqbf1iLEWZ4k3rqP"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@CrimsonBridgeMinistry"
-      }
-    ]
-  },
-  "quotes": [
-    "We don’t just play music — we deliver the message.",
-    "Every song is a bridge — from brokenness to healing, from fear to faith."
-  ]
-}
-,
-{
-  "artistID": "evie-calabasas",
-  "displayName": "Evie Calabasas",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["pop", "indie", "bedroom pop", "soft vocals", "modern"],
-  "identity": {
-    "realName": "Evie Calabasas",
-    "aliases": [],
-    "origin": "USA",
-    "location": "California, USA",
-    "languages": ["English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Producer"],
-    "genres": ["Indie Pop", "Bedroom Pop", "Alternative"],
-    "influences": ["Clairo", "Lana Del Rey", "Billie Eilish"],
-    "skills": ["Vocals", "Lo-fi Production", "Lyricism", "DIY Recording"]
-  },
-  "career": {
-    "education": "Self-taught in music production",
-    "collaborations": [],
-    "performances": ["Online showcases", "Virtual music festivals"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Pink Lemonade",
-      "type": "EP",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A soft and dreamy collection of indie-pop songs about youth and self-discovery"
-    },
-    {
-      "title": "Alone in the City",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "A melancholic tune about solitude and urban isolation"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Written in her bedroom studio; lyrics often derived from journal entries and personal stories.",
-    "production_process": "DIY with bedroom synths and lo-fi techniques; minimalist and emotional."
-  },
-  "availability": {
-    "current_projects": ["Working on second EP", "Experimenting with visual album concepts"],
-    "looking_for": ["Collaborators in indie space", "Curated playlists", "Music blogs"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/eviecalabasas"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/3p2ZVbLPZey1lVXc5yA7uY"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@eviecalabasas"
-      }
-    ]
-  },
-  "quotes": [
-    "I make music that sounds like late-night thoughts and soft lights.",
-    "Being vulnerable is powerful — that’s what my songs are all about."
-  ]
-}
-,
-{
-  "artistID": "darrell-kelley",
-  "displayName": "Darrell Kelley",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["gospel", "R&B", "social justice", "spiritual", "activism"],
-  "identity": {
-    "realName": "Darrell Kelley",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Atlanta, Georgia, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Pastor", "Activist"],
-    "genres": ["Gospel", "R&B", "Soul", "Hip Hop"],
-    "influences": ["Kirk Franklin", "Marvin Gaye", "Stevie Wonder"],
-    "skills": ["Vocals", "Public Speaking", "Message-Based Songwriting"]
-  },
-  "career": {
-    "education": "Ministry and music background",
-    "collaborations": ["Viral Gospel productions", "Community justice groups"],
-    "performances": ["Church events", "Community rallies", "Online media"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Systemic Racism in America",
-      "type": "Single",
-      "year": 2020,
-      "label": "Viral Records",
-      "details": "Powerful social commentary through gospel-influenced R&B"
-    },
-    {
-      "title": "The Coronavirus",
-      "type": "Single",
-      "year": 2020,
-      "label": "Viral Records",
-      "details": "A soulful plea for health awareness and community unity during the pandemic"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Inspired by real-life issues, headlines, and biblical principles.",
-    "production_process": "Combines traditional gospel structure with modern R&B and spoken word influences."
-  },
-  "availability": {
-    "current_projects": ["Releasing message-based singles", "Speaking at community events"],
-    "looking_for": ["Faith-based media", "Social justice collaborations", "Gospel networks"]
-  },
-  "online_presence": {
-    "website": "https://www.darrellkelleyofficial.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/darrellkelleymusic"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/darrellkelleymusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/3UsWeEmrYEnAChAYvVn7g6"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@DarrellKelley"
-      }
-    ]
-  },
-  "quotes": [
-    "I’m not just singing songs — I’m spreading truth.",
-    "Music should uplift, inspire, and challenge injustice wherever it exists."
-  ]
-}
-,
-{
-  "artistID": "the-sunset-drifters",
-  "displayName": "The Sunset Drifters",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["alt rock", "americana", "road trip", "nostalgic", "band"],
-  "identity": {
-    "realName": "The Sunset Drifters",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Nashville, Tennessee, USA",
-    "languages": ["English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Band", "Performers", "Songwriters"],
-    "genres": ["Alternative Rock", "Americana", "Country Rock"],
-    "influences": ["The Eagles", "Tom Petty", "The War on Drugs"],
-    "skills": ["Harmonies", "Guitar Solos", "Songwriting", "Live Performance"]
-  },
-  "career": {
-    "education": "Independent band roots; local scene development",
-    "collaborations": [],
-    "performances": ["Nashville music bars", "Regional festivals", "College circuits"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Dust and Sunsets",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Warm Americana tracks with themes of journeying, heartbreak, and youth"
-    },
-    {
-      "title": "Runaways",
-      "type": "Single",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Driving rhythm and nostalgic lyrics, perfect for road-trip playlists"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Collective effort; themes stem from late-night drives, small towns, and growing up American.",
-    "production_process": "Tracked in home studios and Nashville indie spaces; keeps it organic and story-focused."
-  },
-  "availability": {
-    "current_projects": ["Writing follow-up EP", "Live tour planning"],
-    "looking_for": ["Management", "Indie label deals", "Tour sponsors"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/thesunsetdrifters"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/thesunsetdrifters"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/5CVkEGWnIhx9u3SYrGQjms"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@TheSunsetDrifters"
-      }
-    ]
-  },
-  "quotes": [
-    "We make music for the open road and the broken heart.",
-    "Sunsets fade, but the songs stay with you."
-  ]
-},
-{
-  "artistID": "falu-falguni-shah",
-  "displayName": "Falu (Falguni Shah)",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["indian classical", "fusion", "grammy-winning", "children's music", "east-meets-west"],
-  "identity": {
-    "realName": "Falguni Shah",
-    "aliases": ["Falu"],
-    "origin": "India",
-    "location": "New York, USA",
-    "languages": ["Hindi", "Gujarati", "English"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Composer", "Performer"],
-    "genres": ["Indian Classical", "Fusion", "World Music", "Children's Music"],
-    "influences": ["Indian ragas", "Western harmonies", "Lata Mangeshkar", "Shankar Mahadevan"],
-    "skills": ["Vocals", "Raga Interpretation", "Live Performance", "Cultural Fusion"]
-  },
-  "career": {
-    "education": "Trained under Kaumudi Munshi and Ustad Sultan Khan; Berklee College of Music (guest instructor)",
-    "collaborations": ["A. R. Rahman", "Yo-Yo Ma", "Wyclef Jean"],
-    "performances": ["White House Diwali Celebration", "Carnegie Hall", "Global Music Festivals"],
-    "awards": ["Grammy Award for Best Children’s Album (2022)"]
-  },
-  "discography": [
-    {
-      "title": "Falu’s Bazaar",
-      "type": "Album",
-      "year": 2018,
-      "label": "Independent",
-      "details": "A bilingual album introducing South Asian culture and music to children"
-    },
-    {
-      "title": "A Colorful World",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Grammy-winning children's album blending Indian and Western music traditions"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Draws on cultural stories, raga motifs, and multilingual narratives; tailored for global audiences.",
-    "production_process": "Collaborative process with traditional and contemporary musicians; recorded in hybrid studio setups."
-  },
-  "availability": {
-    "current_projects": ["World music education initiatives", "Upcoming multilingual children’s album"],
-    "looking_for": ["Educational collaborations", "Global tour opportunities", "UNESCO cultural initiatives"]
-  },
-  "online_presence": {
-    "website": "https://www.falusmusic.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/falusmusic"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/falusmusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/0qxUq2rHWHHqKQIdBESaEl"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@falusmusic"
-      }
-    ]
-  },
-  "quotes": [
-    "My music bridges the gap between the ancient and the modern, the East and the West.",
-    "I believe children deserve music that celebrates diversity and inclusion."
-  ]
-}
-,
-{
-  "artistID": "jason-shadrick",
-  "displayName": "Jason Shadrick",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["guitar", "blues", "education", "PRS", "fusion"],
-  "identity": {
-    "realName": "Jason Shadrick",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Iowa, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Guitarist", "Educator", "Writer"],
-    "genres": ["Blues", "Jazz Fusion", "Instrumental"],
-    "influences": ["Robben Ford", "John Scofield", "Larry Carlton"],
-    "skills": ["Guitar Performance", "Teaching", "Music Journalism"]
-  },
-  "career": {
-    "education": "Berklee College of Music (Jazz Studies)",
-    "collaborations": ["Premier Guitar", "PRS Guitars", "Jazz publications"],
-    "performances": ["Workshops", "Guitar Clinics", "Online Sessions"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Slightly Off Course",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Instrumental guitar-driven album with blues and fusion influences"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Begins with groove or harmonic idea; focuses on improvisation-friendly structures.",
-    "production_process": "Layered tracking in home studio using a hybrid analog-digital setup."
-  },
-  "availability": {
-    "current_projects": ["Educational video content", "New instrumental album", "Collaborating with gear brands"],
-    "looking_for": ["Guitar festivals", "Educational clinics", "Publishing opportunities"]
-  },
-  "online_presence": {
-    "website": "https://www.jasonshadrick.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/jasonshadrick"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/jasonshadrickmusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/4pVuILyUD8rTAwA9GOW3m1"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@JasonShadrick"
-      }
-    ]
-  },
-  "quotes": [
-    "Good tone starts in your hands.",
-    "I love helping players unlock their own sound, one phrase at a time."
-  ]
-}
-,
-{
-  "artistID": "david-ditchfield",
-  "displayName": "David Ditchfield",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["near-death-experience", "orchestral", "spiritual", "self-taught", "inspirational"],
-  "identity": {
-    "realName": "David Ditchfield",
-    "aliases": [],
-    "origin": "UK",
-    "location": "Cambridge, UK",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Composer", "Author", "Speaker"],
-    "genres": ["Orchestral", "Spiritual", "Ambient"],
-    "influences": ["Classical composers", "Spiritual experiences", "Life-after-death themes"],
-    "skills": ["Orchestration", "Motivational Speaking", "Painting", "Writing"]
-  },
-  "career": {
-    "education": "Self-taught after a near-death experience",
-    "collaborations": [],
-    "performances": ["Live orchestral performances", "Spiritual events", "Podcasts"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "The Divine Light",
-      "type": "Symphony",
-      "year": 2016,
-      "label": "Independent",
-      "details": "Inspired by his near-death experience and composed without formal training"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Directly inspired by spiritual visions and his NDE; melodies come intuitively.",
-    "production_process": "Composed via digital orchestration tools; collaborates with musicians for recordings."
-  },
-  "availability": {
-    "current_projects": ["Book promotions", "Spiritual compositions", "Documentary collaborations"],
-    "looking_for": ["Film scoring", "Spiritual organizations", "Speaking events"]
-  },
-  "online_presence": {
-    "website": "https://www.shineonthestory.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/davidditchfield"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/ShineOnTheStory"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@davidditchfield"
-      }
-    ]
-  },
-  "quotes": [
-    "I wasn’t a composer before my near-death experience — I became one because of it.",
-    "My music is a bridge between this world and what lies beyond."
-  ]
-}
-,
-{
-  "artistID": "tom-tikka",
-  "displayName": "Tom Tikka",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["pop rock", "alternative", "songwriter", "finnish", "indie"],
-  "identity": {
-    "realName": "Tom Tikka",
-    "aliases": [],
-    "origin": "Finland",
-    "location": "Helsinki, Finland",
-    "languages": ["Finnish", "English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Composer", "Guitarist"],
-    "genres": ["Pop Rock", "Alternative Rock", "Indie"],
-    "influences": ["The Beatles", "ELO", "Oasis", "David Bowie"],
-    "skills": ["Songwriting", "Guitar", "Melodic Composition", "Studio Production"]
-  },
-  "career": {
-    "education": "Studied music theory and composition; self-driven learning as well",
-    "collaborations": ["The Impersonators", "MTS Records", "Antti Autio"],
-    "performances": ["Finnish indie scene", "Virtual showcases", "Radio features"],
-    "awards": ["Multiple placements on European Indie Music Charts"]
-  },
-  "discography": [
-    {
-      "title": "This Is My Happy Face",
-      "type": "Album",
-      "year": 2021,
-      "label": "MTS Records",
-      "details": "Melodic and lyrical pop rock album about personal struggle and identity"
-    },
-    {
-      "title": "Doormat",
-      "type": "Single",
-      "year": 2021,
-      "label": "MTS Records",
-      "details": "Energetic alt-rock single with witty lyricism"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Starts with melody or lyric idea, often from life reflection; very structured workflow.",
-    "production_process": "Uses home studio and collaborates with producers for mixing/mastering."
-  },
-  "availability": {
-    "current_projects": ["New solo material", "Impersonators EP", "Video production"],
-    "looking_for": ["Label expansion", "New markets", "Playlist curation"]
-  },
-  "online_presence": {
-    "website": "https://www.tomtikka.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/tomtikkamusic"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/tomtikkamusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/2jivKejtPLatBeIjc2U90n"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@TomTikka"
-      }
-    ]
-  },
-  "quotes": [
-    "Music is therapy. It helps me make sense of the chaos around me.",
-    "Pop rock is more than catchy — it’s deeply emotional when done right."
-  ]
-}
-,
-{
-  "artistID": "the-aquarian-bloodline",
-  "displayName": "The Aquarian Bloodline",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["experimental", "ambient", "electronic", "spiritual", "cosmic"],
-  "identity": {
-    "realName": "The Aquarian Bloodline",
-    "aliases": [],
-    "origin": "USA",
-    "location": "USA",
-    "languages": ["English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Producer", "Composer", "Sound Healer"],
-    "genres": ["Ambient", "Experimental", "Electronic", "Spiritual"],
-    "influences": ["Brian Eno", "Tangerine Dream", "Cosmic Consciousness"],
-    "skills": ["Sound Design", "Meditative Composition", "Spiritual Audio Experiences"]
-  },
-  "career": {
-    "education": "Self-taught spiritual and sonic experimentation",
-    "collaborations": ["Healers", "Visual Artists", "Sound Meditation Events"],
-    "performances": ["Sound healing sessions", "Spiritual retreats", "Online audio journeys"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Awakened Frequencies",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "A sonic journey through vibrational healing and cosmic awakening"
-    },
-    {
-      "title": "Third Eye Streams",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Experimental ambient layers for meditative practices"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Created during spiritual rituals or meditative states; prioritizes vibrational resonance.",
-    "production_process": "Layered with ambient textures, synth atmospheres, and healing tones; uses binaural mixing."
-  },
-  "availability": {
-    "current_projects": ["Healing frequency album", "Collaborations with visual meditation artists"],
-    "looking_for": ["Spiritual community features", "Meditation apps", "Wellness spaces"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/aquarianbloodline"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/3RxT7ZZW5nPVLiNhYP2V7b"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@aquarianbloodline"
-      }
-    ]
-  },
-  "quotes": [
-    "Sound is a doorway to higher consciousness.",
-    "Our music is designed to activate inner knowing and peace."
-  ]
-}
-,
-{
-  "artistID": "paul-marotto",
-  "displayName": "Paul Marotto",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["progressive rock", "instrumental", "fusion", "multi-instrumentalist", "experimental"],
-  "identity": {
-    "realName": "Paul Marotto",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Boston, Massachusetts, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Composer", "Instrumentalist", "Producer"],
-    "genres": ["Progressive Rock", "Jazz Fusion", "Experimental"],
-    "influences": ["Frank Zappa", "King Crimson", "Allan Holdsworth"],
-    "skills": ["Multi-instrumentation", "Complex Composition", "Studio Production"]
-  },
-  "career": {
-    "education": "Classically trained; studied jazz and experimental music",
-    "collaborations": ["Studio ensembles", "Fusion collectives"],
-    "performances": ["Jazz clubs", "Instrumental showcases", "College circuits"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Fragmented Reality",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "A mix of progressive, jazz, and experimental pieces composed and performed entirely by Paul"
-    },
-    {
-      "title": "Quantum Blue",
-      "type": "EP",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Instrumental exploration of time, rhythm, and sound layers"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Built on odd meters and harmonic tension; usually starts on piano or guitar.",
-    "production_process": "Self-recorded and mixed using hybrid analog-digital tools; layered instrumentation."
-  },
-  "availability": {
-    "current_projects": ["New instrumental LP", "Collaborative fusion projects"],
-    "looking_for": ["Label support", "Progressive music festivals", "Online scoring opportunities"]
-  },
-  "online_presence": {
-    "website": "",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/paulmarottomusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/1h2jKThj5iXeb1xx8vA0Yb"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@paulmarotto"
-      }
-    ]
-  },
-  "quotes": [
-    "Music should challenge you — emotionally and intellectually.",
-    "Every track is like a puzzle I love solving."
-  ]
-}
-,
-{
-  "artistID": "sara-ontaneda",
-  "displayName": "Sara Ontaneda",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["latin pop", "bilingual", "indie", "singer-songwriter", "ecuadorian"],
-  "identity": {
-    "realName": "Sara Ontaneda",
-    "aliases": [],
-    "origin": "Ecuador",
-    "location": "New York, USA",
-    "languages": ["English", "Spanish"],
-    "gender": "Female"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Composer", "Performer"],
-    "genres": ["Latin Pop", "Indie Folk", "Alternative"],
-    "influences": ["Natalie Imbruglia", "Julieta Venegas", "Norah Jones", "Jorge Drexler"],
-    "skills": ["Vocals", "Songwriting", "Bilingual Performance", "Production"]
-  },
-  "career": {
-    "education": "Graduated from Berklee College of Music",
-    "collaborations": ["Latin indie musicians", "Festival circuits"],
-    "performances": ["SXSW", "Latin American Music Conference", "Lincoln Center"],
-    "awards": ["Selected artist at international showcases (SXSW, LAMC)"]
-  },
-  "discography": [
-    {
-      "title": "Entre Espacios y Colores",
-      "type": "Album",
-      "year": 2016,
-      "label": "Independent",
-      "details": "Debut album blending Latin pop and folk with bilingual lyrics"
-    },
-    {
-      "title": "Hey Maria",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Empowering bilingual track reflecting on womanhood and identity"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Bilingual writing inspired by personal stories and cross-cultural themes.",
-    "production_process": "Collaborates with Latin musicians; records in hybrid studio settings in NY and Ecuador."
-  },
-  "availability": {
-    "current_projects": ["Upcoming bilingual album", "Latin American tour planning"],
-    "looking_for": ["Indie labels", "Women-in-music partnerships", "Sync licensing"]
-  },
-  "online_presence": {
-    "website": "https://www.saraontaneda.com",
-    "social_media": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/saraontaneda"
-      },
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/saraontanedamusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/5iDuKgqJZpj2LVmHgmbOqY"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@saraontaneda"
-      }
-    ]
-  },
-  "quotes": [
-    "I tell stories that belong to two cultures, two languages, and one heart.",
-    "Being bilingual is not just a skill — it’s a musical superpower."
-  ]
-}
-,
-{
-  "artistID": "sons-of-silver",
-  "displayName": "Sons of Silver",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["rock", "alt rock", "supergroup", "anthemic", "gritty"],
-  "identity": {
-    "realName": "Sons of Silver",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Los Angeles, California, USA",
-    "languages": ["English"],
-    "gender": ""
-  },
-  "artistic_background": {
-    "roles": ["Band", "Songwriters", "Performers"],
-    "genres": ["Rock", "Alternative Rock", "Post-Grunge"],
-    "influences": ["Soundgarden", "Pearl Jam", "U2", "Foo Fighters"],
-    "skills": ["Live Performance", "Powerful Vocals", "Anthemic Songwriting", "Studio Production"]
-  },
-  "career": {
-    "education": "Members from various notable bands (ex-Candlebox, Pearl Jam affiliates)",
-    "collaborations": ["Peter Argyropoulos", "Brina Kabler", "Kevin Haaland", "Marc Slutsky"],
-    "performances": ["Rock festivals", "Streaming concerts", "West Coast venues"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Doomsday Noises",
-      "type": "EP",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Debut EP delivering high-energy alt-rock with political undertones"
-    },
-    {
-      "title": "Hesitate",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Hard-hitting alt-rock track exploring hesitation and control"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Lyrics often driven by current events and personal freedom; music collaboratively jammed.",
-    "production_process": "Recorded at home studio; tightly produced with layered guitar and rhythm sections."
-  },
-  "availability": {
-    "current_projects": ["Full-length album production", "Tour planning post-pandemic"],
-    "looking_for": ["Festival slots", "Management partnerships", "Expanded streaming distribution"]
-  },
-  "online_presence": {
-    "website": "https://www.sonsofsilver.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/SonsOfSilver"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/sonsofsilver"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/6eS4rPphWx3NYpOBU1G2ru"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@SonsOfSilver"
-      }
-    ]
-  },
-  "quotes": [
-    "We’re not trying to be retro — we’re just trying to be real.",
-    "If you're not uncomfortable writing lyrics, you're not digging deep enough."
-  ]
-}
-,
-{
-  "artistID": "carl-jones",
-  "displayName": "Carl Jones",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["folk", "americana", "acoustic", "storytelling", "roots"],
-  "identity": {
-    "realName": "Carl Jones",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Georgia, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Songwriter", "Guitarist", "Mandolinist"],
-    "genres": ["Americana", "Folk", "Bluegrass"],
-    "influences": ["Traditional Appalachian", "Southern Americana", "Old-time storytelling"],
-    "skills": ["Fingerstyle Guitar", "Mandolin", "Lyric Writing", "Live Acoustic Performance"]
-  },
-  "career": {
-    "education": "Largely self-taught through folk traditions",
-    "collaborations": ["Erynn Marshall", "James Leva", "Norman Blake"],
-    "performances": ["Folk festivals", "Workshops", "House concerts"],
-    "awards": ["Recognized figure in American roots music circles"]
-  },
-  "discography": [
-    {
-      "title": "Wolves in the Woodwork",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "A collection of heartfelt folk songs blending humor, wisdom, and tradition"
-    },
-    {
-      "title": "The Road That Brings You Home",
-      "type": "Album",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Collaborative album with Erynn Marshall focusing on harmony and acoustic textures"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Driven by storytelling and real-life emotions; lyrics come before melody.",
-    "production_process": "Minimal production focused on acoustic purity and emotional resonance."
-  },
-  "availability": {
-    "current_projects": ["Folk duo tours", "Teaching mandolin workshops"],
-    "looking_for": ["Festival bookings", "Acoustic music circles", "International folk events"]
-  },
-  "online_presence": {
-    "website": "https://www.dittyville.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/dittyville"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Bandcamp",
-        "url": "https://carljones.bandcamp.com"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@CarlJonesErynnMarshall"
-      }
-    ]
-  },
-  "quotes": [
-    "A good folk song carries the voice of many generations.",
-    "Music is best when it feels like an old friend telling you a story."
-  ]
-}
-,
-{
-  "artistID": "dave-molter",
-  "displayName": "Dave Molter",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["classic rock", "60s", "70s", "radio host", "veteran"],
-  "identity": {
-    "realName": "Dave Molter",
-    "aliases": ["Moltz"],
-    "origin": "USA",
-    "location": "Pittsburgh, Pennsylvania, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Bassist", "Songwriter", "Radio Personality"],
-    "genres": ["Classic Rock", "Pop Rock", "Retro"],
-    "influences": ["The Beatles", "Chicago", "Steely Dan", "Paul McCartney"],
-    "skills": ["Bass Guitar", "Lyric Writing", "Radio Hosting", "Studio Production"]
-  },
-  "career": {
-    "education": "University of Pittsburgh (Communications)",
-    "collaborations": ["Buddy Hall", "Bill Toms", "Donnie Iris band affiliates"],
-    "performances": ["Pittsburgh rock venues", "Radio music shows", "Streaming gigs"],
-    "awards": ["Indie chart features", "Radio host accolades"]
-  },
-  "discography": [
-    {
-      "title": "Foolish Heart",
-      "type": "Album",
-      "year": 2020,
-      "label": "Independent",
-      "details": "Retro-rock inspired debut solo album with catchy hooks and vintage vibes"
-    },
-    {
-      "title": "It’s Your Move",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Upbeat single reflecting on choices and consequence, with Beatles-style harmony"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Begins with lyrical ideas or phrases; draws from personal experiences and social commentary.",
-    "production_process": "Collaborates with seasoned session players; recorded in regional studios with analog touch."
-  },
-  "availability": {
-    "current_projects": ["Second solo album", "Classic rock podcast", "Online streaming shows"],
-    "looking_for": ["Distribution", "Festival opportunities", "Media sync"]
-  },
-  "online_presence": {
-    "website": "https://www.davemoltermusic.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/DaveMolterMusic"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/davemoltermusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/1EjdfTQYZgeADk3AedQlQe"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@DaveMolterMusic"
-      }
-    ]
-  },
-  "quotes": [
-    "I’m a child of the '60s — the music never left me.",
-    "Every song I write is a tribute to the golden era of rock."
-  ]
-}
-,
-{
-  "artistID": "mark-winters",
-  "displayName": "Mark Winters",
-  "priceUSD": 0,
-  "imageUrl": "undefined",
-  "vibeTags": ["rock", "positive vibes", "singer-songwriter", "uplifting", "indie"],
-  "identity": {
-    "realName": "Mark Winters",
-    "aliases": [],
-    "origin": "USA",
-    "location": "Texas, USA",
-    "languages": ["English"],
-    "gender": "Male"
-  },
-  "artistic_background": {
-    "roles": ["Singer", "Guitarist", "Songwriter"],
-    "genres": ["Rock", "Alternative Rock", "Indie Pop"],
-    "influences": ["John Mayer", "Tom Petty", "Goo Goo Dolls", "Matchbox Twenty"],
-    "skills": ["Vocals", "Rhythm Guitar", "Lyric Writing", "Positive Messaging"]
-  },
-  "career": {
-    "education": "Engineering background before transitioning to music",
-    "collaborations": ["Indie producers", "Live session musicians"],
-    "performances": ["Texas local circuits", "Virtual concerts", "Indie festivals"],
-    "awards": []
-  },
-  "discography": [
-    {
-      "title": "Slipstream",
-      "type": "Album",
-      "year": 2019,
-      "label": "Independent",
-      "details": "Debut album focusing on themes of positivity, momentum, and hope"
-    },
-    {
-      "title": "Boundary Layer",
-      "type": "Single",
-      "year": 2021,
-      "label": "Independent",
-      "details": "Upbeat rock single inspired by physics and emotional balance"
-    }
-  ],
-  "creative_process": {
-    "songwriting_process": "Starts with a message or theme; lyrics and melody evolve together with a guitar base.",
-    "production_process": "Recorded in home studio with minimal production layers to retain warmth and clarity."
-  },
-  "availability": {
-    "current_projects": ["New EP in production", "Local Texas tour", "Fan engagement livestreams"],
-    "looking_for": ["Sync licensing", "Collaborations", "Community radio features"]
-  },
-  "online_presence": {
-    "website": "https://www.markwintersmusic.com",
-    "social_media": [
-      {
-        "platform": "Facebook",
-        "url": "https://www.facebook.com/markwintersmusic"
-      },
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/markwintersmusic"
-      }
-    ],
-    "streaming_platforms": [
-      {
-        "platform": "Spotify",
-        "url": "https://open.spotify.com/artist/0iXql7WTUMVyD8t9YVJsoF"
-      },
-      {
-        "platform": "YouTube",
-        "url": "https://www.youtube.com/@markwintersmusic"
-      }
-    ]
-  },
-  "quotes": [
-    "I use rock music as a tool to spread positivity and energy.",
-    "Slip into the slipstream and let momentum carry you forward."
-  ]
-}
-
 
 ]
+
+
