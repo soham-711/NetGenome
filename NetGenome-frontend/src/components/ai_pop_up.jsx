@@ -73,7 +73,7 @@ export default function AiPopUp() {
           transition={{ duration: 1 }}
           className="text-white text-5xl md:text-[350px] font-[Recoleta] leading-tight"
         >
-          Ai Chat
+          AI CHAT
         </motion.h1>
       </div>
     </motion.div>
