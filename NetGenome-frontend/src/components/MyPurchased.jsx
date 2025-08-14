@@ -343,7 +343,7 @@ export default function MyPurchase() {
                       {/* Price */}
                       <div className="pt-4">
                         <div className="text-teal-400 font-bold text-lg">
-                          ${item.priceUSD?.toFixed(2) || "0.00"}
+                          {item.priceUSD?.toFixed(2) || "0.00"} SOL
                         </div>
                       </div>
                     </div>
