@@ -2011,7 +2011,7 @@ const ArtistProfile = () => {
   className="relative w-full min-h-[80vh] bg-center bg-cover px-4 py-16 md:px-12 lg:px-20 overflow-hidden"
   style={{ 
     backgroundImage: `url(${i24})`,
-    backgroundAttachment: 'fixed',
+   
     backgroundPosition: 'center',
     backgroundSize: 'cover'
   }}
