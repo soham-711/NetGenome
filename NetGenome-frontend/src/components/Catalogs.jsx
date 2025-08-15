@@ -1483,7 +1483,7 @@ const ArtistProfile = () => {
             {"ASSOCIATION LAZYINDIE".split(" ").map((word, i) => (
               <motion.span
                 key={i}
-                className="text-white/50 text-center text-xl md:text-2xl font-bold font-monda"
+                className="text-white/50 text-center text-xl md:text-2xl rotate-180 font-bold font-monda"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
