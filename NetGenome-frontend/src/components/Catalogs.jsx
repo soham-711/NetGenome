@@ -1447,7 +1447,7 @@ const ArtistProfile = () => {
             className="px-6 py-4 flex justify-center items-center"
           >
             <h2 className="text-white text-2xl md:text-3xl font-bold font-monda text-center">
-              LAZIEINDIE ASSOCIATION
+              LAZYINDIE ASSOCIATION
             </h2>
           </motion.div>
           <motion.div
@@ -1480,7 +1480,7 @@ const ArtistProfile = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
-            {"LAZIE INDIE ASSOCIATION".split(" ").map((word, i) => (
+            {"ASSOCIATION LAZYINDIE".split(" ").map((word, i) => (
               <motion.span
                 key={i}
                 className="text-white/50 text-center text-xl md:text-2xl font-bold font-monda"
