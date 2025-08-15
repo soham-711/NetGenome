@@ -1447,7 +1447,7 @@ const ArtistProfile = () => {
             className="px-6 py-4 flex justify-center items-center"
           >
             <h2 className="text-white text-2xl md:text-3xl font-bold font-monda text-center">
-              LAZIEINDI ASSOCIATION
+              LAZIEINDIE ASSOCIATION
             </h2>
           </motion.div>
           <motion.div
