@@ -1480,7 +1480,7 @@ const ArtistProfile = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
-            {"LAZIE INDI ASSOCIATION".split(" ").map((word, i) => (
+            {"LAZIE INDIE ASSOCIATION".split(" ").map((word, i) => (
               <motion.span
                 key={i}
                 className="text-white/50 text-center text-xl md:text-2xl font-bold font-monda"
