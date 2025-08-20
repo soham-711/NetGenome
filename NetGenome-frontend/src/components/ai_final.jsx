@@ -844,7 +844,7 @@ export default function AiFinal() {
     const navItems = [
     { name: 'Home', path: '/home' },
     { name: 'AI Chat', path: '/ai_chat_land' },
-    { name: 'My Purchase', path: '/my_purchase' },
+    { name: 'My Purchases', path: '/my_purchase' },
   ];
 
   // Initialize the conversation
