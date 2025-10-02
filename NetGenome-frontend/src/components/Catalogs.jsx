@@ -1987,25 +1987,32 @@ const ArtistProfile = () => {
 
 
 <section
-      className="relative h-[801px] w-full bg-center bg-cover flex items-center justify-center"
-      style={{ backgroundImage: `url(${i23})` }}
-      onMouseEnter={() => setHover(true)} // Only set once
-    >
-      <div className="max-w-[1545px] px-6 flex flex-col items-center gap-8 text-center">
-        {artist.long_narrative.split('. ').map((sentence, index) => (
-          <motion.p
-            key={index}
-            className="text-white text-2xl font-normal font-['Monda'] max-w-[1524px]"
-            variants={fadeUpVariant}
-            initial="hidden"
-            animate={hover ? "visible" : "hidden"}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            {`“ ${sentence.trim()}${index < artist.long_narrative.split('. ').length - 1 ? '.' : ''} “`}
-          </motion.p>
-        ))}
-      </div>
-    </section>
+  className="relative h-[801px] w-full bg-center bg-cover flex items-center justify-center"
+  style={{ backgroundImage: `url(${i23})` }}
+  onMouseEnter={() => setHover(true)} // Only set once
+>
+  <div className="max-w-[1545px] px-6 flex flex-col items-center gap-8 text-center">
+    {artist?.long_narrative ? (
+      artist.long_narrative.split('. ').map((sentence, index, arr) => (
+        <motion.p
+          key={index}
+          className="text-white text-2xl font-normal font-['Monda'] max-w-[1524px]"
+          variants={fadeUpVariant}
+          initial="hidden"
+          animate={hover ? "visible" : "hidden"}
+          transition={{ duration: 0.8, delay: index * 0.2 }}
+        >
+          {`“ ${sentence.trim()}${index < arr.length - 1 ? '.' : ''} “`}
+        </motion.p>
+      ))
+    ) : (
+      <p className="text-white text-xl font-light italic">
+        No description available.
+      </p>
+    )}
+  </div>
+</section>
+
 
 <section
   className="relative w-full min-h-[80vh] bg-center bg-cover px-4 py-16 md:px-12 lg:px-20 overflow-hidden"
