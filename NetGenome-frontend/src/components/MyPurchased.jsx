@@ -211,7 +211,7 @@ export default function MyPurchase() {
             animate={{ scale: 1 }}
             transition={{ delay: 0.7, type: "spring", stiffness: 100 }}
           >
-            My Purchases
+            My Collaborations
           </motion.h1>
         </motion.div>
 

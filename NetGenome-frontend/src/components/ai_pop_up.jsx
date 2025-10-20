@@ -12,7 +12,7 @@ export default function AiPopUp() {
     const navItems = [
     { name: 'Home', path: '/home' },
     { name: 'AI Chat', path: '/ai_chat_land' },
-    { name: 'My Purchases', path: '/my_purchase' },
+    { name: 'My Collaborations', path: '/my_purchase' },
   ];
 
   // Auto-redirect after 1 second

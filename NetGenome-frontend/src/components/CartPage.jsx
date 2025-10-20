@@ -257,7 +257,7 @@ export default function Cart() {
                 className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-500 via-gray-400 to-gray-400 hover:from-gray-600 hover:to-gray-600 text-white font-medium rounded-md transition-all"
               >
                 <IoMdMusicalNote />
-                My Purchases
+                My Collaborations
               </button>
             )}
 
@@ -496,7 +496,7 @@ export default function Cart() {
                     <p className="text-sm text-gray-400">
                       After payment, you'll instantly receive contact
                       information and links to the artists' profiles. All
-                      purchased artists will be available in your "My Purchases"
+                      purchased artists will be available in your "My Collaborations"
                       section.
                     </p>
                   </div>

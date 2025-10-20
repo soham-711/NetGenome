@@ -269,7 +269,7 @@ export default function Home() {
   const navItems = [
     { label: "Home", path: "/home" },
     { label: "AI Chat", path: "/ai_chat_land" },
-    { label: "My Purchases", path: "/my_purchase" },
+    { label: "My Collaborations", path: "/my_purchase" },
   ];
 
   return (

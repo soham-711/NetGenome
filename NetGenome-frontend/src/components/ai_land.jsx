@@ -38,7 +38,7 @@ export default function AILand() {
     const navItems = [
     { name: 'Home', path: '/home' },
     { name: 'AI Chat', path: '/ai_chat_land' },
-    { name: 'My Purchases', path: '/my_purchase' },
+    { name: 'My Collaborations', path: '/my_purchase' },
   ];
 
   const pageVariants = {
